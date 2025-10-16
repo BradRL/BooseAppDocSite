@@ -24,5 +24,10 @@ namespace BradleyLeach_BooseApp.Shapes
             g.DrawRectangle(p, x, y, width, height);
             base.draw(g);
         }
+
+        public override float calcArea()
+        {
+            return width * height;
+        }
     }
 }

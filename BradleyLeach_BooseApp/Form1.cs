@@ -6,19 +6,17 @@ namespace BradleyLeach_BooseApp
 {
     public partial class Form1 : Form
     {
+        Bitmap myBitmap;
+        List<Shape> myShapes = new List<Shape>();
+
         public Form1()
         {
             InitializeComponent();
-            Debug.WriteLine(AboutBOOSE.about());
-        }
+            myBitmap = new Bitmap(this.ClientSize.Width, this.ClientSize.Height);
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            Graphics g = e.Graphics;
+            // Creates 250x random shapes
             Random rnd = new Random();
-            List<Shape> shapes = new List<Shape>();
-
-            for (int i = 0; i < 250; i++)
+            for (int i = 0; i < 50; i++)
             {
                 int x = rnd.Next(256);
                 int y = rnd.Next(256);
@@ -28,20 +26,34 @@ namespace BradleyLeach_BooseApp
                 switch (shape)
                 {
                     case 0:
-                        Shape circle = new Shapes.Circle(c, x, y, size);
-                        circle.draw(g);
+                        myShapes.Add(new Shapes.Circle(c, x, y, size));
                         break;
                     case 1:
-                        Shape square = new Shapes.Square(c, x, y, size);
-                        square.draw(g);
+                        myShapes.Add(new Shapes.Square(c, x, y, size));
                         break;
-                    case 2:
-                        Shape rectangle = new Shapes.Rectangle(c, x, y, size, size / 2);
-                        rectangle.draw(g);
+                    case 2:                
+                        myShapes.Add(new Shapes.Rectangle(c, x, y, size, size / 2));
+                        break;
+                    case 3:
+                        myShapes.Add(new Shapes.Triangle(c, x, y, size));
                         break;
                 }
-                Thread.Sleep(500);
             }
+
+            Graphics g = Graphics.FromImage(myBitmap);
+            for (int i = 0; i < myShapes.Count; i++)
+            {
+                Shape s = (Shape)myShapes[i];
+                s.draw(g);
+                Debug.WriteLine("Drawing OBJ : " + s.ToString());
+            }
+        }
+
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            //Graphics g = e.Graphics.FromImage(myBitmap);
+            Graphics g = e.Graphics;
+            g.DrawImage(myBitmap, 0, 0);
         }
     }
 }

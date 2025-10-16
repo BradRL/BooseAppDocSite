@@ -23,5 +23,10 @@ namespace BradleyLeach_BooseApp.Shapes
             g.DrawEllipse(p, x, y, r * 2, r * 2);
             base.draw(g);
         }
+
+        public override float calcArea()
+        {
+            return (float)Math.PI * r * r;
+        }
     }
 }

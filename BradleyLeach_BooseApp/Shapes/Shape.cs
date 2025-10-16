@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp.Shapes
 {
-    abstract class Shape
+    abstract class Shape : IShape
     {
         protected Color colour;
         protected int x, y;
@@ -26,6 +26,8 @@ namespace BradleyLeach_BooseApp.Shapes
             String text = this.ToString();
             g.DrawString(text, font, brush, this.x, this.y, drawFormat);
         }
+
+        public abstract float calcArea();
 
         public override string ToString()
         {
