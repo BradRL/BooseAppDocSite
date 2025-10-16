@@ -23,13 +23,13 @@ namespace BradleyLeach_BooseApp.Shapes
             Brush brush = new SolidBrush(Color.Black);
             StringFormat drawFormat = new StringFormat();
             drawFormat.FormatFlags = StringFormatFlags.NoClip;
-            String text = "Shape";
+            String text = this.ToString();
             g.DrawString(text, font, brush, this.x, this.y, drawFormat);
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            return base.ToString().Split('.').Last();
         }
     }
 }
