@@ -13,8 +13,23 @@ namespace BradleyLeach_BooseApp
         {
             InitializeComponent();
             myBitmap = new Bitmap(this.ClientSize.Width, this.ClientSize.Height);
+        }
 
-            // Creates 250x random shapes
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
+            //Graphics g = e.Graphics.FromImage(myBitmap);
+            //Graphics g = e.Graphics;
+            //g.DrawImage(myBitmap, 0, 0);
+
+            DisplayBox.Image = myBitmap;  // Draws Bitmap image to DisplayBox instead of whole form
+        }
+
+        private void RunButtom_Click(object sender, EventArgs e)
+        {
+            // Execute BOOSE code form textBox
+
+
+            // Placeholder drawing animations
             Random rnd = new Random();
             for (int i = 0; i < 50; i++)
             {
@@ -31,7 +46,7 @@ namespace BradleyLeach_BooseApp
                     case 1:
                         myShapes.Add(new Shapes.Square(c, x, y, size));
                         break;
-                    case 2:                
+                    case 2:
                         myShapes.Add(new Shapes.Rectangle(c, x, y, size, size / 2));
                         break;
                     case 3:
@@ -47,13 +62,8 @@ namespace BradleyLeach_BooseApp
                 s.draw(g);
                 Debug.WriteLine("Drawing OBJ : " + s.ToString());
             }
-        }
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            //Graphics g = e.Graphics.FromImage(myBitmap);
-            Graphics g = e.Graphics;
-            g.DrawImage(myBitmap, 0, 0);
+            DisplayBox.Image = myBitmap;
         }
     }
 }
