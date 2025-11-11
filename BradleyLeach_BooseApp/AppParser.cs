@@ -30,12 +30,14 @@ namespace BradleyLeach_BooseApp
         public ICommand ParseCommand(string Line)
         {
             String[] lineComponents = Line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+
             if (lineComponents.Length == 0)
             {
                 return null;
             }
+
             String commandType = lineComponents[0];
-            String[] parameters = lineComponents[1..];
+            String[] parameters = lineComponents[1].Split(",", StringSplitOptions.RemoveEmptyEntries);
 
             ICommand command = Factory.MakeCommand(commandType);
             command.CheckParameters(parameters);

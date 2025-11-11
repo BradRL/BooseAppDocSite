@@ -15,7 +15,7 @@ namespace BradleyLeach_BooseApp
         {
             InitializeComponent();
             InputBox.Text = AboutBOOSE.about();
-            Canvas = new AppCanvas(this.ClientSize.Width, this.ClientSize.Height);
+            Canvas = new AppCanvas(10000, 10000);  // Very large value ensures that all screen sizes will not cut of canvas even when fullscreened 
             Factory = new AppCommandFactory();
             Program = new AppStoredProgram(Canvas);
             Parser = new AppParser(Factory, Program);

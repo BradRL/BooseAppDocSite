@@ -20,6 +20,7 @@ namespace BradleyLeach_BooseApp
                 "rectangle" => new AppRect(),
                 "moveto" => new AppMoveTo(),
                 "pencolour" => new AppPenColour(),
+                "pen" => new AppPenColour(),
 
                 _ => throw new FactoryException("no such command \'" + commandType + "'")
             };
