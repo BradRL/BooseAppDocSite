@@ -6,64 +6,48 @@ namespace BradleyLeach_BooseApp
 {
     public partial class Form1 : Form
     {
-        Bitmap myBitmap;
-        List<Shape> myShapes = new List<Shape>();
+        private AppCanvas Canvas;
+        private AppCommandFactory Factory;
+        private AppStoredProgram Program;
+        private AppParser Parser;
 
         public Form1()
         {
             InitializeComponent();
-            myBitmap = new Bitmap(this.ClientSize.Width, this.ClientSize.Height);
+            InputBox.Text = AboutBOOSE.about();
+            Canvas = new AppCanvas(this.ClientSize.Width, this.ClientSize.Height);
+            Factory = new AppCommandFactory();
+            Program = new AppStoredProgram(Canvas);
+            Parser = new AppParser(Factory, Program);
         }
 
-        private void Form1_Paint(object sender, PaintEventArgs e)
-        {
-            //Graphics g = e.Graphics.FromImage(myBitmap);
-            //Graphics g = e.Graphics;
-            //g.DrawImage(myBitmap, 0, 0);
-
-            DisplayBox.Image = myBitmap;  // Draws Bitmap image to DisplayBox instead of whole form
+        private void Form1_Paint(object sender, PaintEventArgs e) 
+        { 
+            Graphics g = e.Graphics;
+            Bitmap b = (Bitmap)Canvas.getBitmap();
+            DisplayBox.Image = b;
         }
 
         private void RunButtom_Click(object sender, EventArgs e)
         {
-            // Execute BOOSE code form textBox
+            List<String> errorList = new List<string>();
 
+            Parser.ParseProgram(InputBox.Text);
+            errorList.AddRange(Parser.ErrorList);
 
-            // Placeholder drawing animations
-            Random rnd = new Random();
-            for (int i = 0; i < 50; i++)
+            Program.Run();
+            errorList.AddRange(Program.ErrorList);
+
+            if (errorList.Count > 0)
             {
-                int x = rnd.Next(256);
-                int y = rnd.Next(256);
-                int size = rnd.Next(256);
-                Color c = Color.FromArgb(128, rnd.Next(256), rnd.Next(256), rnd.Next(256));
-                int shape = rnd.Next(4);
-                switch (shape)
-                {
-                    case 0:
-                        myShapes.Add(new Shapes.Circle(c, x, y, size));
-                        break;
-                    case 1:
-                        myShapes.Add(new Shapes.Square(c, x, y, size));
-                        break;
-                    case 2:
-                        myShapes.Add(new Shapes.Rectangle(c, x, y, size, size / 2));
-                        break;
-                    case 3:
-                        myShapes.Add(new Shapes.Triangle(c, x, y, size));
-                        break;
-                }
+                MessageBox.Show(
+                    text: String.Join("\n", errorList),
+                    caption: "Runtime Error Warning.",
+                    buttons: MessageBoxButtons.OK,
+                    icon: MessageBoxIcon.Error     
+                );
             }
-
-            Graphics g = Graphics.FromImage(myBitmap);
-            for (int i = 0; i < myShapes.Count; i++)
-            {
-                Shape s = (Shape)myShapes[i];
-                s.draw(g);
-                Debug.WriteLine("Drawing OBJ : " + s.ToString());
-            }
-
-            DisplayBox.Image = myBitmap;
+            DisplayBox.Invalidate();
         }
     }
 }

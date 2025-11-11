@@ -46,7 +46,7 @@
             RunButtom.Cursor = Cursors.Hand;
             RunButtom.Location = new Point(5, 637);
             RunButtom.Name = "RunButtom";
-            RunButtom.Size = new Size(342, 29);
+            RunButtom.Size = new Size(578, 29);
             RunButtom.TabIndex = 0;
             RunButtom.Text = "Run";
             RunButtom.UseVisualStyleBackColor = true;
@@ -59,7 +59,7 @@
             InputBox.Multiline = true;
             InputBox.Name = "InputBox";
             InputBox.ScrollBars = ScrollBars.Vertical;
-            InputBox.Size = new Size(342, 628);
+            InputBox.Size = new Size(578, 628);
             InputBox.TabIndex = 1;
             InputBox.Text = "<Enter Code Here>";
             InputBox.WordWrap = false;
@@ -71,7 +71,7 @@
             DisplayBox.BorderStyle = BorderStyle.Fixed3D;
             DisplayBox.Location = new Point(3, 3);
             DisplayBox.Name = "DisplayBox";
-            DisplayBox.Size = new Size(694, 663);
+            DisplayBox.Size = new Size(458, 663);
             DisplayBox.TabIndex = 2;
             DisplayBox.TabStop = false;
             // 
@@ -91,7 +91,7 @@
             // 
             splitContainer1.Panel2.Controls.Add(DisplayBox);
             splitContainer1.Size = new Size(1062, 673);
-            splitContainer1.SplitterDistance = 354;
+            splitContainer1.SplitterDistance = 590;
             splitContainer1.TabIndex = 3;
             // 
             // Form1
