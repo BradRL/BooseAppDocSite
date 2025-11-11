@@ -1,7 +1,6 @@
 ﻿using BOOSE;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,7 +29,6 @@ namespace BradleyLeach_BooseApp
                 int index = PC;
 
                 ICommand command = this[index] as ICommand;
-                Debug.WriteLine(command.ToString());
 
                 if (command == null)
                 {
@@ -51,8 +49,8 @@ namespace BradleyLeach_BooseApp
                 } 
                 catch (Exception ex)
                 {
-                    errorList.Add($"Line {index}: {ex.Message}");
-                    NextCommand();//added
+                    errorList.Add($"Line {index + 1}: {ex.Message}");
+                    continue;
                 }
 
                 if (commandsExecuted > 50000 && PC < 20)

@@ -60,22 +60,21 @@ namespace BradleyLeach_BooseApp
 
                 if (string.IsNullOrEmpty(command)) 
                 {
-                    // try with this not here to see effect on line count
-                    //Program.Add(new AppNoCommand());  // add null command to maintain line numbering
+                    Program.Add(new AppNoCommand());  // add null command to maintain line numbering
                     continue; 
                 }
 
                 try
                 {
                     ICommand c = ParseCommand(command);
-                    if (c != null)
+                    if (c == null)
                     {
-                        Program.Add(c);
+                        Program.Add(new AppNoCommand());
                     }
                 } 
                 catch (Exception ex)
                 {
-                    errorList.Add($"Line {i+1} (parser): {ex.Message}");
+                    errorList.Add($"Line {i+1}: {ex.Message}");
                     Program.Add(new AppNoCommand());
                 }
                 

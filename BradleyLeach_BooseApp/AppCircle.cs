@@ -25,16 +25,34 @@ namespace BradleyLeach_BooseApp
 
         public override void Execute() 
         {
-            if (!int.TryParse(param1unprocessed, out param1))
+            // Added redudant code for >1 commands for consistency with other shape commands and future proofing
+            bool param1Valid = int.TryParse(param1unprocessed, out param1);
+
+            List<string> invalidParams = new();
+
+            if (!param1Valid) invalidParams.Add(param1unprocessed);
+
+            if (invalidParams.Count > 0)
             {
-                throw new CanvasException($"Invalid parameter: '{param1unprocessed}' is not an integer.");
+                String joinedParams = string.Join("','", invalidParams);
+                String plural = invalidParams.Count > 1 ? "s" : "";
+                throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} not integer{plural}.");
             }
 
-            if (param1 <= 0)
+            // Checks values are > 0
+            param1Valid = param1 > 0;
+
+            invalidParams = new();
+
+            if (!param1Valid) invalidParams.Add(param1unprocessed);
+
+            if (invalidParams.Count > 0)
             {
-                throw new CommandException($"Invalid Radius: '{param1}' should be larger than 0.");
+                String joinedParams = string.Join("','", invalidParams);
+                String plural = invalidParams.Count > 1 ? "s" : "";
+                throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} less than '1'.");
             }
-           
+
             Canvas.Circle(param1, false);
         }
     }

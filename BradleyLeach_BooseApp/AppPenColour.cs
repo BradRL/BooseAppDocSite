@@ -46,7 +46,7 @@ namespace BradleyLeach_BooseApp
             {
                 String joinedParams = string.Join("','", invalidParams);
                 String plural = invalidParams.Count > 1 ? "s" : "";
-                throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : " is ")} not integer{plural}.");
+                throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} not integer{plural}.");
             }
 
             // Checks values are in range 0-255
@@ -64,7 +64,7 @@ namespace BradleyLeach_BooseApp
             {
                 String joinedParams = string.Join("','", invalidParams);
                 String plural = invalidParams.Count > 1 ? "s" : "";
-                throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : " is ")} out of range (0-255).");
+                throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} out of range (0-255).");
             }
 
             Canvas.SetColour(param1, param2, param3);

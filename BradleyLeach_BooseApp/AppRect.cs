@@ -38,38 +38,36 @@ namespace BradleyLeach_BooseApp
 
         public override void Execute()
         {
-            // Exhaustive data type error handling for providing more insightfull errors
-            if (!int.TryParse(param1unprocessed, out param1))
+            // Checks values are integers
+            bool param1Valid = int.TryParse(param1unprocessed, out param1);
+            bool param2Valid = int.TryParse(param2unprocessed, out param2);
+
+            List<string> invalidParams = new();
+
+            if (!param1Valid) invalidParams.Add(param1unprocessed);
+            if (!param2Valid) invalidParams.Add(param2unprocessed);
+
+            if (invalidParams.Count > 0)
             {
-                if (!int.TryParse(param2unprocessed, out param2))
-                {
-                    throw new CanvasException($"Invalid parameters: '{param1unprocessed}','{param2unprocessed}' are not an integers.");
-                }
-                else
-                {
-                    throw new CanvasException($"Invalid parameter: '{param1unprocessed}' is not an integer.");
-                }
-            }
-            else if (!int.TryParse(param2unprocessed, out param2))
-            {
-                throw new CanvasException($"Invalid parameter: '{param2unprocessed}' is not an integer.");
+                String joinedParams = string.Join("','", invalidParams);
+                String plural = invalidParams.Count > 1 ? "s" : "";
+                throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} not integer{plural}.");
             }
 
-            // Exhaustive value checks for natural integer values
-            if (param1 <= 0)
+            // Checks values are > 0
+            param1Valid = param1 > 0;
+            param2Valid = param2 > 0;
+
+            invalidParams = new();
+
+            if (!param1Valid) invalidParams.Add(param1unprocessed);
+            if (!param2Valid) invalidParams.Add(param2unprocessed);
+
+            if (invalidParams.Count > 0)
             {
-                if (param2 <= 0)
-                {
-                    throw new CommandException($"Invalid Width and Length: '{param1}', '{param2}' should be larger than 0.");
-                }
-                else
-                {
-                    throw new CommandException($"Invalid Width: '{param1}' should be larger than 0.");
-                }
-            } 
-            else if (param2 <= 0)
-            {
-                throw new CommandException($"Invalid Length: '{param2}' should be larger than 0.");
+                String joinedParams = string.Join("','", invalidParams);
+                String plural = invalidParams.Count > 1 ? "s" : "";
+                throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} less than '1'.");
             }
 
             Canvas.Rect(param1, param2, false);
