@@ -16,7 +16,7 @@ namespace BradleyLeach_BooseApp
 
         public List<String> ErrorList { get => errorList; }
 
-        public AppParser(AppCommandFactory Factory, StoredProgram Program)
+        public AppParser(AppCommandFactory Factory, AppStoredProgram Program)
         {
             this.Factory = Factory;
             this.Program = Program;
@@ -31,9 +31,9 @@ namespace BradleyLeach_BooseApp
         {
             String[] lineComponents = Line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
 
-            if (lineComponents.Length == 0)
+            if (lineComponents.Length != 2)
             {
-                return null;
+                throw new CommandException($"Invalid command format: should be 'command <parameters,...>");
             }
 
             String commandType = lineComponents[0];
@@ -52,7 +52,8 @@ namespace BradleyLeach_BooseApp
         /// <param name="program"></param>
         public void ParseProgram(string program)
         {
-            Program.ResetProgram();  // clear any prior program commands
+            Program.ResetProgram(); 
+
             errorList = new List<String>();  // create new errorlist and clear any prior memory
             String[] programCommands = program.Split('\n');
 

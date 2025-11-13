@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
-    internal class AppCommandFactory : ICommandFactory
+    internal class AppCommandFactory : CommandFactory, ICommandFactory
     {
-        public ICommand MakeCommand(string commandType)
+        public override ICommand MakeCommand(string commandType)
         {
             commandType = commandType.ToLower().Trim();
 
@@ -21,6 +21,7 @@ namespace BradleyLeach_BooseApp
                 "moveto" => new AppMoveTo(),
                 "pencolour" => new AppPenColour(),
                 "pen" => new AppPenColour(),
+                "drawto" => new AppDrawTo(),
 
                 _ => throw new FactoryException("no such command \'" + commandType + "'")
             };

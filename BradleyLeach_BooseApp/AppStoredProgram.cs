@@ -39,10 +39,10 @@ namespace BradleyLeach_BooseApp
                 try
                 {
                     commandsExecuted++;
-                    if (commandsExecuted > 200)  // Soft limit on commands that can be executed
-                    {
-                        throw new RestrictionException($"Commands execution limit exceeded: '{commandsExecuted}'");
-                    }
+                    //if (commandsExecuted > 200)  // Soft limit on commands that can be executed
+                    //{
+                    //    throw new RestrictionException($"Commands execution limit exceeded: '{commandsExecuted}'");
+                    //}
 
                     ICommand nextCommand = (ICommand)NextCommand();
                     nextCommand.Execute();
