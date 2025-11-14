@@ -32,6 +32,7 @@
             InputBox = new TextBox();
             DisplayBox = new PictureBox();
             splitContainer1 = new SplitContainer();
+            clearCanvasBtn = new Button();
             ((System.ComponentModel.ISupportInitialize)DisplayBox).BeginInit();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
@@ -46,7 +47,7 @@
             RunButtom.Cursor = Cursors.Hand;
             RunButtom.Location = new Point(5, 637);
             RunButtom.Name = "RunButtom";
-            RunButtom.Size = new Size(423, 29);
+            RunButtom.Size = new Size(264, 29);
             RunButtom.TabIndex = 0;
             RunButtom.Text = "Run";
             RunButtom.UseVisualStyleBackColor = true;
@@ -59,7 +60,7 @@
             InputBox.Multiline = true;
             InputBox.Name = "InputBox";
             InputBox.ScrollBars = ScrollBars.Vertical;
-            InputBox.Size = new Size(423, 628);
+            InputBox.Size = new Size(398, 628);
             InputBox.TabIndex = 1;
             InputBox.Text = "<Enter Code Here>";
             InputBox.WordWrap = false;
@@ -71,7 +72,7 @@
             DisplayBox.BorderStyle = BorderStyle.Fixed3D;
             DisplayBox.Location = new Point(3, 3);
             DisplayBox.Name = "DisplayBox";
-            DisplayBox.Size = new Size(613, 663);
+            DisplayBox.Size = new Size(638, 663);
             DisplayBox.TabIndex = 2;
             DisplayBox.TabStop = false;
             // 
@@ -84,6 +85,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            splitContainer1.Panel1.Controls.Add(clearCanvasBtn);
             splitContainer1.Panel1.Controls.Add(RunButtom);
             splitContainer1.Panel1.Controls.Add(InputBox);
             // 
@@ -91,8 +93,25 @@
             // 
             splitContainer1.Panel2.Controls.Add(DisplayBox);
             splitContainer1.Size = new Size(1062, 673);
-            splitContainer1.SplitterDistance = 435;
+            splitContainer1.SplitterDistance = 410;
             splitContainer1.TabIndex = 3;
+            // 
+            // clearCanvasBtn
+            // 
+            clearCanvasBtn.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            clearCanvasBtn.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            clearCanvasBtn.BackColor = Color.Red;
+            clearCanvasBtn.BackgroundImageLayout = ImageLayout.None;
+            clearCanvasBtn.Cursor = Cursors.Hand;
+            clearCanvasBtn.FlatAppearance.BorderSize = 10;
+            clearCanvasBtn.ForeColor = SystemColors.ButtonHighlight;
+            clearCanvasBtn.Location = new Point(275, 637);
+            clearCanvasBtn.Name = "clearCanvasBtn";
+            clearCanvasBtn.Size = new Size(128, 29);
+            clearCanvasBtn.TabIndex = 2;
+            clearCanvasBtn.Text = "clear";
+            clearCanvasBtn.UseVisualStyleBackColor = false;
+            clearCanvasBtn.Click += clearCanvasBtn_Click;
             // 
             // Form1
             // 
@@ -118,5 +137,6 @@
         private TextBox InputBox;
         private PictureBox DisplayBox;
         private SplitContainer splitContainer1;
+        private Button clearCanvasBtn;
     }
 }

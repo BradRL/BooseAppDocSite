@@ -56,8 +56,8 @@ namespace BradleyLeach_BooseApp
         /// <remarks>This method retrieves the current bitmap from the canvas and sets it as the image</remarks>
         /// <param name="sender">The source of the event, typically the form.</param>
         /// <param name="e">A <see cref="PaintEventArgs"/> that contains the event data.</param>
-        private void Form1_Paint(object sender, PaintEventArgs e) 
-        { 
+        private void Form1_Paint(object sender, PaintEventArgs e)
+        {
             Bitmap b = (Bitmap)Canvas.getBitmap();
             DisplayBox.Image = b;
         }
@@ -74,6 +74,7 @@ namespace BradleyLeach_BooseApp
         private void RunButtom_Click(object sender, EventArgs e)
         {
             List<String> errorList = new List<string>();
+
 
             Parser.ParseProgram(InputBox.Text);
             errorList.AddRange(Parser.ErrorList);
@@ -97,6 +98,17 @@ namespace BradleyLeach_BooseApp
             {
                 DisplayBox.Invalidate();
             }
+        }
+
+        /// <summary>
+        /// Clears the canvas when the "Clear" button is clicked.
+        /// </summary>
+        /// <param name="sender">The source of the event, typically the form.</param>
+        /// <param name="e">A <see cref="PaintEventArgs"/> that contains the event data.</param>
+        private void clearCanvasBtn_Click(object sender, EventArgs e)
+        {
+            Canvas.Clear();
+            DisplayBox.Invalidate();
         }
     }
 }

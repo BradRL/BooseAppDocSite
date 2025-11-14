@@ -80,16 +80,14 @@ namespace BradleyLeach_BooseApp
         public void Circle(int radius, bool filled)
         {
             /// add command to set filled variable here for drawing filled shapes!!!!!
-            MoveTo(Xpos - radius, Ypos - radius);
             if (filled)
             {
-                Graphics.FillEllipse(Brush, Xpos, Ypos, radius * 2, radius * 2);
+                Graphics.FillEllipse(Brush, Xpos - radius, Ypos - radius, radius * 2, radius * 2);
             }
             else
             {
-                Graphics.DrawEllipse(Pen, Xpos, Ypos, radius * 2, radius * 2);
+                Graphics.DrawEllipse(Pen, Xpos - radius, Ypos - radius, radius * 2, radius * 2);
             }
-            MoveTo(Xpos + radius, Ypos + radius);
         }
 
         /// <summary>
