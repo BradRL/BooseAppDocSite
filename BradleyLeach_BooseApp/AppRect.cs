@@ -8,21 +8,32 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
+    /// <summary>
+    /// Command class to draw a rectangle of specified width and height from the current position.
+    /// </summary>
     public class AppRect : CommandTwoParameters, ICommand
     {
-        protected int width, height;
-        public int Width { get => width; set => width = value; }
-        public int Height { get => height; set => height = value; }
-
+        /// <summary>
+        /// Blank constructor for factory use.
+        /// </summary>
         public AppRect() : base() { }
 
+        /// <summary>
+        /// Complete constructor, draws rectangle of specified width and height.
+        /// </summary>
+        /// <param name="c">Canvas which is being drawn on</param>
+        /// <param name="w">width of rectangle</param>
+        /// <param name="h">height of rectangle</param>
         public AppRect(Canvas c, int w, int h) : base(c)
         {
-            Width = w;
-            Height = h;
-            c.Rect(Width, Height, false);
+            c.Rect(w, h, false);
         }
 
+        /// <summary>
+        /// Validates that the command has the correct number of parameters and sets unprocessed values for later processing.
+        /// </summary>
+        /// <param name="Parameters">List of parameters ("width","height")</param>
+        /// <exception cref="CommandException">When invalid number of parameters given</exception>
         public override void CheckParameters(string[] Parameters)
         {
             if (Parameters.Length != 2)
@@ -36,9 +47,12 @@ namespace BradleyLeach_BooseApp
             }
         }
 
+        /// <summary>
+        /// Validates that parameters are integers and within valid range (> 0), then calls the rectangle draw method.
+        /// </summary>
+        /// <exception cref="CanvasException">When parameter(s) are non integer or less than 1</exception>
         public override void Execute()
         {
-            // Checks values are integers
             bool param1Valid = int.TryParse(param1unprocessed, out param1);
             bool param2Valid = int.TryParse(param2unprocessed, out param2);
 
@@ -54,7 +68,6 @@ namespace BradleyLeach_BooseApp
                 throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} not integer{plural}.");
             }
 
-            // Checks values are > 0
             param1Valid = param1 > 0;
             param2Valid = param2 > 0;
 

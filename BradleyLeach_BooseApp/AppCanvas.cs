@@ -10,7 +10,7 @@ namespace BradleyLeach_BooseApp
     /// <summary>
     /// This class is responsible for drawing on the canvas.
     /// </summary>
-    internal class AppCanvas : ICanvas
+    public class AppCanvas : ICanvas
     {
         /// <summary>
         /// The bitmap representing the canvas.

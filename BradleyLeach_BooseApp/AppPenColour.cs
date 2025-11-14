@@ -7,14 +7,33 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
+    /// <summary>
+    /// Command class to change the current pen colour to specified RGB values.
+    /// </summary>
     public class AppPenColour : CommandThreeParameters, ICommand
     {
+        /// <summary>
+        /// Blank constructor for factory use.
+        /// </summary>
         public AppPenColour() : base() { }
 
+        /// <summary>
+        /// Complete constructor, sets pen colour to specified RGB values.
+        /// </summary>
+        /// <param name="c">Canvas which is being executed on</param>
+        /// <param name="r">red RGB component</param>
+        /// <param name="g">green RGB component</param>
+        /// <param name="b">blue RGB component</param>
         public AppPenColour(Canvas c, int r, int g, int b) : base(c)
         {
             c.SetColour(r, g, b);
         }
+
+        /// <summary>
+        /// Validates that the command has the correct number of parameters and sets unprocessed values for later processing.
+        /// </summary>
+        /// <param name="Parameters">List of parameters ("r","g","b")</param>
+        /// <exception cref="CommandException">When invalid number of parameters given</exception>
         public override void CheckParameters(string[] Parameters)
         {
             if (Parameters.Length != 3)
@@ -29,9 +48,13 @@ namespace BradleyLeach_BooseApp
             }
         }
 
+
+        /// <summary>
+        /// Validates that parameters are integers and within valid range (0-255 inclusive), then calls the penColour method.
+        /// </summary>
+        /// <exception cref="CanvasException">When parameter(s) are non integer or not in range 0-255 inclusive</exception>
         public override void Execute()
         {
-            // Checks values are integers
             bool param1Valid = int.TryParse(param1unprocessed, out param1);
             bool param2Valid = int.TryParse(param2unprocessed, out param2);
             bool param3Valid = int.TryParse(param3unprocessed, out param3);
@@ -49,7 +72,6 @@ namespace BradleyLeach_BooseApp
                 throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} not integer{plural}.");
             }
 
-            // Checks values are in range 0-255
             param1Valid = param1 >= 0 && param1 <= 255;
             param2Valid = param2 >= 0 && param2 <= 255;
             param3Valid = param3 >= 0 && param3 <= 255;

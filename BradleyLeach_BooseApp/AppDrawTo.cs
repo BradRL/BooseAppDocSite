@@ -7,18 +7,32 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
+    /// <summary>
+    /// Command class to draw a line from the current position to a specified position.
+    /// </summary>
     public class AppDrawTo : CommandTwoParameters, ICommand
     {
-        protected int xPos, yPos;
+        /// <summary>
+        /// Blank constructor for factory use.
+        /// </summary>
         public AppDrawTo() : base() { }
 
+        /// <summary>
+        /// Complete constructor, draws a line to specified coordinates.
+        /// </summary>
+        /// <param name="c">Canvas which is being executed on</param>
+        /// <param name="xPos">Canvas xPos to move to</param>
+        /// <param name="yPos">Canvas yPos to move to</param>
         public AppDrawTo(Canvas c, int xPos, int yPos) : base(c) 
         { 
-            this.xPos = xPos;
-            this.yPos = yPos;
             c.DrawTo(xPos, yPos);
         }
 
+        /// <summary>
+        /// Validates that the command has the correct number of parameters and sets unprocessed values for later processing.
+        /// </summary>
+        /// <param name="Parameters">List of parameters ("xPos","yPos")</param>
+        /// <exception cref="CommandException">When invalid number of parameters given</exception>
         public override void CheckParameters(string[] Parameters)
         {
             if (Parameters.Length != 2)
@@ -32,9 +46,12 @@ namespace BradleyLeach_BooseApp
             }
         }
 
+        /// <summary>
+        /// Validates that parameters are integers and within valid range (>= 0), then calls the drawTo method.
+        /// </summary>
+        /// <exception cref="CanvasException">When parameter(s) are non integer or less than 0</exception>
         public override void Execute()
         {
-            // Checks values are integers
             bool param1Valid = int.TryParse(param1unprocessed, out param1);
             bool param2Valid = int.TryParse(param2unprocessed, out param2);
 
@@ -50,7 +67,6 @@ namespace BradleyLeach_BooseApp
                 throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} not integer{plural}.");
             }
 
-            // Checks values are >= 0
             param1Valid = param1 >= 0;
             param2Valid = param2 >= 0;
 

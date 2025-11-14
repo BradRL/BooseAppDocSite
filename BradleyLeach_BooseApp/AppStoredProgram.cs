@@ -7,13 +7,34 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
+    /// <summary>
+    /// Stored program responsible for storing commands and executing them, extends base StoredProgram class.
+    /// </summary>
     public class AppStoredProgram : StoredProgram
     {
+        /// <summary>
+        /// Stores runtime error messages encountered during program execution.
+        /// </summary>
         protected List<String> errorList;
+
+        /// <summary>
+        /// Public accessor for retrieving the list of runtime error messages.
+        /// </summary>
         public List<String> ErrorList { get => errorList; }
 
-        public AppStoredProgram(ICanvas c) : base(c) { }
+        /// <summary>
+        /// Constructor that initializes the stored program with a given canvas.
+        /// </summary>
+        /// <param name="c">Canvas being drawn to</param>
+        public AppStoredProgram(ICanvas c) : base(c) 
+        { 
+            this.errorList = new List<string>();
+        }
 
+        /// <summary>
+        /// Executes the stored program command by command, handling errors and detecting potential infinite loops.
+        /// </summary>
+        /// <exception cref="StoredProgramException">When an infinite loop or execution error occurs</exception>
         public override void Run()
         {
             errorList = new List<string>();
@@ -39,10 +60,6 @@ namespace BradleyLeach_BooseApp
                 try
                 {
                     commandsExecuted++;
-                    //if (commandsExecuted > 200)  // Soft limit on commands that can be executed
-                    //{
-                    //    throw new RestrictionException($"Commands execution limit exceeded: '{commandsExecuted}'");
-                    //}
 
                     ICommand nextCommand = (ICommand)NextCommand();
                     nextCommand.Execute();
