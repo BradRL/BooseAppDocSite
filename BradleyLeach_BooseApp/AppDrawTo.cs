@@ -18,14 +18,14 @@ namespace BradleyLeach_BooseApp
         public AppDrawTo() : base() { }
 
         /// <summary>
-        /// Complete constructor, draws a line to specified coordinates.
+        /// Complete constructor, draws a line to specified coordinates. Used for Unit Testing purposes.
         /// </summary>
         /// <param name="c">Canvas which is being executed on</param>
-        /// <param name="xPos">Canvas xPos to move to</param>
-        /// <param name="yPos">Canvas yPos to move to</param>
-        public AppDrawTo(Canvas c, int xPos, int yPos) : base(c) 
+        /// <param name="parameters">Parameters for the command</param>
+        public AppDrawTo(Canvas c, String[] parameters) : base(c) 
         { 
-            c.DrawTo(xPos, yPos);
+            CheckParameters(parameters);
+            Execute();
         }
 
         /// <summary>

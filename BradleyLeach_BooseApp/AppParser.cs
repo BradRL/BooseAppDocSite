@@ -11,7 +11,7 @@ namespace BradleyLeach_BooseApp
     /// <summary>
     /// Parser class to interpret BOOSE commands for the application.
     /// </summary>
-    internal class AppParser : IParser
+    public class AppParser : IParser
     {
         /// <summary>
         /// BOOSE command factory to create command instances from user input.

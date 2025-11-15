@@ -18,14 +18,14 @@ namespace BradleyLeach_BooseApp
         public AppMoveTo() : base() { }
 
         /// <summary>
-        /// Complete constructor, moves to specified coordinates.
+        /// Complete constructor, moves drawing position to specified coordinates. Used for Unit Testing purposes.
         /// </summary>
         /// <param name="c">Canvas which is being executed on</param>
-        /// <param name="xPos">Canvas xPos to move to</param>
-        /// <param name="yPos">Canvas yPos to move to</param>
-        public AppMoveTo(Canvas c, int xPos, int yPos) : base(c)
+        /// <param name="parameters">Parameters for the command</param>
+        public AppMoveTo(Canvas c, String[] parameters) : base(c)
         {
-            c.MoveTo(xPos, yPos);
+            CheckParameters(parameters);
+            Execute();
         }
 
         /// <summary>
