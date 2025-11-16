@@ -1,0 +1,833 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: BradleyLeach_BooseApp
+  name: BradleyLeach_BooseApp
+  href: api/BradleyLeach_BooseApp.html
+  commentId: N:BradleyLeach_BooseApp
+  fullName: BradleyLeach_BooseApp
+  nameWithType: BradleyLeach_BooseApp
+- uid: BradleyLeach_BooseApp.AppCanvas
+  name: AppCanvas
+  href: api/BradleyLeach_BooseApp.AppCanvas.html
+  commentId: T:BradleyLeach_BooseApp.AppCanvas
+  fullName: BradleyLeach_BooseApp.AppCanvas
+  nameWithType: AppCanvas
+- uid: BradleyLeach_BooseApp.AppCanvas.#ctor(System.Int32,System.Int32)
+  name: AppCanvas(int, int)
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas__ctor_System_Int32_System_Int32_
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.#ctor(System.Int32,System.Int32)
+  name.vb: New(Integer, Integer)
+  fullName: BradleyLeach_BooseApp.AppCanvas.AppCanvas(int, int)
+  fullName.vb: BradleyLeach_BooseApp.AppCanvas.New(Integer, Integer)
+  nameWithType: AppCanvas.AppCanvas(int, int)
+  nameWithType.vb: AppCanvas.New(Integer, Integer)
+- uid: BradleyLeach_BooseApp.AppCanvas.#ctor*
+  name: AppCanvas
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas__ctor_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BradleyLeach_BooseApp.AppCanvas.AppCanvas
+  fullName.vb: BradleyLeach_BooseApp.AppCanvas.New
+  nameWithType: AppCanvas.AppCanvas
+  nameWithType.vb: AppCanvas.New
+- uid: BradleyLeach_BooseApp.AppCanvas.Circle(System.Int32,System.Boolean)
+  name: Circle(int, bool)
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Circle_System_Int32_System_Boolean_
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.Circle(System.Int32,System.Boolean)
+  name.vb: Circle(Integer, Boolean)
+  fullName: BradleyLeach_BooseApp.AppCanvas.Circle(int, bool)
+  fullName.vb: BradleyLeach_BooseApp.AppCanvas.Circle(Integer, Boolean)
+  nameWithType: AppCanvas.Circle(int, bool)
+  nameWithType.vb: AppCanvas.Circle(Integer, Boolean)
+- uid: BradleyLeach_BooseApp.AppCanvas.Circle*
+  name: Circle
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Circle_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Circle
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.Circle
+  nameWithType: AppCanvas.Circle
+- uid: BradleyLeach_BooseApp.AppCanvas.Clear
+  name: Clear()
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Clear
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.Clear
+  fullName: BradleyLeach_BooseApp.AppCanvas.Clear()
+  nameWithType: AppCanvas.Clear()
+- uid: BradleyLeach_BooseApp.AppCanvas.Clear*
+  name: Clear
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Clear_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Clear
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.Clear
+  nameWithType: AppCanvas.Clear
+- uid: BradleyLeach_BooseApp.AppCanvas.DrawTo(System.Int32,System.Int32)
+  name: DrawTo(int, int)
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_DrawTo_System_Int32_System_Int32_
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.DrawTo(System.Int32,System.Int32)
+  name.vb: DrawTo(Integer, Integer)
+  fullName: BradleyLeach_BooseApp.AppCanvas.DrawTo(int, int)
+  fullName.vb: BradleyLeach_BooseApp.AppCanvas.DrawTo(Integer, Integer)
+  nameWithType: AppCanvas.DrawTo(int, int)
+  nameWithType.vb: AppCanvas.DrawTo(Integer, Integer)
+- uid: BradleyLeach_BooseApp.AppCanvas.DrawTo*
+  name: DrawTo
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_DrawTo_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.DrawTo
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.DrawTo
+  nameWithType: AppCanvas.DrawTo
+- uid: BradleyLeach_BooseApp.AppCanvas.MoveTo(System.Int32,System.Int32)
+  name: MoveTo(int, int)
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_MoveTo_System_Int32_System_Int32_
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.MoveTo(System.Int32,System.Int32)
+  name.vb: MoveTo(Integer, Integer)
+  fullName: BradleyLeach_BooseApp.AppCanvas.MoveTo(int, int)
+  fullName.vb: BradleyLeach_BooseApp.AppCanvas.MoveTo(Integer, Integer)
+  nameWithType: AppCanvas.MoveTo(int, int)
+  nameWithType.vb: AppCanvas.MoveTo(Integer, Integer)
+- uid: BradleyLeach_BooseApp.AppCanvas.MoveTo*
+  name: MoveTo
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_MoveTo_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.MoveTo
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.MoveTo
+  nameWithType: AppCanvas.MoveTo
+- uid: BradleyLeach_BooseApp.AppCanvas.PenColour
+  name: PenColour
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_PenColour
+  commentId: P:BradleyLeach_BooseApp.AppCanvas.PenColour
+  fullName: BradleyLeach_BooseApp.AppCanvas.PenColour
+  nameWithType: AppCanvas.PenColour
+- uid: BradleyLeach_BooseApp.AppCanvas.PenColour*
+  name: PenColour
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_PenColour_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.PenColour
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.PenColour
+  nameWithType: AppCanvas.PenColour
+- uid: BradleyLeach_BooseApp.AppCanvas.Rect(System.Int32,System.Int32,System.Boolean)
+  name: Rect(int, int, bool)
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Rect_System_Int32_System_Int32_System_Boolean_
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.Rect(System.Int32,System.Int32,System.Boolean)
+  name.vb: Rect(Integer, Integer, Boolean)
+  fullName: BradleyLeach_BooseApp.AppCanvas.Rect(int, int, bool)
+  fullName.vb: BradleyLeach_BooseApp.AppCanvas.Rect(Integer, Integer, Boolean)
+  nameWithType: AppCanvas.Rect(int, int, bool)
+  nameWithType.vb: AppCanvas.Rect(Integer, Integer, Boolean)
+- uid: BradleyLeach_BooseApp.AppCanvas.Rect*
+  name: Rect
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Rect_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Rect
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.Rect
+  nameWithType: AppCanvas.Rect
+- uid: BradleyLeach_BooseApp.AppCanvas.Reset
+  name: Reset()
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Reset
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.Reset
+  fullName: BradleyLeach_BooseApp.AppCanvas.Reset()
+  nameWithType: AppCanvas.Reset()
+- uid: BradleyLeach_BooseApp.AppCanvas.Reset*
+  name: Reset
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Reset_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Reset
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.Reset
+  nameWithType: AppCanvas.Reset
+- uid: BradleyLeach_BooseApp.AppCanvas.Set(System.Int32,System.Int32)
+  name: Set(int, int)
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Set_System_Int32_System_Int32_
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.Set(System.Int32,System.Int32)
+  name.vb: Set(Integer, Integer)
+  fullName: BradleyLeach_BooseApp.AppCanvas.Set(int, int)
+  fullName.vb: BradleyLeach_BooseApp.AppCanvas.Set(Integer, Integer)
+  nameWithType: AppCanvas.Set(int, int)
+  nameWithType.vb: AppCanvas.Set(Integer, Integer)
+- uid: BradleyLeach_BooseApp.AppCanvas.Set*
+  name: Set
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Set_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Set
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.Set
+  nameWithType: AppCanvas.Set
+- uid: BradleyLeach_BooseApp.AppCanvas.SetColour(System.Int32,System.Int32,System.Int32)
+  name: SetColour(int, int, int)
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_SetColour_System_Int32_System_Int32_System_Int32_
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.SetColour(System.Int32,System.Int32,System.Int32)
+  name.vb: SetColour(Integer, Integer, Integer)
+  fullName: BradleyLeach_BooseApp.AppCanvas.SetColour(int, int, int)
+  fullName.vb: BradleyLeach_BooseApp.AppCanvas.SetColour(Integer, Integer, Integer)
+  nameWithType: AppCanvas.SetColour(int, int, int)
+  nameWithType.vb: AppCanvas.SetColour(Integer, Integer, Integer)
+- uid: BradleyLeach_BooseApp.AppCanvas.SetColour*
+  name: SetColour
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_SetColour_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.SetColour
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.SetColour
+  nameWithType: AppCanvas.SetColour
+- uid: BradleyLeach_BooseApp.AppCanvas.Tri(System.Int32,System.Int32)
+  name: Tri(int, int)
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Tri_System_Int32_System_Int32_
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.Tri(System.Int32,System.Int32)
+  name.vb: Tri(Integer, Integer)
+  fullName: BradleyLeach_BooseApp.AppCanvas.Tri(int, int)
+  fullName.vb: BradleyLeach_BooseApp.AppCanvas.Tri(Integer, Integer)
+  nameWithType: AppCanvas.Tri(int, int)
+  nameWithType.vb: AppCanvas.Tri(Integer, Integer)
+- uid: BradleyLeach_BooseApp.AppCanvas.Tri*
+  name: Tri
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Tri_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Tri
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.Tri
+  nameWithType: AppCanvas.Tri
+- uid: BradleyLeach_BooseApp.AppCanvas.WriteText(System.String)
+  name: WriteText(string)
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_WriteText_System_String_
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.WriteText(System.String)
+  name.vb: WriteText(String)
+  fullName: BradleyLeach_BooseApp.AppCanvas.WriteText(string)
+  fullName.vb: BradleyLeach_BooseApp.AppCanvas.WriteText(String)
+  nameWithType: AppCanvas.WriteText(string)
+  nameWithType.vb: AppCanvas.WriteText(String)
+- uid: BradleyLeach_BooseApp.AppCanvas.WriteText*
+  name: WriteText
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_WriteText_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.WriteText
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.WriteText
+  nameWithType: AppCanvas.WriteText
+- uid: BradleyLeach_BooseApp.AppCanvas.Xpos
+  name: Xpos
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Xpos
+  commentId: P:BradleyLeach_BooseApp.AppCanvas.Xpos
+  fullName: BradleyLeach_BooseApp.AppCanvas.Xpos
+  nameWithType: AppCanvas.Xpos
+- uid: BradleyLeach_BooseApp.AppCanvas.Xpos*
+  name: Xpos
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Xpos_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Xpos
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.Xpos
+  nameWithType: AppCanvas.Xpos
+- uid: BradleyLeach_BooseApp.AppCanvas.Ypos
+  name: Ypos
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Ypos
+  commentId: P:BradleyLeach_BooseApp.AppCanvas.Ypos
+  fullName: BradleyLeach_BooseApp.AppCanvas.Ypos
+  nameWithType: AppCanvas.Ypos
+- uid: BradleyLeach_BooseApp.AppCanvas.Ypos*
+  name: Ypos
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Ypos_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Ypos
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.Ypos
+  nameWithType: AppCanvas.Ypos
+- uid: BradleyLeach_BooseApp.AppCanvas.backgroundColour
+  name: backgroundColour
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_backgroundColour
+  commentId: F:BradleyLeach_BooseApp.AppCanvas.backgroundColour
+  fullName: BradleyLeach_BooseApp.AppCanvas.backgroundColour
+  nameWithType: AppCanvas.backgroundColour
+- uid: BradleyLeach_BooseApp.AppCanvas.getBitmap
+  name: getBitmap()
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_getBitmap
+  commentId: M:BradleyLeach_BooseApp.AppCanvas.getBitmap
+  fullName: BradleyLeach_BooseApp.AppCanvas.getBitmap()
+  nameWithType: AppCanvas.getBitmap()
+- uid: BradleyLeach_BooseApp.AppCanvas.getBitmap*
+  name: getBitmap
+  href: api/BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_getBitmap_
+  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.getBitmap
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCanvas.getBitmap
+  nameWithType: AppCanvas.getBitmap
+- uid: BradleyLeach_BooseApp.AppCircle
+  name: AppCircle
+  href: api/BradleyLeach_BooseApp.AppCircle.html
+  commentId: T:BradleyLeach_BooseApp.AppCircle
+  fullName: BradleyLeach_BooseApp.AppCircle
+  nameWithType: AppCircle
+- uid: BradleyLeach_BooseApp.AppCircle.#ctor
+  name: AppCircle()
+  href: api/BradleyLeach_BooseApp.AppCircle.html#BradleyLeach_BooseApp_AppCircle__ctor
+  commentId: M:BradleyLeach_BooseApp.AppCircle.#ctor
+  name.vb: New()
+  fullName: BradleyLeach_BooseApp.AppCircle.AppCircle()
+  fullName.vb: BradleyLeach_BooseApp.AppCircle.New()
+  nameWithType: AppCircle.AppCircle()
+  nameWithType.vb: AppCircle.New()
+- uid: BradleyLeach_BooseApp.AppCircle.#ctor(BOOSE.Canvas,System.Int32)
+  name: AppCircle(Canvas, int)
+  href: api/BradleyLeach_BooseApp.AppCircle.html#BradleyLeach_BooseApp_AppCircle__ctor_BOOSE_Canvas_System_Int32_
+  commentId: M:BradleyLeach_BooseApp.AppCircle.#ctor(BOOSE.Canvas,System.Int32)
+  name.vb: New(Canvas, Integer)
+  fullName: BradleyLeach_BooseApp.AppCircle.AppCircle(BOOSE.Canvas, int)
+  fullName.vb: BradleyLeach_BooseApp.AppCircle.New(BOOSE.Canvas, Integer)
+  nameWithType: AppCircle.AppCircle(Canvas, int)
+  nameWithType.vb: AppCircle.New(Canvas, Integer)
+- uid: BradleyLeach_BooseApp.AppCircle.#ctor*
+  name: AppCircle
+  href: api/BradleyLeach_BooseApp.AppCircle.html#BradleyLeach_BooseApp_AppCircle__ctor_
+  commentId: Overload:BradleyLeach_BooseApp.AppCircle.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BradleyLeach_BooseApp.AppCircle.AppCircle
+  fullName.vb: BradleyLeach_BooseApp.AppCircle.New
+  nameWithType: AppCircle.AppCircle
+  nameWithType.vb: AppCircle.New
+- uid: BradleyLeach_BooseApp.AppCircle.CheckParameters(System.String[])
+  name: CheckParameters(string[])
+  href: api/BradleyLeach_BooseApp.AppCircle.html#BradleyLeach_BooseApp_AppCircle_CheckParameters_System_String___
+  commentId: M:BradleyLeach_BooseApp.AppCircle.CheckParameters(System.String[])
+  name.vb: CheckParameters(String())
+  fullName: BradleyLeach_BooseApp.AppCircle.CheckParameters(string[])
+  fullName.vb: BradleyLeach_BooseApp.AppCircle.CheckParameters(String())
+  nameWithType: AppCircle.CheckParameters(string[])
+  nameWithType.vb: AppCircle.CheckParameters(String())
+- uid: BradleyLeach_BooseApp.AppCircle.CheckParameters*
+  name: CheckParameters
+  href: api/BradleyLeach_BooseApp.AppCircle.html#BradleyLeach_BooseApp_AppCircle_CheckParameters_
+  commentId: Overload:BradleyLeach_BooseApp.AppCircle.CheckParameters
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCircle.CheckParameters
+  nameWithType: AppCircle.CheckParameters
+- uid: BradleyLeach_BooseApp.AppCircle.Execute
+  name: Execute()
+  href: api/BradleyLeach_BooseApp.AppCircle.html#BradleyLeach_BooseApp_AppCircle_Execute
+  commentId: M:BradleyLeach_BooseApp.AppCircle.Execute
+  fullName: BradleyLeach_BooseApp.AppCircle.Execute()
+  nameWithType: AppCircle.Execute()
+- uid: BradleyLeach_BooseApp.AppCircle.Execute*
+  name: Execute
+  href: api/BradleyLeach_BooseApp.AppCircle.html#BradleyLeach_BooseApp_AppCircle_Execute_
+  commentId: Overload:BradleyLeach_BooseApp.AppCircle.Execute
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCircle.Execute
+  nameWithType: AppCircle.Execute
+- uid: BradleyLeach_BooseApp.AppCommandFactory
+  name: AppCommandFactory
+  href: api/BradleyLeach_BooseApp.AppCommandFactory.html
+  commentId: T:BradleyLeach_BooseApp.AppCommandFactory
+  fullName: BradleyLeach_BooseApp.AppCommandFactory
+  nameWithType: AppCommandFactory
+- uid: BradleyLeach_BooseApp.AppCommandFactory.MakeCommand(System.String)
+  name: MakeCommand(string)
+  href: api/BradleyLeach_BooseApp.AppCommandFactory.html#BradleyLeach_BooseApp_AppCommandFactory_MakeCommand_System_String_
+  commentId: M:BradleyLeach_BooseApp.AppCommandFactory.MakeCommand(System.String)
+  name.vb: MakeCommand(String)
+  fullName: BradleyLeach_BooseApp.AppCommandFactory.MakeCommand(string)
+  fullName.vb: BradleyLeach_BooseApp.AppCommandFactory.MakeCommand(String)
+  nameWithType: AppCommandFactory.MakeCommand(string)
+  nameWithType.vb: AppCommandFactory.MakeCommand(String)
+- uid: BradleyLeach_BooseApp.AppCommandFactory.MakeCommand*
+  name: MakeCommand
+  href: api/BradleyLeach_BooseApp.AppCommandFactory.html#BradleyLeach_BooseApp_AppCommandFactory_MakeCommand_
+  commentId: Overload:BradleyLeach_BooseApp.AppCommandFactory.MakeCommand
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppCommandFactory.MakeCommand
+  nameWithType: AppCommandFactory.MakeCommand
+- uid: BradleyLeach_BooseApp.AppDrawTo
+  name: AppDrawTo
+  href: api/BradleyLeach_BooseApp.AppDrawTo.html
+  commentId: T:BradleyLeach_BooseApp.AppDrawTo
+  fullName: BradleyLeach_BooseApp.AppDrawTo
+  nameWithType: AppDrawTo
+- uid: BradleyLeach_BooseApp.AppDrawTo.#ctor
+  name: AppDrawTo()
+  href: api/BradleyLeach_BooseApp.AppDrawTo.html#BradleyLeach_BooseApp_AppDrawTo__ctor
+  commentId: M:BradleyLeach_BooseApp.AppDrawTo.#ctor
+  name.vb: New()
+  fullName: BradleyLeach_BooseApp.AppDrawTo.AppDrawTo()
+  fullName.vb: BradleyLeach_BooseApp.AppDrawTo.New()
+  nameWithType: AppDrawTo.AppDrawTo()
+  nameWithType.vb: AppDrawTo.New()
+- uid: BradleyLeach_BooseApp.AppDrawTo.#ctor(BOOSE.Canvas,System.String[])
+  name: AppDrawTo(Canvas, string[])
+  href: api/BradleyLeach_BooseApp.AppDrawTo.html#BradleyLeach_BooseApp_AppDrawTo__ctor_BOOSE_Canvas_System_String___
+  commentId: M:BradleyLeach_BooseApp.AppDrawTo.#ctor(BOOSE.Canvas,System.String[])
+  name.vb: New(Canvas, String())
+  fullName: BradleyLeach_BooseApp.AppDrawTo.AppDrawTo(BOOSE.Canvas, string[])
+  fullName.vb: BradleyLeach_BooseApp.AppDrawTo.New(BOOSE.Canvas, String())
+  nameWithType: AppDrawTo.AppDrawTo(Canvas, string[])
+  nameWithType.vb: AppDrawTo.New(Canvas, String())
+- uid: BradleyLeach_BooseApp.AppDrawTo.#ctor*
+  name: AppDrawTo
+  href: api/BradleyLeach_BooseApp.AppDrawTo.html#BradleyLeach_BooseApp_AppDrawTo__ctor_
+  commentId: Overload:BradleyLeach_BooseApp.AppDrawTo.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BradleyLeach_BooseApp.AppDrawTo.AppDrawTo
+  fullName.vb: BradleyLeach_BooseApp.AppDrawTo.New
+  nameWithType: AppDrawTo.AppDrawTo
+  nameWithType.vb: AppDrawTo.New
+- uid: BradleyLeach_BooseApp.AppDrawTo.CheckParameters(System.String[])
+  name: CheckParameters(string[])
+  href: api/BradleyLeach_BooseApp.AppDrawTo.html#BradleyLeach_BooseApp_AppDrawTo_CheckParameters_System_String___
+  commentId: M:BradleyLeach_BooseApp.AppDrawTo.CheckParameters(System.String[])
+  name.vb: CheckParameters(String())
+  fullName: BradleyLeach_BooseApp.AppDrawTo.CheckParameters(string[])
+  fullName.vb: BradleyLeach_BooseApp.AppDrawTo.CheckParameters(String())
+  nameWithType: AppDrawTo.CheckParameters(string[])
+  nameWithType.vb: AppDrawTo.CheckParameters(String())
+- uid: BradleyLeach_BooseApp.AppDrawTo.CheckParameters*
+  name: CheckParameters
+  href: api/BradleyLeach_BooseApp.AppDrawTo.html#BradleyLeach_BooseApp_AppDrawTo_CheckParameters_
+  commentId: Overload:BradleyLeach_BooseApp.AppDrawTo.CheckParameters
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppDrawTo.CheckParameters
+  nameWithType: AppDrawTo.CheckParameters
+- uid: BradleyLeach_BooseApp.AppDrawTo.Execute
+  name: Execute()
+  href: api/BradleyLeach_BooseApp.AppDrawTo.html#BradleyLeach_BooseApp_AppDrawTo_Execute
+  commentId: M:BradleyLeach_BooseApp.AppDrawTo.Execute
+  fullName: BradleyLeach_BooseApp.AppDrawTo.Execute()
+  nameWithType: AppDrawTo.Execute()
+- uid: BradleyLeach_BooseApp.AppDrawTo.Execute*
+  name: Execute
+  href: api/BradleyLeach_BooseApp.AppDrawTo.html#BradleyLeach_BooseApp_AppDrawTo_Execute_
+  commentId: Overload:BradleyLeach_BooseApp.AppDrawTo.Execute
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppDrawTo.Execute
+  nameWithType: AppDrawTo.Execute
+- uid: BradleyLeach_BooseApp.AppMoveTo
+  name: AppMoveTo
+  href: api/BradleyLeach_BooseApp.AppMoveTo.html
+  commentId: T:BradleyLeach_BooseApp.AppMoveTo
+  fullName: BradleyLeach_BooseApp.AppMoveTo
+  nameWithType: AppMoveTo
+- uid: BradleyLeach_BooseApp.AppMoveTo.#ctor
+  name: AppMoveTo()
+  href: api/BradleyLeach_BooseApp.AppMoveTo.html#BradleyLeach_BooseApp_AppMoveTo__ctor
+  commentId: M:BradleyLeach_BooseApp.AppMoveTo.#ctor
+  name.vb: New()
+  fullName: BradleyLeach_BooseApp.AppMoveTo.AppMoveTo()
+  fullName.vb: BradleyLeach_BooseApp.AppMoveTo.New()
+  nameWithType: AppMoveTo.AppMoveTo()
+  nameWithType.vb: AppMoveTo.New()
+- uid: BradleyLeach_BooseApp.AppMoveTo.#ctor(BOOSE.Canvas,System.String[])
+  name: AppMoveTo(Canvas, string[])
+  href: api/BradleyLeach_BooseApp.AppMoveTo.html#BradleyLeach_BooseApp_AppMoveTo__ctor_BOOSE_Canvas_System_String___
+  commentId: M:BradleyLeach_BooseApp.AppMoveTo.#ctor(BOOSE.Canvas,System.String[])
+  name.vb: New(Canvas, String())
+  fullName: BradleyLeach_BooseApp.AppMoveTo.AppMoveTo(BOOSE.Canvas, string[])
+  fullName.vb: BradleyLeach_BooseApp.AppMoveTo.New(BOOSE.Canvas, String())
+  nameWithType: AppMoveTo.AppMoveTo(Canvas, string[])
+  nameWithType.vb: AppMoveTo.New(Canvas, String())
+- uid: BradleyLeach_BooseApp.AppMoveTo.#ctor*
+  name: AppMoveTo
+  href: api/BradleyLeach_BooseApp.AppMoveTo.html#BradleyLeach_BooseApp_AppMoveTo__ctor_
+  commentId: Overload:BradleyLeach_BooseApp.AppMoveTo.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BradleyLeach_BooseApp.AppMoveTo.AppMoveTo
+  fullName.vb: BradleyLeach_BooseApp.AppMoveTo.New
+  nameWithType: AppMoveTo.AppMoveTo
+  nameWithType.vb: AppMoveTo.New
+- uid: BradleyLeach_BooseApp.AppMoveTo.CheckParameters(System.String[])
+  name: CheckParameters(string[])
+  href: api/BradleyLeach_BooseApp.AppMoveTo.html#BradleyLeach_BooseApp_AppMoveTo_CheckParameters_System_String___
+  commentId: M:BradleyLeach_BooseApp.AppMoveTo.CheckParameters(System.String[])
+  name.vb: CheckParameters(String())
+  fullName: BradleyLeach_BooseApp.AppMoveTo.CheckParameters(string[])
+  fullName.vb: BradleyLeach_BooseApp.AppMoveTo.CheckParameters(String())
+  nameWithType: AppMoveTo.CheckParameters(string[])
+  nameWithType.vb: AppMoveTo.CheckParameters(String())
+- uid: BradleyLeach_BooseApp.AppMoveTo.CheckParameters*
+  name: CheckParameters
+  href: api/BradleyLeach_BooseApp.AppMoveTo.html#BradleyLeach_BooseApp_AppMoveTo_CheckParameters_
+  commentId: Overload:BradleyLeach_BooseApp.AppMoveTo.CheckParameters
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppMoveTo.CheckParameters
+  nameWithType: AppMoveTo.CheckParameters
+- uid: BradleyLeach_BooseApp.AppMoveTo.Execute
+  name: Execute()
+  href: api/BradleyLeach_BooseApp.AppMoveTo.html#BradleyLeach_BooseApp_AppMoveTo_Execute
+  commentId: M:BradleyLeach_BooseApp.AppMoveTo.Execute
+  fullName: BradleyLeach_BooseApp.AppMoveTo.Execute()
+  nameWithType: AppMoveTo.Execute()
+- uid: BradleyLeach_BooseApp.AppMoveTo.Execute*
+  name: Execute
+  href: api/BradleyLeach_BooseApp.AppMoveTo.html#BradleyLeach_BooseApp_AppMoveTo_Execute_
+  commentId: Overload:BradleyLeach_BooseApp.AppMoveTo.Execute
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppMoveTo.Execute
+  nameWithType: AppMoveTo.Execute
+- uid: BradleyLeach_BooseApp.AppNoCommand
+  name: AppNoCommand
+  href: api/BradleyLeach_BooseApp.AppNoCommand.html
+  commentId: T:BradleyLeach_BooseApp.AppNoCommand
+  fullName: BradleyLeach_BooseApp.AppNoCommand
+  nameWithType: AppNoCommand
+- uid: BradleyLeach_BooseApp.AppNoCommand.CheckParameters(System.String[])
+  name: CheckParameters(string[])
+  href: api/BradleyLeach_BooseApp.AppNoCommand.html#BradleyLeach_BooseApp_AppNoCommand_CheckParameters_System_String___
+  commentId: M:BradleyLeach_BooseApp.AppNoCommand.CheckParameters(System.String[])
+  name.vb: CheckParameters(String())
+  fullName: BradleyLeach_BooseApp.AppNoCommand.CheckParameters(string[])
+  fullName.vb: BradleyLeach_BooseApp.AppNoCommand.CheckParameters(String())
+  nameWithType: AppNoCommand.CheckParameters(string[])
+  nameWithType.vb: AppNoCommand.CheckParameters(String())
+- uid: BradleyLeach_BooseApp.AppNoCommand.CheckParameters*
+  name: CheckParameters
+  href: api/BradleyLeach_BooseApp.AppNoCommand.html#BradleyLeach_BooseApp_AppNoCommand_CheckParameters_
+  commentId: Overload:BradleyLeach_BooseApp.AppNoCommand.CheckParameters
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppNoCommand.CheckParameters
+  nameWithType: AppNoCommand.CheckParameters
+- uid: BradleyLeach_BooseApp.AppNoCommand.Compile
+  name: Compile()
+  href: api/BradleyLeach_BooseApp.AppNoCommand.html#BradleyLeach_BooseApp_AppNoCommand_Compile
+  commentId: M:BradleyLeach_BooseApp.AppNoCommand.Compile
+  fullName: BradleyLeach_BooseApp.AppNoCommand.Compile()
+  nameWithType: AppNoCommand.Compile()
+- uid: BradleyLeach_BooseApp.AppNoCommand.Compile*
+  name: Compile
+  href: api/BradleyLeach_BooseApp.AppNoCommand.html#BradleyLeach_BooseApp_AppNoCommand_Compile_
+  commentId: Overload:BradleyLeach_BooseApp.AppNoCommand.Compile
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppNoCommand.Compile
+  nameWithType: AppNoCommand.Compile
+- uid: BradleyLeach_BooseApp.AppNoCommand.Execute
+  name: Execute()
+  href: api/BradleyLeach_BooseApp.AppNoCommand.html#BradleyLeach_BooseApp_AppNoCommand_Execute
+  commentId: M:BradleyLeach_BooseApp.AppNoCommand.Execute
+  fullName: BradleyLeach_BooseApp.AppNoCommand.Execute()
+  nameWithType: AppNoCommand.Execute()
+- uid: BradleyLeach_BooseApp.AppNoCommand.Execute*
+  name: Execute
+  href: api/BradleyLeach_BooseApp.AppNoCommand.html#BradleyLeach_BooseApp_AppNoCommand_Execute_
+  commentId: Overload:BradleyLeach_BooseApp.AppNoCommand.Execute
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppNoCommand.Execute
+  nameWithType: AppNoCommand.Execute
+- uid: BradleyLeach_BooseApp.AppNoCommand.Set(BOOSE.StoredProgram,System.String)
+  name: Set(StoredProgram, string)
+  href: api/BradleyLeach_BooseApp.AppNoCommand.html#BradleyLeach_BooseApp_AppNoCommand_Set_BOOSE_StoredProgram_System_String_
+  commentId: M:BradleyLeach_BooseApp.AppNoCommand.Set(BOOSE.StoredProgram,System.String)
+  name.vb: Set(StoredProgram, String)
+  fullName: BradleyLeach_BooseApp.AppNoCommand.Set(BOOSE.StoredProgram, string)
+  fullName.vb: BradleyLeach_BooseApp.AppNoCommand.Set(BOOSE.StoredProgram, String)
+  nameWithType: AppNoCommand.Set(StoredProgram, string)
+  nameWithType.vb: AppNoCommand.Set(StoredProgram, String)
+- uid: BradleyLeach_BooseApp.AppNoCommand.Set*
+  name: Set
+  href: api/BradleyLeach_BooseApp.AppNoCommand.html#BradleyLeach_BooseApp_AppNoCommand_Set_
+  commentId: Overload:BradleyLeach_BooseApp.AppNoCommand.Set
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppNoCommand.Set
+  nameWithType: AppNoCommand.Set
+- uid: BradleyLeach_BooseApp.AppParser
+  name: AppParser
+  href: api/BradleyLeach_BooseApp.AppParser.html
+  commentId: T:BradleyLeach_BooseApp.AppParser
+  fullName: BradleyLeach_BooseApp.AppParser
+  nameWithType: AppParser
+- uid: BradleyLeach_BooseApp.AppParser.#ctor(BradleyLeach_BooseApp.AppCommandFactory,BradleyLeach_BooseApp.AppStoredProgram)
+  name: AppParser(AppCommandFactory, AppStoredProgram)
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser__ctor_BradleyLeach_BooseApp_AppCommandFactory_BradleyLeach_BooseApp_AppStoredProgram_
+  commentId: M:BradleyLeach_BooseApp.AppParser.#ctor(BradleyLeach_BooseApp.AppCommandFactory,BradleyLeach_BooseApp.AppStoredProgram)
+  name.vb: New(AppCommandFactory, AppStoredProgram)
+  fullName: BradleyLeach_BooseApp.AppParser.AppParser(BradleyLeach_BooseApp.AppCommandFactory, BradleyLeach_BooseApp.AppStoredProgram)
+  fullName.vb: BradleyLeach_BooseApp.AppParser.New(BradleyLeach_BooseApp.AppCommandFactory, BradleyLeach_BooseApp.AppStoredProgram)
+  nameWithType: AppParser.AppParser(AppCommandFactory, AppStoredProgram)
+  nameWithType.vb: AppParser.New(AppCommandFactory, AppStoredProgram)
+- uid: BradleyLeach_BooseApp.AppParser.#ctor*
+  name: AppParser
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser__ctor_
+  commentId: Overload:BradleyLeach_BooseApp.AppParser.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BradleyLeach_BooseApp.AppParser.AppParser
+  fullName.vb: BradleyLeach_BooseApp.AppParser.New
+  nameWithType: AppParser.AppParser
+  nameWithType.vb: AppParser.New
+- uid: BradleyLeach_BooseApp.AppParser.ErrorList
+  name: ErrorList
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser_ErrorList
+  commentId: P:BradleyLeach_BooseApp.AppParser.ErrorList
+  fullName: BradleyLeach_BooseApp.AppParser.ErrorList
+  nameWithType: AppParser.ErrorList
+- uid: BradleyLeach_BooseApp.AppParser.ErrorList*
+  name: ErrorList
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser_ErrorList_
+  commentId: Overload:BradleyLeach_BooseApp.AppParser.ErrorList
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppParser.ErrorList
+  nameWithType: AppParser.ErrorList
+- uid: BradleyLeach_BooseApp.AppParser.Factory
+  name: Factory
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser_Factory
+  commentId: F:BradleyLeach_BooseApp.AppParser.Factory
+  fullName: BradleyLeach_BooseApp.AppParser.Factory
+  nameWithType: AppParser.Factory
+- uid: BradleyLeach_BooseApp.AppParser.ParseCommand(System.String)
+  name: ParseCommand(string)
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser_ParseCommand_System_String_
+  commentId: M:BradleyLeach_BooseApp.AppParser.ParseCommand(System.String)
+  name.vb: ParseCommand(String)
+  fullName: BradleyLeach_BooseApp.AppParser.ParseCommand(string)
+  fullName.vb: BradleyLeach_BooseApp.AppParser.ParseCommand(String)
+  nameWithType: AppParser.ParseCommand(string)
+  nameWithType.vb: AppParser.ParseCommand(String)
+- uid: BradleyLeach_BooseApp.AppParser.ParseCommand*
+  name: ParseCommand
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser_ParseCommand_
+  commentId: Overload:BradleyLeach_BooseApp.AppParser.ParseCommand
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppParser.ParseCommand
+  nameWithType: AppParser.ParseCommand
+- uid: BradleyLeach_BooseApp.AppParser.ParseProgram(System.String)
+  name: ParseProgram(string)
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser_ParseProgram_System_String_
+  commentId: M:BradleyLeach_BooseApp.AppParser.ParseProgram(System.String)
+  name.vb: ParseProgram(String)
+  fullName: BradleyLeach_BooseApp.AppParser.ParseProgram(string)
+  fullName.vb: BradleyLeach_BooseApp.AppParser.ParseProgram(String)
+  nameWithType: AppParser.ParseProgram(string)
+  nameWithType.vb: AppParser.ParseProgram(String)
+- uid: BradleyLeach_BooseApp.AppParser.ParseProgram*
+  name: ParseProgram
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser_ParseProgram_
+  commentId: Overload:BradleyLeach_BooseApp.AppParser.ParseProgram
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppParser.ParseProgram
+  nameWithType: AppParser.ParseProgram
+- uid: BradleyLeach_BooseApp.AppParser.Program
+  name: Program
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser_Program
+  commentId: F:BradleyLeach_BooseApp.AppParser.Program
+  fullName: BradleyLeach_BooseApp.AppParser.Program
+  nameWithType: AppParser.Program
+- uid: BradleyLeach_BooseApp.AppParser.errorList
+  name: errorList
+  href: api/BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser_errorList
+  commentId: F:BradleyLeach_BooseApp.AppParser.errorList
+  fullName: BradleyLeach_BooseApp.AppParser.errorList
+  nameWithType: AppParser.errorList
+- uid: BradleyLeach_BooseApp.AppPenColour
+  name: AppPenColour
+  href: api/BradleyLeach_BooseApp.AppPenColour.html
+  commentId: T:BradleyLeach_BooseApp.AppPenColour
+  fullName: BradleyLeach_BooseApp.AppPenColour
+  nameWithType: AppPenColour
+- uid: BradleyLeach_BooseApp.AppPenColour.#ctor
+  name: AppPenColour()
+  href: api/BradleyLeach_BooseApp.AppPenColour.html#BradleyLeach_BooseApp_AppPenColour__ctor
+  commentId: M:BradleyLeach_BooseApp.AppPenColour.#ctor
+  name.vb: New()
+  fullName: BradleyLeach_BooseApp.AppPenColour.AppPenColour()
+  fullName.vb: BradleyLeach_BooseApp.AppPenColour.New()
+  nameWithType: AppPenColour.AppPenColour()
+  nameWithType.vb: AppPenColour.New()
+- uid: BradleyLeach_BooseApp.AppPenColour.#ctor(BOOSE.Canvas,System.Int32,System.Int32,System.Int32)
+  name: AppPenColour(Canvas, int, int, int)
+  href: api/BradleyLeach_BooseApp.AppPenColour.html#BradleyLeach_BooseApp_AppPenColour__ctor_BOOSE_Canvas_System_Int32_System_Int32_System_Int32_
+  commentId: M:BradleyLeach_BooseApp.AppPenColour.#ctor(BOOSE.Canvas,System.Int32,System.Int32,System.Int32)
+  name.vb: New(Canvas, Integer, Integer, Integer)
+  fullName: BradleyLeach_BooseApp.AppPenColour.AppPenColour(BOOSE.Canvas, int, int, int)
+  fullName.vb: BradleyLeach_BooseApp.AppPenColour.New(BOOSE.Canvas, Integer, Integer, Integer)
+  nameWithType: AppPenColour.AppPenColour(Canvas, int, int, int)
+  nameWithType.vb: AppPenColour.New(Canvas, Integer, Integer, Integer)
+- uid: BradleyLeach_BooseApp.AppPenColour.#ctor*
+  name: AppPenColour
+  href: api/BradleyLeach_BooseApp.AppPenColour.html#BradleyLeach_BooseApp_AppPenColour__ctor_
+  commentId: Overload:BradleyLeach_BooseApp.AppPenColour.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BradleyLeach_BooseApp.AppPenColour.AppPenColour
+  fullName.vb: BradleyLeach_BooseApp.AppPenColour.New
+  nameWithType: AppPenColour.AppPenColour
+  nameWithType.vb: AppPenColour.New
+- uid: BradleyLeach_BooseApp.AppPenColour.CheckParameters(System.String[])
+  name: CheckParameters(string[])
+  href: api/BradleyLeach_BooseApp.AppPenColour.html#BradleyLeach_BooseApp_AppPenColour_CheckParameters_System_String___
+  commentId: M:BradleyLeach_BooseApp.AppPenColour.CheckParameters(System.String[])
+  name.vb: CheckParameters(String())
+  fullName: BradleyLeach_BooseApp.AppPenColour.CheckParameters(string[])
+  fullName.vb: BradleyLeach_BooseApp.AppPenColour.CheckParameters(String())
+  nameWithType: AppPenColour.CheckParameters(string[])
+  nameWithType.vb: AppPenColour.CheckParameters(String())
+- uid: BradleyLeach_BooseApp.AppPenColour.CheckParameters*
+  name: CheckParameters
+  href: api/BradleyLeach_BooseApp.AppPenColour.html#BradleyLeach_BooseApp_AppPenColour_CheckParameters_
+  commentId: Overload:BradleyLeach_BooseApp.AppPenColour.CheckParameters
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppPenColour.CheckParameters
+  nameWithType: AppPenColour.CheckParameters
+- uid: BradleyLeach_BooseApp.AppPenColour.Execute
+  name: Execute()
+  href: api/BradleyLeach_BooseApp.AppPenColour.html#BradleyLeach_BooseApp_AppPenColour_Execute
+  commentId: M:BradleyLeach_BooseApp.AppPenColour.Execute
+  fullName: BradleyLeach_BooseApp.AppPenColour.Execute()
+  nameWithType: AppPenColour.Execute()
+- uid: BradleyLeach_BooseApp.AppPenColour.Execute*
+  name: Execute
+  href: api/BradleyLeach_BooseApp.AppPenColour.html#BradleyLeach_BooseApp_AppPenColour_Execute_
+  commentId: Overload:BradleyLeach_BooseApp.AppPenColour.Execute
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppPenColour.Execute
+  nameWithType: AppPenColour.Execute
+- uid: BradleyLeach_BooseApp.AppRect
+  name: AppRect
+  href: api/BradleyLeach_BooseApp.AppRect.html
+  commentId: T:BradleyLeach_BooseApp.AppRect
+  fullName: BradleyLeach_BooseApp.AppRect
+  nameWithType: AppRect
+- uid: BradleyLeach_BooseApp.AppRect.#ctor
+  name: AppRect()
+  href: api/BradleyLeach_BooseApp.AppRect.html#BradleyLeach_BooseApp_AppRect__ctor
+  commentId: M:BradleyLeach_BooseApp.AppRect.#ctor
+  name.vb: New()
+  fullName: BradleyLeach_BooseApp.AppRect.AppRect()
+  fullName.vb: BradleyLeach_BooseApp.AppRect.New()
+  nameWithType: AppRect.AppRect()
+  nameWithType.vb: AppRect.New()
+- uid: BradleyLeach_BooseApp.AppRect.#ctor(BOOSE.Canvas,System.Int32,System.Int32)
+  name: AppRect(Canvas, int, int)
+  href: api/BradleyLeach_BooseApp.AppRect.html#BradleyLeach_BooseApp_AppRect__ctor_BOOSE_Canvas_System_Int32_System_Int32_
+  commentId: M:BradleyLeach_BooseApp.AppRect.#ctor(BOOSE.Canvas,System.Int32,System.Int32)
+  name.vb: New(Canvas, Integer, Integer)
+  fullName: BradleyLeach_BooseApp.AppRect.AppRect(BOOSE.Canvas, int, int)
+  fullName.vb: BradleyLeach_BooseApp.AppRect.New(BOOSE.Canvas, Integer, Integer)
+  nameWithType: AppRect.AppRect(Canvas, int, int)
+  nameWithType.vb: AppRect.New(Canvas, Integer, Integer)
+- uid: BradleyLeach_BooseApp.AppRect.#ctor*
+  name: AppRect
+  href: api/BradleyLeach_BooseApp.AppRect.html#BradleyLeach_BooseApp_AppRect__ctor_
+  commentId: Overload:BradleyLeach_BooseApp.AppRect.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BradleyLeach_BooseApp.AppRect.AppRect
+  fullName.vb: BradleyLeach_BooseApp.AppRect.New
+  nameWithType: AppRect.AppRect
+  nameWithType.vb: AppRect.New
+- uid: BradleyLeach_BooseApp.AppRect.CheckParameters(System.String[])
+  name: CheckParameters(string[])
+  href: api/BradleyLeach_BooseApp.AppRect.html#BradleyLeach_BooseApp_AppRect_CheckParameters_System_String___
+  commentId: M:BradleyLeach_BooseApp.AppRect.CheckParameters(System.String[])
+  name.vb: CheckParameters(String())
+  fullName: BradleyLeach_BooseApp.AppRect.CheckParameters(string[])
+  fullName.vb: BradleyLeach_BooseApp.AppRect.CheckParameters(String())
+  nameWithType: AppRect.CheckParameters(string[])
+  nameWithType.vb: AppRect.CheckParameters(String())
+- uid: BradleyLeach_BooseApp.AppRect.CheckParameters*
+  name: CheckParameters
+  href: api/BradleyLeach_BooseApp.AppRect.html#BradleyLeach_BooseApp_AppRect_CheckParameters_
+  commentId: Overload:BradleyLeach_BooseApp.AppRect.CheckParameters
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppRect.CheckParameters
+  nameWithType: AppRect.CheckParameters
+- uid: BradleyLeach_BooseApp.AppRect.Execute
+  name: Execute()
+  href: api/BradleyLeach_BooseApp.AppRect.html#BradleyLeach_BooseApp_AppRect_Execute
+  commentId: M:BradleyLeach_BooseApp.AppRect.Execute
+  fullName: BradleyLeach_BooseApp.AppRect.Execute()
+  nameWithType: AppRect.Execute()
+- uid: BradleyLeach_BooseApp.AppRect.Execute*
+  name: Execute
+  href: api/BradleyLeach_BooseApp.AppRect.html#BradleyLeach_BooseApp_AppRect_Execute_
+  commentId: Overload:BradleyLeach_BooseApp.AppRect.Execute
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppRect.Execute
+  nameWithType: AppRect.Execute
+- uid: BradleyLeach_BooseApp.AppStoredProgram
+  name: AppStoredProgram
+  href: api/BradleyLeach_BooseApp.AppStoredProgram.html
+  commentId: T:BradleyLeach_BooseApp.AppStoredProgram
+  fullName: BradleyLeach_BooseApp.AppStoredProgram
+  nameWithType: AppStoredProgram
+- uid: BradleyLeach_BooseApp.AppStoredProgram.#ctor(BOOSE.ICanvas)
+  name: AppStoredProgram(ICanvas)
+  href: api/BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram__ctor_BOOSE_ICanvas_
+  commentId: M:BradleyLeach_BooseApp.AppStoredProgram.#ctor(BOOSE.ICanvas)
+  name.vb: New(ICanvas)
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.AppStoredProgram(BOOSE.ICanvas)
+  fullName.vb: BradleyLeach_BooseApp.AppStoredProgram.New(BOOSE.ICanvas)
+  nameWithType: AppStoredProgram.AppStoredProgram(ICanvas)
+  nameWithType.vb: AppStoredProgram.New(ICanvas)
+- uid: BradleyLeach_BooseApp.AppStoredProgram.#ctor*
+  name: AppStoredProgram
+  href: api/BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram__ctor_
+  commentId: Overload:BradleyLeach_BooseApp.AppStoredProgram.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.AppStoredProgram
+  fullName.vb: BradleyLeach_BooseApp.AppStoredProgram.New
+  nameWithType: AppStoredProgram.AppStoredProgram
+  nameWithType.vb: AppStoredProgram.New
+- uid: BradleyLeach_BooseApp.AppStoredProgram.ErrorList
+  name: ErrorList
+  href: api/BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram_ErrorList
+  commentId: P:BradleyLeach_BooseApp.AppStoredProgram.ErrorList
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.ErrorList
+  nameWithType: AppStoredProgram.ErrorList
+- uid: BradleyLeach_BooseApp.AppStoredProgram.ErrorList*
+  name: ErrorList
+  href: api/BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram_ErrorList_
+  commentId: Overload:BradleyLeach_BooseApp.AppStoredProgram.ErrorList
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.ErrorList
+  nameWithType: AppStoredProgram.ErrorList
+- uid: BradleyLeach_BooseApp.AppStoredProgram.Run
+  name: Run()
+  href: api/BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram_Run
+  commentId: M:BradleyLeach_BooseApp.AppStoredProgram.Run
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.Run()
+  nameWithType: AppStoredProgram.Run()
+- uid: BradleyLeach_BooseApp.AppStoredProgram.Run*
+  name: Run
+  href: api/BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram_Run_
+  commentId: Overload:BradleyLeach_BooseApp.AppStoredProgram.Run
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.Run
+  nameWithType: AppStoredProgram.Run
+- uid: BradleyLeach_BooseApp.AppStoredProgram.errorList
+  name: errorList
+  href: api/BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram_errorList
+  commentId: F:BradleyLeach_BooseApp.AppStoredProgram.errorList
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.errorList
+  nameWithType: AppStoredProgram.errorList
+- uid: BradleyLeach_BooseApp.Form1
+  name: Form1
+  href: api/BradleyLeach_BooseApp.Form1.html
+  commentId: T:BradleyLeach_BooseApp.Form1
+  fullName: BradleyLeach_BooseApp.Form1
+  nameWithType: Form1
+- uid: BradleyLeach_BooseApp.Form1.#ctor
+  name: Form1()
+  href: api/BradleyLeach_BooseApp.Form1.html#BradleyLeach_BooseApp_Form1__ctor
+  commentId: M:BradleyLeach_BooseApp.Form1.#ctor
+  name.vb: New()
+  fullName: BradleyLeach_BooseApp.Form1.Form1()
+  fullName.vb: BradleyLeach_BooseApp.Form1.New()
+  nameWithType: Form1.Form1()
+  nameWithType.vb: Form1.New()
+- uid: BradleyLeach_BooseApp.Form1.#ctor*
+  name: Form1
+  href: api/BradleyLeach_BooseApp.Form1.html#BradleyLeach_BooseApp_Form1__ctor_
+  commentId: Overload:BradleyLeach_BooseApp.Form1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BradleyLeach_BooseApp.Form1.Form1
+  fullName.vb: BradleyLeach_BooseApp.Form1.New
+  nameWithType: Form1.Form1
+  nameWithType.vb: Form1.New
+- uid: BradleyLeach_BooseApp.Form1.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/BradleyLeach_BooseApp.Form1.html#BradleyLeach_BooseApp_Form1_Dispose_System_Boolean_
+  commentId: M:BradleyLeach_BooseApp.Form1.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: BradleyLeach_BooseApp.Form1.Dispose(bool)
+  fullName.vb: BradleyLeach_BooseApp.Form1.Dispose(Boolean)
+  nameWithType: Form1.Dispose(bool)
+  nameWithType.vb: Form1.Dispose(Boolean)
+- uid: BradleyLeach_BooseApp.Form1.Dispose*
+  name: Dispose
+  href: api/BradleyLeach_BooseApp.Form1.html#BradleyLeach_BooseApp_Form1_Dispose_
+  commentId: Overload:BradleyLeach_BooseApp.Form1.Dispose
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.Form1.Dispose
+  nameWithType: Form1.Dispose

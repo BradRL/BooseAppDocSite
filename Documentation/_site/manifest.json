@@ -1,0 +1,256 @@
+{
+  "source_base_path": "C:/Users/mrble/OneDrive - Leeds Beckett University/University Files/Year-3/ASE/ase-boose-assignment-BradRL/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.AppCanvas.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.AppCanvas.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.AppCanvas",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.AppCanvas.yml\" sourcestartlinenumber=\"1\">This class is responsible for drawing on the canvas.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.AppCircle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.AppCircle.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.AppCircle",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.AppCircle.yml\" sourcestartlinenumber=\"1\">Command class to draw circle centered at the current position with specified radius.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.AppCommandFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.AppCommandFactory.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.AppCommandFactory",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.AppCommandFactory.yml\" sourcestartlinenumber=\"1\">Factory class to create BOOSE application specific commands.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.AppDrawTo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.AppDrawTo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.AppDrawTo",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.AppDrawTo.yml\" sourcestartlinenumber=\"1\">Command class to draw a line from the current position to a specified position.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.AppMoveTo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.AppMoveTo.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.AppMoveTo",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.AppMoveTo.yml\" sourcestartlinenumber=\"1\">Command class to move the current drawing position to a specified position.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.AppNoCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.AppNoCommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.AppNoCommand",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.AppNoCommand.yml\" sourcestartlinenumber=\"1\">Blank BOOSE command that does nothing.\nUsed for maintaining correct line numbering in case of commands with invlaid syntax.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.AppParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.AppParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.AppParser",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.AppParser.yml\" sourcestartlinenumber=\"1\">Parser class to interpret BOOSE commands for the application.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.AppPenColour.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.AppPenColour.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.AppPenColour",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.AppPenColour.yml\" sourcestartlinenumber=\"1\">Command class to change the current pen colour to specified RGB values.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.AppRect.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.AppRect.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.AppRect",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.AppRect.yml\" sourcestartlinenumber=\"1\">Command class to draw a rectangle of specified width and height from the current position.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.AppStoredProgram.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.AppStoredProgram.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.AppStoredProgram",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.AppStoredProgram.yml\" sourcestartlinenumber=\"1\">Stored program responsible for storing commands and executing them, extends base StoredProgram class.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.Form1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.Form1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.Form1",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.Form1.yml\" sourcestartlinenumber=\"1\">Represents the main form of the application, providing the user interface for rendering a canvas, parsing and\nexecuting commands, and displaying runtime results or errors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html"
+        },
+        ".json": {
+          "relative_path": "articles/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
