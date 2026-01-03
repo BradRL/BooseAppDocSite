@@ -10,7 +10,7 @@ namespace BradleyLeach_BooseApp
     /// <summary>
     /// This class is responsible for drawing on the canvas.
     /// </summary>
-    public class AppCanvas : ICanvas
+    public class AppCanvas : IAppCanvas
     {
         /// <summary>
         /// The bitmap representing the canvas.
@@ -203,7 +203,7 @@ namespace BradleyLeach_BooseApp
             throw new NotImplementedException();
         }
 
-        public void Fill(bool fillState) 
+        public void SetFill(bool fillState) 
         { 
             FillShapes = fillState;
         }
