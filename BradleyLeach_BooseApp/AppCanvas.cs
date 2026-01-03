@@ -28,7 +28,7 @@ namespace BradleyLeach_BooseApp
         Pen Pen;
 
         /// <summary>
-        /// Used for filling shapes. # TO BE IMPLEMENTED
+        /// Used for drawing filled shapes.
         /// </summary>
         Brush Brush;
 
@@ -36,6 +36,12 @@ namespace BradleyLeach_BooseApp
         /// Position coordinates for drawing.
         /// </summary>
         private int yPos, xPos;
+
+
+        /// <summary>
+        /// Toggle for drawing shapes with fill.
+        /// </summary>
+        private bool fillShapes = false;
 
         /// <summary>
         /// Solid background colour for the canvas.
@@ -73,6 +79,11 @@ namespace BradleyLeach_BooseApp
         public object PenColour { get => Pen.Color; set => Pen.Color = (Color)value; }
 
         /// <summary>
+        /// Expression to get and set whether shapes are filled when drawn.
+        /// </summary>
+        public bool FillShapes { get => fillShapes; set => fillShapes = value; }
+
+        /// <summary>
         /// Draw a circle centered at cursor position with specified radius.
         /// </summary>
         /// <param name="radius">Radius of circle being drawn</param>
@@ -80,7 +91,7 @@ namespace BradleyLeach_BooseApp
         public void Circle(int radius, bool filled)
         {
             /// add command to set filled variable here for drawing filled shapes!!!!!
-            if (filled)
+            if (FillShapes)
             {
                 Graphics.FillEllipse(Brush, Xpos - radius, Ypos - radius, radius * 2, radius * 2);
             }
@@ -132,7 +143,7 @@ namespace BradleyLeach_BooseApp
         /// <param name="filled">fills area of rectangle</param>
         public void Rect(int width, int height, bool filled)
         {
-            if (filled)
+            if (FillShapes)
             {
                 Graphics.FillRectangle(Brush, Xpos, Ypos, width, height);
             }
@@ -190,6 +201,11 @@ namespace BradleyLeach_BooseApp
         public void WriteText(string text)
         {
             throw new NotImplementedException();
+        }
+
+        public void Fill(bool fillState) 
+        { 
+            FillShapes = fillState;
         }
     }
 }
