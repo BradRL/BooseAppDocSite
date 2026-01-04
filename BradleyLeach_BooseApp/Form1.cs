@@ -63,7 +63,7 @@ namespace BradleyLeach_BooseApp
         /// <param name="sender">The source of the event, typically the form.</param>
         /// <param name="e">A <see cref="PaintEventArgs"/> that contains the event data.</param>
         private void Form1_Paint(object sender, PaintEventArgs e)
-        {
+        { 
             Bitmap b = (Bitmap)Canvas.getBitmap();
             DisplayBox.Image = b;
         }

@@ -66,9 +66,9 @@ namespace BradleyLeach_BooseApp
             }
 
             // Adapter call as this is a non BOOSE method
-            if (Canvas is IAppCanvas fillCanvas)
+            if (Canvas is IAppCanvas adapter)
             {
-                fillCanvas.SetFill(param1);
+                adapter.SetFill(param1);
             }
         }
     }
