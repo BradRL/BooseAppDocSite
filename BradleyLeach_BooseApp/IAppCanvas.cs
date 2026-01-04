@@ -15,5 +15,7 @@ namespace BradleyLeach_BooseApp
         bool FillShapes { get; set; }
 
         void SetFill(bool fillState);
+
+        void RCircle(float radius);
     }
 }

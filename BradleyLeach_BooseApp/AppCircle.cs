@@ -46,7 +46,13 @@ namespace BradleyLeach_BooseApp
         /// <exception cref="CanvasException">When parameter(s) are non integer or less than 1</exception>
         public override void Execute() 
         {
-            bool param1Valid = int.TryParse(param1unprocessed, out param1);
+            try
+            {
+                param1unprocessed = this.program.GetVarValue(param1unprocessed);
+            }
+            catch { }
+
+            bool param1Valid = float.TryParse(param1unprocessed, out float param1);
 
             List<string> invalidParams = new();
 
@@ -71,8 +77,11 @@ namespace BradleyLeach_BooseApp
                 String plural = invalidParams.Count > 1 ? "s" : "";
                 throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} less than '1'.");
             }
-
-            Canvas.Circle(param1, false);
+    
+            if (Canvas is IAppCanvas adapter)
+            {
+                adapter.RCircle(param1);
+            }
         }
     }
 }

@@ -101,6 +101,22 @@ namespace BradleyLeach_BooseApp
         }
 
         /// <summary>
+        /// Draw a circle centered at cursor position with specified radius.
+        /// </summary>
+        /// <param name="radius">Radius of circle being drawn (Int or Real)</param>
+        public void RCircle(float radius) 
+        {
+            if (FillShapes)
+            {
+                Graphics.FillEllipse(Brush, Xpos - radius, Ypos - radius, radius * 2, radius * 2);
+            }
+            else
+            {
+                Graphics.DrawEllipse(Pen, Xpos - radius, Ypos - radius, radius * 2, radius * 2);
+            }
+        }
+
+        /// <summary>
         /// Reset canvas to background colour.
         /// </summary>
         public void Clear()
