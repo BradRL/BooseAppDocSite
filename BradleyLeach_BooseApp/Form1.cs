@@ -30,8 +30,7 @@ namespace BradleyLeach_BooseApp
             InitializeComponent();
             InputBox.Text = AboutBOOSE.about();
 
-            /// add singleton
-            BooseFacade = new AppBooseFacade(this.Width, this.Height);
+            BooseFacade = AppBooseFacade.Instance(this.Width, this.Height);
         }
 
         /// <summary>
