@@ -20,6 +20,11 @@ namespace BradleyLeach_BooseApp
         private AppCanvas Canvas;
 
         /// <summary>
+        /// Adapter to allow for new interface functions
+        /// </summary>
+        private AppICanvasAdapter CanvasAdapter;
+
+        /// <summary>
         /// Factory for creating BOOSE command instances.
         /// </summary>
         private AppCommandFactory Factory;
@@ -45,8 +50,9 @@ namespace BradleyLeach_BooseApp
             InitializeComponent();
             InputBox.Text = AboutBOOSE.about();
             Canvas = new AppCanvas(this.Width, this.Height);  // Can be modified for larger screens if needed.
+            CanvasAdapter = new AppICanvasAdapter(Canvas);
             Factory = new AppCommandFactory();
-            Program = new AppStoredProgram(Canvas);
+            Program = new AppStoredProgram(CanvasAdapter);
             Parser = new AppParser(Factory, Program);
         }
 

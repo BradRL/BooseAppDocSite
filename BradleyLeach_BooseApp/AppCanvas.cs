@@ -90,7 +90,6 @@ namespace BradleyLeach_BooseApp
         /// <param name="filled">Specifies if circle drawn should be filled *NOT IMPLEMENTED YEY*</param>
         public void Circle(int radius, bool filled)
         {
-            /// add command to set filled variable here for drawing filled shapes!!!!!
             if (FillShapes)
             {
                 Graphics.FillEllipse(Brush, Xpos - radius, Ypos - radius, radius * 2, radius * 2);

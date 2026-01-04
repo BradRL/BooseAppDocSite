@@ -28,6 +28,11 @@ namespace BradleyLeach_BooseApp
             Execute();
         }
 
+        /// <summary>
+        /// Validates that the command has the correct number of parameters and sets unprocessed values for later processing.
+        /// </summary>
+        /// <param name="parameters">List of parameters ("True/False")</param>
+        /// <exception cref="CommandException">When invalid number of parameters given</exception>
         public override void CheckParameters(String[] parameters)
         {
             if (parameters.Length != 1)
@@ -40,6 +45,11 @@ namespace BradleyLeach_BooseApp
             }
         }
 
+        /// <summary>
+        /// Validates that parameter is a valid Boolean string (True/False), then calls the SetFill method.
+        /// Makes use of the Adapter as its a non BOOSE ICanvas interface method
+        /// </summary>
+        /// <exception cref="CanvasException">When parameter is non Boolean</exception>
         public override void Execute()
         {
             bool param1Valid = bool.TryParse(param1unprocessed, out bool param1);
@@ -55,20 +65,11 @@ namespace BradleyLeach_BooseApp
                 throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} not boolean{plural}.");
             }
 
-            param1Valid = true;  // If paramater passes previous check it will always pass this block (kept for maintanance and edge cases)
-
-            invalidParams = new();
-
-            if (!param1Valid) invalidParams.Add(param1unprocessed);
-
-            if (invalidParams.Count > 0)
+            // Adapter call as this is a non BOOSE method
+            if (Canvas is IAppCanvas fillCanvas)
             {
-                String joinedParams = string.Join("','", invalidParams);
-                String plural = invalidParams.Count > 1 ? "s" : "";
-                throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} not `True` or `False`.");
+                fillCanvas.SetFill(param1);
             }
-
-            Canvas.SetFill(param1);
         }
     }
 }

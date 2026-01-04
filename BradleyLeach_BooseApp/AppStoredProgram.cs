@@ -26,7 +26,7 @@ namespace BradleyLeach_BooseApp
         /// Constructor that initializes the stored program with a given canvas.
         /// </summary>
         /// <param name="c">Canvas being drawn to</param>
-        public AppStoredProgram(ICanvas c) : base(c) 
+        public AppStoredProgram(AppICanvasAdapter c) : base(c) 
         { 
             this.errorList = new List<string>();
         }
