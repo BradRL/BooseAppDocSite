@@ -15,29 +15,9 @@ namespace BradleyLeach_BooseApp
     public partial class Form1 : Form
     {
         /// <summary>
-        /// The application's canvas for drawing.
+        /// Facade instance for backend functionality
         /// </summary>
-        private AppCanvas Canvas;
-
-        /// <summary>
-        /// Adapter to allow for new interface functions
-        /// </summary>
-        private AppICanvasAdapter CanvasAdapter;
-
-        /// <summary>
-        /// Factory for creating BOOSE command instances.
-        /// </summary>
-        private AppCommandFactory Factory;
-
-        /// <summary>
-        /// Stored program that holds parsed commmands and executes them.
-        /// </summary>
-        private AppStoredProgram Program;
-
-        /// <summary>
-        /// Parser instance for parsing BOOSE commands from input.
-        /// </summary>
-        private AppParser Parser;
+        AppBooseFacade BooseFacade;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Form1"/> class.
@@ -49,11 +29,9 @@ namespace BradleyLeach_BooseApp
         {
             InitializeComponent();
             InputBox.Text = AboutBOOSE.about();
-            Canvas = new AppCanvas(this.Width, this.Height);  // Can be modified for larger screens if needed.
-            CanvasAdapter = new AppICanvasAdapter(Canvas);
-            Factory = new AppCommandFactory();
-            Program = new AppStoredProgram(CanvasAdapter);
-            Parser = new AppParser(Factory, Program);
+
+            /// add singleton
+            BooseFacade = new AppBooseFacade(this.Width, this.Height);
         }
 
         /// <summary>
@@ -63,8 +41,8 @@ namespace BradleyLeach_BooseApp
         /// <param name="sender">The source of the event, typically the form.</param>
         /// <param name="e">A <see cref="PaintEventArgs"/> that contains the event data.</param>
         private void Form1_Paint(object sender, PaintEventArgs e)
-        { 
-            Bitmap b = (Bitmap)Canvas.getBitmap();
+        {
+            Bitmap b = (Bitmap)BooseFacade.getBitmap();
             DisplayBox.Image = b;
         }
 
@@ -81,12 +59,13 @@ namespace BradleyLeach_BooseApp
         {
             List<String> errorList = new List<string>();
 
+            BooseFacade.ParseProgram(InputBox.Text);
 
-            Parser.ParseProgram(InputBox.Text);
-            errorList.AddRange(Parser.ErrorList);
+            errorList.AddRange(BooseFacade.getSyntaxErrors());
 
-            Program.Run();
-            errorList.AddRange(Program.ErrorList);
+            BooseFacade.Run();
+
+            errorList.AddRange(BooseFacade.getRunTimeErrors());
 
             DialogResult result = DialogResult.OK;
 
@@ -113,7 +92,7 @@ namespace BradleyLeach_BooseApp
         /// <param name="e">A <see cref="PaintEventArgs"/> that contains the event data.</param>
         private void clearCanvasBtn_Click(object sender, EventArgs e)
         {
-            Canvas.Clear();
+            BooseFacade.Clear();
             DisplayBox.Invalidate();
         }
     }
