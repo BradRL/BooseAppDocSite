@@ -15,12 +15,12 @@ namespace BradleyLeach_BooseApp
         /// <summary>
         /// Overriding `value` variable declaration to be compatable with float values.
         /// </summary>
-        protected double value;
+        protected new double value;
 
         /// <summary>
         /// Overridden public accessor for the new `double` type value.
         /// </summary>
-        public double Value { get; set; }
+        public new double Value { get; set; }
 
         /// <summary>
         /// Blank construtor for factory

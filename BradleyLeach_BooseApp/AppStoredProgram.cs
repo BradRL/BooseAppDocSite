@@ -79,6 +79,11 @@ namespace BradleyLeach_BooseApp
             }
         }
 
+        /// <summary>
+        /// Overridden method to be compatable with `AppReal`, updates value of `AppReal` variables
+        /// </summary>
+        /// <param name="varName">variable name to be effected</param>
+        /// <param name="value">actual value to attached to variable name</param>
         public override void UpdateVariable(string varName, double value)
         {
             Evaluation var = (Evaluation)GetVariable(varName);
@@ -88,10 +93,14 @@ namespace BradleyLeach_BooseApp
                 realVar.Value = value;
                 return;
             }
-
-            throw new CommandException("Big stink");
         }
 
+        /// <summary>
+        /// Overridden method to be compatable with `AppReal`, returns the string value of a given variable name.
+        /// </summary>
+        /// <param name="varName">variable name to find value for</param>
+        /// <returns>String value of given variable</returns>
+        /// <exception cref="StoredProgramException">Throws error if variable given is not found</exception>
         public override string GetVarValue(string varName)
         {
             int index = FindVariable(varName);
