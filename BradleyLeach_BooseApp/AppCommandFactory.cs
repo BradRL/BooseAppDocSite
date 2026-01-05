@@ -34,6 +34,7 @@ namespace BradleyLeach_BooseApp
                 "drawto" => new AppDrawTo(),
                 "fill" => new AppFill(),
                 "int" => new AppInt(),
+                "real" => new AppReal(),
 
                 _ => throw new FactoryException("no such command \'" + commandType + "'")
             };

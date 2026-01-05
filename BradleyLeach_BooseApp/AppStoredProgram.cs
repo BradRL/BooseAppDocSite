@@ -1,7 +1,9 @@
 ﻿using BOOSE;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -75,6 +77,42 @@ namespace BradleyLeach_BooseApp
                     throw new StoredProgramException("Potential infinite loop detected. Program execution halted.");
                 }
             }
+        }
+
+        public override void UpdateVariable(string varName, double value)
+        {
+            Evaluation var = (Evaluation)GetVariable(varName);
+
+            if (var is AppReal realVar)
+            {
+                realVar.Value = value;
+                return;
+            }
+
+            throw new CommandException("Big stink");
+        }
+
+        public override string GetVarValue(string varName)
+        {
+            int index = FindVariable(varName);
+            if (index == -1) 
+            {
+                throw new StoredProgramException($"Variable not found: `{varName}`");
+            }
+
+            Evaluation evaluation = (Evaluation)GetVariable(varName);
+
+            if (evaluation is AppReal realVar)
+            {
+                return realVar.Value.ToString();    
+            }
+
+            if (evaluation is BOOSE.Boolean boolVar)
+            {
+                return boolVar.BoolValue? "True" : "False";
+            }
+
+            return evaluation.Value.ToString();
         }
     }
 }

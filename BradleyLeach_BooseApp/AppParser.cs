@@ -102,7 +102,7 @@ namespace BradleyLeach_BooseApp
                 {
                     commandName = "int";
                 }
-                else if (variable is AppInt) // PLACEHOLDER, REPLACE WITH `AppReal` 
+                else if (variable is AppReal)
                 {
                     commandName = "real";
                 }
