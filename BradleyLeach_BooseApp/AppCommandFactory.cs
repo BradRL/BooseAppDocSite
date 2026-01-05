@@ -33,6 +33,7 @@ namespace BradleyLeach_BooseApp
                 "pen" => new AppPenColour(),
                 "drawto" => new AppDrawTo(),
                 "fill" => new AppFill(),
+                "int" => new AppInt(),
 
                 _ => throw new FactoryException("no such command \'" + commandType + "'")
             };

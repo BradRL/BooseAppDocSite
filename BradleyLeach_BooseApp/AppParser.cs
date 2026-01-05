@@ -48,25 +48,81 @@ namespace BradleyLeach_BooseApp
         /// <summary>
         /// Creates, parses, and validates a single line of input into a command instance and adds it to the stored program.
         /// </summary>
-        /// <param name="Line">Single line from user input to parse</param>
+        /// <param name="line">Single line from user input to parse</param>
         /// <returns>Command object for further processing</returns>
         /// <exception cref="CommandException">When command has an invalid syntax</exception>
-        public ICommand ParseCommand(string Line)
+        public ICommand ParseCommand(string line)
         {
-            String[] lineComponents = Line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
-
-            if (lineComponents.Length != 2)
+            // Added `*` for comments, returns an `AppNoCommand` to maintain line numbering for error reports.
+            if (line[0] == '*')
             {
-                throw new CommandException($"Invalid command format: should be 'command <parameters,...>");
+                return new AppNoCommand();
             }
 
-            String commandType = lineComponents[0];
-            String[] parameters = lineComponents[1].Split(",", StringSplitOptions.RemoveEmptyEntries);
+            line = line.Trim();
 
-            ICommand command = Factory.MakeCommand(commandType);
-            command.CheckParameters(parameters);
-            command.Set(Program, string.Join(", ", parameters));
+            string[] tokens = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+            string commandName = tokens[0];
+
+            // Gets comma seperated values for simple commands (compatable for non canvas commands as `CheckParameters` has no implementation)
+            String[] canvasCommandParameters;
+            if (tokens.Length > 1)
+            {
+                canvasCommandParameters = tokens[1].Split(',', StringSplitOptions.RemoveEmptyEntries);
+            } 
+            else
+            {
+                canvasCommandParameters= System.Array.Empty<string>();
+            }
+
+            string arguments = string.Empty;
+            for (int i = 1; i < tokens.Length; i++)
+            {
+                arguments += tokens[i] + " ";
+            }
+
+            arguments = arguments.Trim();
+
+            if (tokens.Length > 1 &&
+                tokens[1] == "=" &&
+                commandName != "int" &&
+                commandName != "real" &&
+                commandName != "bool")
+            {
+                if (!Program.VariableExists(commandName))
+                {
+                    throw new ParserException($"Variable does not exist `{commandName}`");
+                }
+
+                arguments = commandName + " " + arguments;
+
+                Evaluation variable = Program.GetVariable(commandName);
+
+                if (variable is AppInt)
+                {
+                    commandName = "int";
+                }
+                else if (variable is AppInt) // PLACEHOLDER, REPLACE WITH `AppReal` 
+                {
+                    commandName = "real";
+                }
+                else if (variable is BOOSE.Boolean) 
+                {
+                    commandName = "bool";
+                }
+                else
+                {
+                    throw new ParserException($"Unsupported variable type `{variable.GetType}`");
+                }
+            }
+
+            ICommand command = Factory.MakeCommand(commandName);
+
+            // Added `CheckParameters` method to evaluate parameters for commands that inherit `CanvasCommands`.
+            command.CheckParameters(canvasCommandParameters);
+            command.Set(Program, arguments);
             command.Compile();
+
             return command;
         }
 
