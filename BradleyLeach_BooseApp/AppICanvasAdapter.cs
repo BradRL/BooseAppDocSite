@@ -41,10 +41,20 @@ namespace BradleyLeach_BooseApp
         /// <summary>
         /// Custom circle interface allowing for float values
         /// </summary>
-        /// <param name="radius"></param>
+        /// <param name="radius">radius of circle</param>
         public void RCircle(float radius)
         {
             _appCanvas.RCircle(radius);
+        }
+
+        /// <summary>
+        /// Custom rectangle interface allowing for float values
+        /// </summary>
+        /// <param name="width">width of rectangle</param>
+        /// <param name="height">height of rectangle</param>
+        public void RRect(float width, float height)
+        {
+            _appCanvas.RRect(width, height);
         }
 
         public bool FillShapes { get => _appCanvas.FillShapes; set => _appCanvas.FillShapes = value; }

@@ -53,8 +53,14 @@ namespace BradleyLeach_BooseApp
         /// <exception cref="CanvasException">When parameter(s) are non integer or less than 1</exception>
         public override void Execute()
         {
-            bool param1Valid = int.TryParse(param1unprocessed, out param1);
-            bool param2Valid = int.TryParse(param2unprocessed, out param2);
+            try
+            {
+                param1unprocessed = this.program.GetVarValue(param1unprocessed);
+                param2unprocessed = this.program.GetVarValue(param2unprocessed);
+            } catch { }
+
+            bool param1Valid = float.TryParse(param1unprocessed, out float param1);
+            bool param2Valid = float.TryParse(param2unprocessed, out float param2);
 
             List<string> invalidParams = new();
 
@@ -83,7 +89,10 @@ namespace BradleyLeach_BooseApp
                 throw new CanvasException($"Invalid parameter{plural}: '{joinedParams}' {(invalidParams.Count > 1 ? "are" : "is")} less than '1'.");
             }
 
-            Canvas.Rect(param1, param2, false);
+            if (Canvas is IAppCanvas adapter)
+            {
+                adapter.RRect(param1, param2);
+            }
         }
     }
 }

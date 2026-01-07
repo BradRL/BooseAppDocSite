@@ -169,6 +169,23 @@ namespace BradleyLeach_BooseApp
         }
 
         /// <summary>
+        /// Draw a circle centered at cursor position with specified radius.
+        /// </summary>
+        /// <param name="width"></param>
+        /// <param name="height"></param>
+        public void RRect(float width, float height)
+        {
+            if (FillShapes)
+            {
+                Graphics.FillRectangle(Brush, Xpos, Ypos, width, height);
+            }
+            else
+            {
+                Graphics.DrawRectangle(Pen, Xpos, Ypos, width, height);
+            }
+        }
+
+        /// <summary>
         /// Reset drawing cursor to 0,0 and reset pen to default.
         /// </summary>
         public void Reset()

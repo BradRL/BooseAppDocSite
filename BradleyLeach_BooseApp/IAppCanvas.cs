@@ -17,5 +17,7 @@ namespace BradleyLeach_BooseApp
         void SetFill(bool fillState);
 
         void RCircle(float radius);
+
+        void RRect(float width, float height);
     }
 }
