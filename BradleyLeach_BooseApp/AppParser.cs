@@ -53,31 +53,25 @@ namespace BradleyLeach_BooseApp
         /// <exception cref="CommandException">When command has an invalid syntax</exception>
         public ICommand ParseCommand(string line)
         {
-            line = line.Trim();
+            string[] tokens = Tokenize(line);
 
-            string[] tokens = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
             string commandName = tokens[0];
+            string commandArgs = string.Empty;
 
-            // Gets comma seperated values for simple commands (compatable for non canvas commands as `CheckParameters` has no implementation)
-            String[] canvasCommandParameters;
-            if (tokens.Length > 1)
+            if (tokens.Length == 1) 
             {
-                canvasCommandParameters = tokens[1].Split(',', StringSplitOptions.RemoveEmptyEntries);
+                return new AppNoCommand();
             } 
+            else if (tokens.Length == 2)
+            {
+                commandArgs = tokens[1];
+            }
             else
             {
-                canvasCommandParameters= System.Array.Empty<string>();
+                commandArgs = string.Join(" ", tokens.Skip(1));
             }
 
-            string arguments = string.Empty;
-            for (int i = 1; i < tokens.Length; i++)
-            {
-                arguments += tokens[i] + " ";
-            }
-
-            arguments = arguments.Trim();
-
-            if (tokens.Length > 1 &&
+            if (tokens.Length > 0 &&
                 tokens[1] == "=" &&
                 commandName != "int" &&
                 commandName != "real" &&
@@ -87,10 +81,10 @@ namespace BradleyLeach_BooseApp
                 {
                     throw new ParserException($"Variable does not exist `{commandName}`");
                 }
-
-                arguments = commandName + " " + arguments;
-
+                
                 Evaluation variable = Program.GetVariable(commandName);
+                string varName = commandName;
+                commandArgs = commandName + " " + commandArgs;
 
                 if (variable is AppInt)
                 {
@@ -112,9 +106,7 @@ namespace BradleyLeach_BooseApp
 
             ICommand command = Factory.MakeCommand(commandName);
 
-            // Added `CheckParameters` method to evaluate parameters for commands that inherit `CanvasCommands`.
-            command.CheckParameters(canvasCommandParameters);
-            command.Set(Program, arguments);
+            command.Set(Program, commandArgs);
             command.Compile();
 
             return command;
@@ -161,7 +153,13 @@ namespace BradleyLeach_BooseApp
         public string[] Tokenize(string line) 
         {
             line = line.Trim();
-            line = line.Replace(",", " ");
+            line = line.Replace(", ", ",");
+            line = line.Replace("+", " + ");
+            line = line.Replace("-", " - ");
+            line = line.Replace("*", " * ");
+            line = line.Replace("/", " / ");
+            line = line.Replace("=", " = ");
+            line = line.Trim();
 
             return line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
         }
