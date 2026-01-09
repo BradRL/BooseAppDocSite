@@ -53,11 +53,8 @@ namespace BradleyLeach_BooseApp
         /// <exception cref="CanvasException">When parameter(s) are non integer or less than 1</exception>
         public override void Execute()
         {
-            try
-            {
-                param1unprocessed = this.program.GetVarValue(param1unprocessed);
-                param2unprocessed = this.program.GetVarValue(param2unprocessed);
-            } catch { }
+            try { param1unprocessed = this.program.GetVarValue(param1unprocessed); } catch { }
+            try { param2unprocessed = this.program.GetVarValue(param2unprocessed); } catch { }
 
             bool param1Valid = float.TryParse(param1unprocessed, out float param1);
             bool param2Valid = float.TryParse(param2unprocessed, out float param2);

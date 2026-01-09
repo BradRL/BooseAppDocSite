@@ -55,6 +55,10 @@ namespace BradleyLeach_BooseApp
         /// <exception cref="CanvasException">When parameter(s) are non integer or not in range 0-255 inclusive</exception>
         public override void Execute()
         {
+            try { param1unprocessed = this.program.GetVarValue(param1unprocessed); } catch { }
+            try { param2unprocessed = this.program.GetVarValue(param2unprocessed); } catch { }
+            try { param3unprocessed = this.program.GetVarValue(param3unprocessed); } catch { }
+
             bool param1Valid = int.TryParse(param1unprocessed, out param1);
             bool param2Valid = int.TryParse(param2unprocessed, out param2);
             bool param3Valid = int.TryParse(param3unprocessed, out param3);

@@ -32,6 +32,7 @@ namespace BradleyLeach_BooseApp
                 "pencolour" => new AppPenColour(),
                 "pen" => new AppPenColour(),
                 "drawto" => new AppDrawTo(),
+                "write" => new AppWrite(),
                 "fill" => new AppFill(),
                 "int" => new AppInt(),
                 "real" => new AppReal(),

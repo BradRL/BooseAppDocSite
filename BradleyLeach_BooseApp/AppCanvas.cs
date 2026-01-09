@@ -232,7 +232,7 @@ namespace BradleyLeach_BooseApp
         /// <param name="text">Text to write to the canvas</param>
         public void WriteText(string text)
         {
-            throw new NotImplementedException();
+            Graphics.DrawString(text, new Font("Arial", 16), Brush, new PointF(Xpos, Ypos));
         }
 
         public void SetFill(bool fillState) 

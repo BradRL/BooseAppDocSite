@@ -53,12 +53,6 @@ namespace BradleyLeach_BooseApp
         /// <exception cref="CommandException">When command has an invalid syntax</exception>
         public ICommand ParseCommand(string line)
         {
-            // Added `*` for comments, returns an `AppNoCommand` to maintain line numbering for error reports.
-            if (line[0] == '*')
-            {
-                return new AppNoCommand();
-            }
-
             line = line.Trim();
 
             string[] tokens = line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
@@ -141,7 +135,7 @@ namespace BradleyLeach_BooseApp
             {
                 String command = programCommands[i].Trim();
 
-                if (string.IsNullOrEmpty(command)) 
+                if (string.IsNullOrEmpty(command) || command[0] == '*') 
                 {
                     Program.Add(new AppNoCommand());  // add null command to maintain line numbering for error reporting
                     continue; 
