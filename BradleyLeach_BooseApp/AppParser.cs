@@ -157,5 +157,13 @@ namespace BradleyLeach_BooseApp
                 
             }
         }
+
+        public string[] Tokenize(string line) 
+        {
+            line = line.Trim();
+            line = line.Replace(",", " ");
+
+            return line.Split(' ', StringSplitOptions.RemoveEmptyEntries);
+        }
     }
 }

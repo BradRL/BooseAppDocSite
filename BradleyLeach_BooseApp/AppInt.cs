@@ -36,10 +36,18 @@ namespace BradleyLeach_BooseApp
             base.Execute();
             if (!int.TryParse(evaluatedExpression, out value))
             {
-                if (double.TryParse(evaluatedExpression, out var _)) 
+                if (double.TryParse(evaluatedExpression, out double value)) 
                 {
-                    throw new StoredProgramException($"Missing feature* implement AppReal type cast from");
-                    // SHOULD return an AppReal cast of the integer
+                    base.Program.DeleteVariable(varName);
+
+                    AppReal newVar = new AppReal();
+
+                    string args = $"{varName} = {value}";
+                    newVar.Set(Program, args);
+                    newVar.Compile();
+                    newVar.Execute();
+
+                    return;
                 } else
                 {
                     throw new StoredProgramException($"Invalid value `{evaluatedExpression}`, cannot parse to `Int`");
@@ -47,6 +55,6 @@ namespace BradleyLeach_BooseApp
             }
 
             base.Program.UpdateVariable(varName, value);
-        }
+        } 
     }
 }
