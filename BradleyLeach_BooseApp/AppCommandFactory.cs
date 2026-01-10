@@ -25,6 +25,7 @@ namespace BradleyLeach_BooseApp
 
             return commandType switch
             {
+                // Drawing Commands
                 "circle" => new AppCircle(),
                 "rect" => new AppRect(),
                 "rectangle" => new AppRect(),
@@ -34,8 +35,17 @@ namespace BradleyLeach_BooseApp
                 "drawto" => new AppDrawTo(),
                 "write" => new AppWrite(),
                 "fill" => new AppFill(),
+
+                // Data Types
                 "int" => new AppInt(),
                 "real" => new AppReal(),
+                "boolean" => new AppBoolean(),
+                "bool" => new AppBoolean(),
+
+                // Control Structures
+                "if" => new AppIf(),
+                "else" => new AppElse(),
+                "end" => new AppEnd(),
 
                 _ => throw new FactoryException("no such command \'" + commandType + "'")
             };

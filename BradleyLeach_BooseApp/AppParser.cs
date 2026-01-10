@@ -60,7 +60,12 @@ namespace BradleyLeach_BooseApp
 
             if (tokens.Length == 1) 
             {
-                return new AppNoCommand();
+                ICommand NoParamCommand = Factory.MakeCommand(commandName);
+
+                NoParamCommand.Set(Program, commandArgs);
+                NoParamCommand.Compile();
+                Debug.WriteLine($"Created {commandName}");
+                return NoParamCommand;
             } 
             else if (tokens.Length == 2)
             {
@@ -103,7 +108,6 @@ namespace BradleyLeach_BooseApp
                     throw new ParserException($"Unsupported variable type `{variable.GetType}`");
                 }
             }
-
             ICommand command = Factory.MakeCommand(commandName);
 
             command.Set(Program, commandArgs);
@@ -118,7 +122,7 @@ namespace BradleyLeach_BooseApp
         /// <param name="program">Raw text input from the GUI input box</param>
         public void ParseProgram(string program)
         {
-            Program.ResetProgram(); 
+            Program.ResetProgram();
 
             errorList = new List<String>();
             String[] programCommands = program.Split('\n');

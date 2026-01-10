@@ -100,6 +100,7 @@ namespace BradleyLeach_BooseApp
         public void ParseProgram(String userInput) 
         {
             Parser.ParseProgram(userInput);
+            Canvas.FillShapes = false;
         }
 
         /// <summary>
