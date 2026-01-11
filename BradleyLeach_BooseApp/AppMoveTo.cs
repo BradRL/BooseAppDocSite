@@ -52,13 +52,20 @@ namespace BradleyLeach_BooseApp
         /// <exception cref="CanvasException">When parameter(s) are non integer or less than 0</exception>
         public override void Execute()
         {
-            bool param1Valid = int.TryParse(param1unprocessed, out param1);
-            bool param2Valid = int.TryParse(param2unprocessed, out param2);
+            string param1resolved;
+            string param2resolved;
+            try { param1resolved = this.program.GetVarValue(param1unprocessed); }
+            catch { param1resolved = param1unprocessed; }
+            try { param2resolved = this.program.GetVarValue(param2unprocessed); }
+            catch { param2resolved = param2unprocessed; }
+
+            bool param1Valid = int.TryParse(param1resolved, out param1);
+            bool param2Valid = int.TryParse(param2resolved, out param2);
 
             List<string> invalidParams = new();
 
-            if (!param1Valid) invalidParams.Add(param1unprocessed);
-            if (!param2Valid) invalidParams.Add(param2unprocessed);
+            if (!param1Valid) invalidParams.Add(param1resolved);
+            if (!param2Valid) invalidParams.Add(param2resolved);
 
             if (invalidParams.Count > 0)
             {
@@ -72,8 +79,8 @@ namespace BradleyLeach_BooseApp
 
             invalidParams = new();
 
-            if (!param1Valid) invalidParams.Add(param1unprocessed);
-            if (!param2Valid) invalidParams.Add(param2unprocessed);
+            if (!param1Valid) invalidParams.Add(param1resolved);
+            if (!param2Valid) invalidParams.Add(param2resolved);
 
             if (invalidParams.Count > 0)
             {

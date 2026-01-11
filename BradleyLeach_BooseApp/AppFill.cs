@@ -52,11 +52,15 @@ namespace BradleyLeach_BooseApp
         /// <exception cref="CanvasException">When parameter is non Boolean</exception>
         public override void Execute()
         {
-            bool param1Valid = bool.TryParse(param1unprocessed, out bool param1);
+            string param1resolved;
+            try { param1resolved = this.program.GetVarValue(param1unprocessed); }
+            catch { param1resolved = param1unprocessed; }
+
+            bool param1Valid = bool.TryParse(param1resolved, out bool param1);
 
             List<string> invalidParams = new();
 
-            if (!param1Valid) invalidParams.Add(param1unprocessed);
+            if (!param1Valid) invalidParams.Add(param1resolved);
 
             if (invalidParams.Count > 0)
             {

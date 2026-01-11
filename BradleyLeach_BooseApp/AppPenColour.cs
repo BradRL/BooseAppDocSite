@@ -56,19 +56,26 @@ namespace BradleyLeach_BooseApp
         /// <exception cref="CanvasException">When parameter(s) are non integer or not in range 0-255 inclusive</exception>
         public override void Execute()
         {
-            try { param1unprocessed = this.program.GetVarValue(param1unprocessed); } catch { }
-            try { param2unprocessed = this.program.GetVarValue(param2unprocessed); } catch { }
-            try { param3unprocessed = this.program.GetVarValue(param3unprocessed); } catch { }
+            string param1resolved;
+            string param2resolved;
+            string param3resolved;
 
-            bool param1Valid = int.TryParse(param1unprocessed, out param1);
-            bool param2Valid = int.TryParse(param2unprocessed, out param2);
-            bool param3Valid = int.TryParse(param3unprocessed, out param3);
+            try { param1resolved = this.program.GetVarValue(param1unprocessed); }
+            catch { param1resolved = param1unprocessed; }
+            try { param2resolved = this.program.GetVarValue(param2unprocessed); }
+            catch { param2resolved = param2unprocessed; }
+            try { param3resolved = this.program.GetVarValue(param3unprocessed); } 
+            catch { param3resolved = param3unprocessed; }
+
+            bool param1Valid = int.TryParse(param1resolved, out param1);
+            bool param2Valid = int.TryParse(param2resolved, out param2);
+            bool param3Valid = int.TryParse(param3resolved, out param3);
 
             List<string> invalidParams = new();
 
-            if (!param1Valid) invalidParams.Add(param1unprocessed);
-            if (!param2Valid) invalidParams.Add(param2unprocessed);
-            if (!param3Valid) invalidParams.Add(param3unprocessed);
+            if (!param1Valid) invalidParams.Add(param1resolved);
+            if (!param2Valid) invalidParams.Add(param2resolved);
+            if (!param3Valid) invalidParams.Add(param3resolved);
 
             if (invalidParams.Count > 0)
             {
@@ -83,9 +90,9 @@ namespace BradleyLeach_BooseApp
 
             invalidParams = new();
 
-            if (!param1Valid) invalidParams.Add(param1unprocessed);
-            if (!param2Valid) invalidParams.Add(param2unprocessed);
-            if (!param3Valid) invalidParams.Add(param3unprocessed);
+            if (!param1Valid) invalidParams.Add(param1resolved);
+            if (!param2Valid) invalidParams.Add(param2resolved);
+            if (!param3Valid) invalidParams.Add(param3resolved);
 
             if (invalidParams.Count > 0)
             {
