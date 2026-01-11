@@ -8,26 +8,33 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
-    public class AppIf : AppCompoundCommand, ICommand
+    public class AppWhile : AppCompoundCommand, ICommand
     {
         /// <summary>
-        /// Blank constructor for factory use. REMOVES RESTRICTION
+        /// Blank constructor for factory use.
         /// </summary>
-        public AppIf() : base() { }
+        public AppWhile() : base() { }
+
+        public override void Compile()
+        {
+            base.Compile();
+        }
 
         public override void Execute()
-        {           
+        {
             base.Execute();
             Condition = base.BoolValue;
+
+            Debug.WriteLine($"While -> {Condition}");
 
             if (!Condition)
             {
                 if (EndLineNumber < 0)
                 {
-                    throw new CommandException("If command missing corresponding end command.");
+                    throw new CommandException("While command missing corresponding end command.");
                 }
 
-                program.PC = EndLineNumber;
+                Program.PC = EndLineNumber + 1;
             }
         }
     }

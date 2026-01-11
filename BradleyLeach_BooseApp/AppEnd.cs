@@ -29,10 +29,10 @@ namespace BradleyLeach_BooseApp
                 throw new CommandException("Mismatched end command: expected 'if' condition.");
             }
 
-            //if (base.CorrespondingCommand is AppWhile && !base.ParameterList.Contains("while"))
-            //{
-            //    throw new CommandException("Mismatched end command: expected 'if' condition.");
-            //}
+            if (base.CorrespondingCommand is AppWhile && !base.ParameterList.Contains("while"))
+            {
+                throw new CommandException("Mismatched end command: expected 'if' condition.");
+            }
 
             //if (base.CorrespondingCommand is AppFor && !base.ParameterList.Contains("for"))
             //{
@@ -45,6 +45,17 @@ namespace BradleyLeach_BooseApp
             condition.EndLineNumber = base.LineNumber;
         }
 
-        public override void Execute() { }
+        public override void Execute() 
+        {
+            if (base.CorrespondingCommand is AppWhile) 
+            {
+                Debug.WriteLine($"end while jumping to start {base.CorrespondingCommand.LineNumber}");
+                base.Program.PC = base.CorrespondingCommand.LineNumber - 1;
+            }
+
+            //else if (base.CorrespondingCommand is AppFor) { }
+            //else if (base.CorrespondingCommand is AppMethod) { }
+
+        }
     }
 }

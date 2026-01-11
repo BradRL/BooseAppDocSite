@@ -152,6 +152,8 @@ namespace BradleyLeach_BooseApp
                 }
                 
             }
+            // testing for loop bypass
+            Program.Add(new AppNoCommand());
         }
 
         public string[] Tokenize(string line) 
