@@ -43,8 +43,6 @@ namespace BradleyLeach_BooseApp
 
             base.LineNumber = base.Program.Count - 1;
             condition.EndLineNumber = base.LineNumber;
-
-            Debug.WriteLine($"base {base.LineNumber}, end {base.CorrespondingCommand.EndLineNumber}");
         }
 
         public override void Execute() { }
