@@ -47,6 +47,7 @@ namespace BradleyLeach_BooseApp
                 "else" => new AppElse(),
                 "end" => new AppEnd(),
                 "while" => new AppWhile(),
+                "for" => new AppFor(),
 
                 _ => throw new FactoryException("no such command \'" + commandType + "'")
             };

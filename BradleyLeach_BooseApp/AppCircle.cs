@@ -48,8 +48,18 @@ namespace BradleyLeach_BooseApp
         public override void Execute() 
         {
             string param1resolved;
-            try { param1resolved = this.program.GetVarValue(param1unprocessed); }
-            catch { param1resolved = param1unprocessed; }
+
+            if (Program.IsExpression(param1unprocessed))
+            {
+                param1resolved = Program.EvaluateExpression(param1unprocessed).Trim();
+            }
+            else
+            {
+                try { param1resolved = this.Program.GetVarValue(param1unprocessed); }
+                catch { param1resolved = param1unprocessed; }
+            }
+
+            Debug.WriteLine($"AppCircle: Resolved parameter 1 to '{param1resolved}'");
 
             bool param1Valid = float.TryParse(param1resolved, out float param1);
 

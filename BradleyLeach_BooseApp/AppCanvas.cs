@@ -57,7 +57,7 @@ namespace BradleyLeach_BooseApp
         {
             this.CanvasBitmap = new Bitmap(xSize, ySize);
             this.Graphics = Graphics.FromImage(CanvasBitmap);
-            this.Pen = new Pen(Color.Black);
+            this.Pen = new Pen(Color.Black, 2);
             this.Brush = new SolidBrush(Color.Black);
             this.Xpos = 0;
             this.Ypos = 0;

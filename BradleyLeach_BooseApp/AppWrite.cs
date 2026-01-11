@@ -27,6 +27,18 @@ namespace BradleyLeach_BooseApp
 
         public override void Execute() 
         {
+            string param1resolved;
+
+            if (Program.IsExpression(param1unprocessed))
+            {
+                param1resolved = Program.EvaluateExpression(param1unprocessed).Trim();
+            }
+            else
+            {
+                try { param1resolved = this.Program.GetVarValue(param1unprocessed); }
+                catch { param1resolved = param1unprocessed; }
+            }
+
             Canvas.WriteText(param1unprocessed);
         }
 
