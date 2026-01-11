@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
-    public class AppIf : CompoundCommand, ICommand
+    public class AppIf : AppCompoundCommand, ICommand
     {
         /// <summary>
         /// Blank constructor for factory use. REMOVES RESTRICTION
@@ -16,9 +16,10 @@ namespace BradleyLeach_BooseApp
         public AppIf() : base() { }
 
         public override void Execute()
-        {
+        {           
             base.Execute();
             Condition = base.BoolValue;
+
 
             if (!Condition)
             {
@@ -26,8 +27,6 @@ namespace BradleyLeach_BooseApp
                 {
                     throw new CommandException("If command missing corresponding end command.");
                 }
-
-                Debug.WriteLine($"If condition false, jumping to line {EndLineNumber}");
 
                 program.PC = EndLineNumber;
             }

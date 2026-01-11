@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
-    public class AppEnd : CompoundCommand, ICommand
+    public class AppEnd : AppCompoundCommand, ICommand
     {
         /// <summary>
         /// Blank constructor for factory use.
@@ -19,8 +19,10 @@ namespace BradleyLeach_BooseApp
 
         public override void Compile()
         {
+            AppStoredProgram adapter = (AppStoredProgram)base.Program;
+
             //base.CorrespondingCommand = base.Program.Pop();
-            var condition = base.Program.Pop();
+            var condition = adapter.Pop();
 
             if (base.CorrespondingCommand is AppIf && !base.ParameterList.Contains("if"))
             {
@@ -42,8 +44,6 @@ namespace BradleyLeach_BooseApp
             base.LineNumber = base.Program.Count - 1;
             condition.EndLineNumber = base.LineNumber;
 
-            //base.LineNumber = base.Program.Count;
-            //base.CorrespondingCommand.EndLineNumber = base.LineNumber;
             Debug.WriteLine($"base {base.LineNumber}, end {base.CorrespondingCommand.EndLineNumber}");
         }
 

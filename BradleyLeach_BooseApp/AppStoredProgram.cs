@@ -123,5 +123,30 @@ namespace BradleyLeach_BooseApp
 
             return evaluation.Value.ToString();
         }
+
+        private Stack<AppConditionalCommand> stack = new Stack<AppConditionalCommand>();
+
+        public void Push(AppConditionalCommand Com)
+        {
+            stack.Push(Com);
+        }
+
+        public new AppConditionalCommand Pop()
+        {
+            try
+            {
+                return (AppConditionalCommand)stack.Pop();
+            }
+            catch (InvalidOperationException)
+            {
+                throw new StoredProgramException("No matching conditional command found for 'end'.");
+            }
+        }
+
+        public override void ResetProgram()
+        {
+            base.ResetProgram();
+            stack.Clear();
+        }
     }
 }

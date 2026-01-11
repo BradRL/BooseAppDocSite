@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
-    public class AppElse : CompoundCommand, ICommand
+    public class AppElse : AppCompoundCommand, ICommand
     {
         private End correspondingEnd;
 
@@ -39,10 +39,12 @@ namespace BradleyLeach_BooseApp
 
         public override void Compile()
         {
-            base.CorrespondingCommand = base.Program.Pop();
+            AppStoredProgram adapter = (AppStoredProgram)base.Program;
+
+            base.CorrespondingCommand = adapter.Pop();
             base.LineNumber = base.Program.Count;
             base.CorrespondingCommand.EndLineNumber = base.LineNumber;
-            base.Program.Push(this);
+            adapter.Push(this);
         }
 
         public override void Execute()
