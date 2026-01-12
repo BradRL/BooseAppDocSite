@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+  commentId: T:BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+  id: AppConditionalCommand.conditionalTypes
+  parent: BradleyLeach_BooseApp
+  children:
+  - BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commFor
+  - BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commIF
+  - BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commWhile
+  langs:
+  - csharp
+  - vb
+  name: AppConditionalCommand.conditionalTypes
+  nameWithType: AppConditionalCommand.conditionalTypes
+  fullName: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+  type: Enum
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppConditionalCommand.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: conditionalTypes
+    path: ../BradleyLeach_BooseApp/AppConditionalCommand.cs
+    startLine: 17
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Enumeration of supported conditional command types.
+  example: []
+  syntax:
+    content: public enum AppConditionalCommand.conditionalTypes
+    content.vb: Public Enum AppConditionalCommand.conditionalTypes
+- uid: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commIF
+  commentId: F:BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commIF
+  id: commIF
+  parent: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+  langs:
+  - csharp
+  - vb
+  name: commIF
+  nameWithType: AppConditionalCommand.conditionalTypes.commIF
+  fullName: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commIF
+  type: Field
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppConditionalCommand.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: commIF
+    path: ../BradleyLeach_BooseApp/AppConditionalCommand.cs
+    startLine: 22
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Represents an 'if' conditional command.
+  example: []
+  syntax:
+    content: commIF = 0
+    return:
+      type: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+- uid: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commWhile
+  commentId: F:BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commWhile
+  id: commWhile
+  parent: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+  langs:
+  - csharp
+  - vb
+  name: commWhile
+  nameWithType: AppConditionalCommand.conditionalTypes.commWhile
+  fullName: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commWhile
+  type: Field
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppConditionalCommand.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: commWhile
+    path: ../BradleyLeach_BooseApp/AppConditionalCommand.cs
+    startLine: 26
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Represents a 'while' loop command.
+  example: []
+  syntax:
+    content: commWhile = 1
+    return:
+      type: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+- uid: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commFor
+  commentId: F:BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commFor
+  id: commFor
+  parent: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+  langs:
+  - csharp
+  - vb
+  name: commFor
+  nameWithType: AppConditionalCommand.conditionalTypes.commFor
+  fullName: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.commFor
+  type: Field
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppConditionalCommand.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: commFor
+    path: ../BradleyLeach_BooseApp/AppConditionalCommand.cs
+    startLine: 30
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Represents a 'for' loop command.
+  example: []
+  syntax:
+    content: commFor = 2
+    return:
+      type: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+references:
+- uid: BradleyLeach_BooseApp
+  commentId: N:BradleyLeach_BooseApp
+  href: BradleyLeach_BooseApp.html
+  name: BradleyLeach_BooseApp
+  nameWithType: BradleyLeach_BooseApp
+  fullName: BradleyLeach_BooseApp
+- uid: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+  commentId: T:BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+  parent: BradleyLeach_BooseApp
+  href: BradleyLeach_BooseApp.AppConditionalCommand.html
+  name: AppConditionalCommand.conditionalTypes
+  nameWithType: AppConditionalCommand.conditionalTypes
+  fullName: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppConditionalCommand
+    name: AppConditionalCommand
+    href: BradleyLeach_BooseApp.AppConditionalCommand.html
+  - name: .
+  - uid: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+    name: conditionalTypes
+    href: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.html
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppConditionalCommand
+    name: AppConditionalCommand
+    href: BradleyLeach_BooseApp.AppConditionalCommand.html
+  - name: .
+  - uid: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+    name: conditionalTypes
+    href: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.html

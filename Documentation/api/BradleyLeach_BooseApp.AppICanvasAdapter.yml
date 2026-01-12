@@ -1,54 +1,55 @@
 ### YamlMime:ManagedReference
 items:
-- uid: BradleyLeach_BooseApp.AppCanvas
-  commentId: T:BradleyLeach_BooseApp.AppCanvas
-  id: AppCanvas
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter
+  commentId: T:BradleyLeach_BooseApp.AppICanvasAdapter
+  id: AppICanvasAdapter
   parent: BradleyLeach_BooseApp
   children:
-  - BradleyLeach_BooseApp.AppCanvas.#ctor(System.Int32,System.Int32)
-  - BradleyLeach_BooseApp.AppCanvas.BrushColour
-  - BradleyLeach_BooseApp.AppCanvas.Circle(System.Int32,System.Boolean)
-  - BradleyLeach_BooseApp.AppCanvas.Clear
-  - BradleyLeach_BooseApp.AppCanvas.DrawTo(System.Int32,System.Int32)
-  - BradleyLeach_BooseApp.AppCanvas.FillShapes
-  - BradleyLeach_BooseApp.AppCanvas.MoveTo(System.Int32,System.Int32)
-  - BradleyLeach_BooseApp.AppCanvas.PenColour
-  - BradleyLeach_BooseApp.AppCanvas.RCircle(System.Single)
-  - BradleyLeach_BooseApp.AppCanvas.RRect(System.Single,System.Single)
-  - BradleyLeach_BooseApp.AppCanvas.Rect(System.Int32,System.Int32,System.Boolean)
-  - BradleyLeach_BooseApp.AppCanvas.Reset
-  - BradleyLeach_BooseApp.AppCanvas.Set(System.Int32,System.Int32)
-  - BradleyLeach_BooseApp.AppCanvas.SetColour(System.Int32,System.Int32,System.Int32)
-  - BradleyLeach_BooseApp.AppCanvas.SetFill(System.Boolean)
-  - BradleyLeach_BooseApp.AppCanvas.Tri(System.Int32,System.Int32)
-  - BradleyLeach_BooseApp.AppCanvas.WriteText(System.String)
-  - BradleyLeach_BooseApp.AppCanvas.Xpos
-  - BradleyLeach_BooseApp.AppCanvas.Ypos
-  - BradleyLeach_BooseApp.AppCanvas.backgroundColour
-  - BradleyLeach_BooseApp.AppCanvas.getBitmap
+  - BradleyLeach_BooseApp.AppICanvasAdapter.#ctor(BradleyLeach_BooseApp.IAppCanvas)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.Circle(System.Int32,System.Boolean)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.Clear
+  - BradleyLeach_BooseApp.AppICanvasAdapter.DrawTo(System.Int32,System.Int32)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.FillShapes
+  - BradleyLeach_BooseApp.AppICanvasAdapter.MoveTo(System.Int32,System.Int32)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.PenColour
+  - BradleyLeach_BooseApp.AppICanvasAdapter.RCircle(System.Single)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.RRect(System.Single,System.Single)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.Rect(System.Int32,System.Int32,System.Boolean)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.Reset
+  - BradleyLeach_BooseApp.AppICanvasAdapter.Set(System.Int32,System.Int32)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.SetColour(System.Int32,System.Int32,System.Int32)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.SetFill(System.Boolean)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.Tri(System.Int32,System.Int32)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.WriteText(System.String)
+  - BradleyLeach_BooseApp.AppICanvasAdapter.Xpos
+  - BradleyLeach_BooseApp.AppICanvasAdapter.Ypos
+  - BradleyLeach_BooseApp.AppICanvasAdapter.getBitmap
   langs:
   - csharp
   - vb
-  name: AppCanvas
-  nameWithType: AppCanvas
-  fullName: BradleyLeach_BooseApp.AppCanvas
+  name: AppICanvasAdapter
+  nameWithType: AppICanvasAdapter
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter
   type: Class
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: AppCanvas
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 12
+    id: AppICanvasAdapter
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 13
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: This class is responsible for drawing on the canvas.
+  summary: >-
+    Adapter class responsible for porting core BOOSE command class' / interfaces to the new app version.
+
+    Allows for additional canvas functionality with the IAppCanvas interface.
   example: []
   syntax:
-    content: 'public class AppCanvas : IAppCanvas, ICanvas'
-    content.vb: Public Class AppCanvas Implements IAppCanvas, ICanvas
+    content: 'public class AppICanvasAdapter : IAppCanvas, ICanvas'
+    content.vb: Public Class AppICanvasAdapter Implements IAppCanvas, ICanvas
   inheritance:
   - System.Object
   implements:
@@ -62,224 +63,178 @@ items:
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
   - System.Object.ToString
-- uid: BradleyLeach_BooseApp.AppCanvas.backgroundColour
-  commentId: F:BradleyLeach_BooseApp.AppCanvas.backgroundColour
-  id: backgroundColour
-  parent: BradleyLeach_BooseApp.AppCanvas
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.#ctor(BradleyLeach_BooseApp.IAppCanvas)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.#ctor(BradleyLeach_BooseApp.IAppCanvas)
+  id: '#ctor(BradleyLeach_BooseApp.IAppCanvas)'
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
-  name: backgroundColour
-  nameWithType: AppCanvas.backgroundColour
-  fullName: BradleyLeach_BooseApp.AppCanvas.backgroundColour
-  type: Field
-  source:
-    remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
-      branch: main
-      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: backgroundColour
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 48
-  assemblies:
-  - BradleyLeach_BooseApp
-  namespace: BradleyLeach_BooseApp
-  summary: Solid background colour for the canvas.
-  example: []
-  syntax:
-    content: protected readonly Color backgroundColour
-    return:
-      type: System.Drawing.Color
-    content.vb: Protected ReadOnly backgroundColour As Color
-- uid: BradleyLeach_BooseApp.AppCanvas.#ctor(System.Int32,System.Int32)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.#ctor(System.Int32,System.Int32)
-  id: '#ctor(System.Int32,System.Int32)'
-  parent: BradleyLeach_BooseApp.AppCanvas
-  langs:
-  - csharp
-  - vb
-  name: AppCanvas(int, int)
-  nameWithType: AppCanvas.AppCanvas(int, int)
-  fullName: BradleyLeach_BooseApp.AppCanvas.AppCanvas(int, int)
+  name: AppICanvasAdapter(IAppCanvas)
+  nameWithType: AppICanvasAdapter.AppICanvasAdapter(IAppCanvas)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.AppICanvasAdapter(BradleyLeach_BooseApp.IAppCanvas)
   type: Constructor
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: .ctor
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 55
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 24
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Constructor to create a canvas of specified size.
+  summary: Adapter contructor storing cavnas obj.
   example: []
   syntax:
-    content: public AppCanvas(int xSize, int ySize)
+    content: public AppICanvasAdapter(IAppCanvas appCanvas)
     parameters:
-    - id: xSize
-      type: System.Int32
-      description: ''
-    - id: ySize
-      type: System.Int32
-      description: ''
-    content.vb: Public Sub New(xSize As Integer, ySize As Integer)
-  overload: BradleyLeach_BooseApp.AppCanvas.#ctor*
-  nameWithType.vb: AppCanvas.New(Integer, Integer)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.New(Integer, Integer)
-  name.vb: New(Integer, Integer)
-- uid: BradleyLeach_BooseApp.AppCanvas.Xpos
-  commentId: P:BradleyLeach_BooseApp.AppCanvas.Xpos
-  id: Xpos
-  parent: BradleyLeach_BooseApp.AppCanvas
+    - id: appCanvas
+      type: BradleyLeach_BooseApp.IAppCanvas
+      description: actual canvas being used
+    content.vb: Public Sub New(appCanvas As IAppCanvas)
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.#ctor*
+  nameWithType.vb: AppICanvasAdapter.New(IAppCanvas)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.New(BradleyLeach_BooseApp.IAppCanvas)
+  name.vb: New(IAppCanvas)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.SetFill(System.Boolean)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.SetFill(System.Boolean)
+  id: SetFill(System.Boolean)
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
-  name: Xpos
-  nameWithType: AppCanvas.Xpos
-  fullName: BradleyLeach_BooseApp.AppCanvas.Xpos
-  type: Property
+  name: SetFill(bool)
+  nameWithType: AppICanvasAdapter.SetFill(bool)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.SetFill(bool)
+  type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: Xpos
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 68
+    id: SetFill
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 35
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Expression to get and set the current drawing X position.
+  summary: Custom setfill command, sets shape fill state
   example: []
   syntax:
-    content: public int Xpos { get; set; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public Property Xpos As Integer
-  overload: BradleyLeach_BooseApp.AppCanvas.Xpos*
+    content: public void SetFill(bool fillState)
+    parameters:
+    - id: fillState
+      type: System.Boolean
+      description: True for fill, False for no fill
+    content.vb: Public Sub SetFill(fillState As Boolean)
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.SetFill*
   implements:
-  - BOOSE.ICanvas.Xpos
-- uid: BradleyLeach_BooseApp.AppCanvas.Ypos
-  commentId: P:BradleyLeach_BooseApp.AppCanvas.Ypos
-  id: Ypos
-  parent: BradleyLeach_BooseApp.AppCanvas
+  - BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
+  nameWithType.vb: AppICanvasAdapter.SetFill(Boolean)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.SetFill(Boolean)
+  name.vb: SetFill(Boolean)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.RCircle(System.Single)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.RCircle(System.Single)
+  id: RCircle(System.Single)
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
-  name: Ypos
-  nameWithType: AppCanvas.Ypos
-  fullName: BradleyLeach_BooseApp.AppCanvas.Ypos
-  type: Property
+  name: RCircle(float)
+  nameWithType: AppICanvasAdapter.RCircle(float)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.RCircle(float)
+  type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: Ypos
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 73
+    id: RCircle
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 44
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Expression to get and set the current drawing Y position.
+  summary: Custom circle interface allowing for float values
   example: []
   syntax:
-    content: public int Ypos { get; set; }
-    parameters: []
-    return:
-      type: System.Int32
-    content.vb: Public Property Ypos As Integer
-  overload: BradleyLeach_BooseApp.AppCanvas.Ypos*
+    content: public void RCircle(float radius)
+    parameters:
+    - id: radius
+      type: System.Single
+      description: radius of circle
+    content.vb: Public Sub RCircle(radius As Single)
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.RCircle*
   implements:
-  - BOOSE.ICanvas.Ypos
-- uid: BradleyLeach_BooseApp.AppCanvas.PenColour
-  commentId: P:BradleyLeach_BooseApp.AppCanvas.PenColour
-  id: PenColour
-  parent: BradleyLeach_BooseApp.AppCanvas
+  - BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
+  nameWithType.vb: AppICanvasAdapter.RCircle(Single)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.RCircle(Single)
+  name.vb: RCircle(Single)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.RRect(System.Single,System.Single)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.RRect(System.Single,System.Single)
+  id: RRect(System.Single,System.Single)
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
-  name: PenColour
-  nameWithType: AppCanvas.PenColour
-  fullName: BradleyLeach_BooseApp.AppCanvas.PenColour
-  type: Property
+  name: RRect(float, float)
+  nameWithType: AppICanvasAdapter.RRect(float, float)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.RRect(float, float)
+  type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: PenColour
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 78
+    id: RRect
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 54
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Expression to get and set the current pen colour.
+  summary: Custom rectangle interface allowing for float values
   example: []
   syntax:
-    content: public object PenColour { get; set; }
-    parameters: []
-    return:
-      type: System.Object
-    content.vb: Public Property PenColour As Object
-  overload: BradleyLeach_BooseApp.AppCanvas.PenColour*
+    content: public void RRect(float width, float height)
+    parameters:
+    - id: width
+      type: System.Single
+      description: width of rectangle
+    - id: height
+      type: System.Single
+      description: height of rectangle
+    content.vb: Public Sub RRect(width As Single, height As Single)
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.RRect*
   implements:
-  - BOOSE.ICanvas.PenColour
-- uid: BradleyLeach_BooseApp.AppCanvas.BrushColour
-  commentId: P:BradleyLeach_BooseApp.AppCanvas.BrushColour
-  id: BrushColour
-  parent: BradleyLeach_BooseApp.AppCanvas
-  langs:
-  - csharp
-  - vb
-  name: BrushColour
-  nameWithType: AppCanvas.BrushColour
-  fullName: BradleyLeach_BooseApp.AppCanvas.BrushColour
-  type: Property
-  source:
-    remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
-      branch: main
-      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: BrushColour
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 80
-  assemblies:
-  - BradleyLeach_BooseApp
-  namespace: BradleyLeach_BooseApp
-  syntax:
-    content: public object BrushColour { get; set; }
-    parameters: []
-    return:
-      type: System.Object
-    content.vb: Public Property BrushColour As Object
-  overload: BradleyLeach_BooseApp.AppCanvas.BrushColour*
-- uid: BradleyLeach_BooseApp.AppCanvas.FillShapes
-  commentId: P:BradleyLeach_BooseApp.AppCanvas.FillShapes
+  - BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
+  nameWithType.vb: AppICanvasAdapter.RRect(Single, Single)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.RRect(Single, Single)
+  name.vb: RRect(Single, Single)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.FillShapes
+  commentId: P:BradleyLeach_BooseApp.AppICanvasAdapter.FillShapes
   id: FillShapes
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: FillShapes
-  nameWithType: AppCanvas.FillShapes
-  fullName: BradleyLeach_BooseApp.AppCanvas.FillShapes
+  nameWithType: AppICanvasAdapter.FillShapes
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.FillShapes
   type: Property
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: FillShapes
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 85
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 59
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Expression to get and set whether shapes are filled when drawn.
+  summary: Gets or sets a value indicating whether shapes should be filled when drawn.
   example: []
   syntax:
     content: public bool FillShapes { get; set; }
@@ -287,175 +242,227 @@ items:
     return:
       type: System.Boolean
     content.vb: Public Property FillShapes As Boolean
-  overload: BradleyLeach_BooseApp.AppCanvas.FillShapes*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.FillShapes*
   implements:
   - BradleyLeach_BooseApp.IAppCanvas.FillShapes
-- uid: BradleyLeach_BooseApp.AppCanvas.Circle(System.Int32,System.Boolean)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.Circle(System.Int32,System.Boolean)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Xpos
+  commentId: P:BradleyLeach_BooseApp.AppICanvasAdapter.Xpos
+  id: Xpos
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
+  langs:
+  - csharp
+  - vb
+  name: Xpos
+  nameWithType: AppICanvasAdapter.Xpos
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Xpos
+  type: Property
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: Xpos
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 63
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  example: []
+  syntax:
+    content: public int Xpos { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Xpos As Integer
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.Xpos*
+  implements:
+  - BOOSE.ICanvas.Xpos
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Ypos
+  commentId: P:BradleyLeach_BooseApp.AppICanvasAdapter.Ypos
+  id: Ypos
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
+  langs:
+  - csharp
+  - vb
+  name: Ypos
+  nameWithType: AppICanvasAdapter.Ypos
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Ypos
+  type: Property
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: Ypos
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 64
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  example: []
+  syntax:
+    content: public int Ypos { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Ypos As Integer
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.Ypos*
+  implements:
+  - BOOSE.ICanvas.Ypos
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.PenColour
+  commentId: P:BradleyLeach_BooseApp.AppICanvasAdapter.PenColour
+  id: PenColour
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
+  langs:
+  - csharp
+  - vb
+  name: PenColour
+  nameWithType: AppICanvasAdapter.PenColour
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.PenColour
+  type: Property
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: PenColour
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 65
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  example: []
+  syntax:
+    content: public object PenColour { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property PenColour As Object
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.PenColour*
+  implements:
+  - BOOSE.ICanvas.PenColour
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Circle(System.Int32,System.Boolean)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.Circle(System.Int32,System.Boolean)
   id: Circle(System.Int32,System.Boolean)
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: Circle(int, bool)
-  nameWithType: AppCanvas.Circle(int, bool)
-  fullName: BradleyLeach_BooseApp.AppCanvas.Circle(int, bool)
+  nameWithType: AppICanvasAdapter.Circle(int, bool)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Circle(int, bool)
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: Circle
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 92
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 67
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Draw a circle centered at cursor position with specified radius.
   example: []
   syntax:
     content: public void Circle(int radius, bool filled)
     parameters:
     - id: radius
       type: System.Int32
-      description: Radius of circle being drawn
     - id: filled
       type: System.Boolean
-      description: Specifies if circle drawn should be filled *NOT IMPLEMENTED YEY*
     content.vb: Public Sub Circle(radius As Integer, filled As Boolean)
-  overload: BradleyLeach_BooseApp.AppCanvas.Circle*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.Circle*
   implements:
   - BOOSE.ICanvas.Circle(System.Int32,System.Boolean)
-  nameWithType.vb: AppCanvas.Circle(Integer, Boolean)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.Circle(Integer, Boolean)
+  nameWithType.vb: AppICanvasAdapter.Circle(Integer, Boolean)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.Circle(Integer, Boolean)
   name.vb: Circle(Integer, Boolean)
-- uid: BradleyLeach_BooseApp.AppCanvas.RCircle(System.Single)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.RCircle(System.Single)
-  id: RCircle(System.Single)
-  parent: BradleyLeach_BooseApp.AppCanvas
-  langs:
-  - csharp
-  - vb
-  name: RCircle(float)
-  nameWithType: AppCanvas.RCircle(float)
-  fullName: BradleyLeach_BooseApp.AppCanvas.RCircle(float)
-  type: Method
-  source:
-    remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
-      branch: main
-      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: RCircle
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 108
-  assemblies:
-  - BradleyLeach_BooseApp
-  namespace: BradleyLeach_BooseApp
-  summary: Draw a circle centered at cursor position with specified radius.
-  example: []
-  syntax:
-    content: public void RCircle(float radius)
-    parameters:
-    - id: radius
-      type: System.Single
-      description: Radius of circle being drawn (Int or Real)
-    content.vb: Public Sub RCircle(radius As Single)
-  overload: BradleyLeach_BooseApp.AppCanvas.RCircle*
-  implements:
-  - BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
-  nameWithType.vb: AppCanvas.RCircle(Single)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.RCircle(Single)
-  name.vb: RCircle(Single)
-- uid: BradleyLeach_BooseApp.AppCanvas.Clear
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.Clear
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Clear
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.Clear
   id: Clear
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: Clear()
-  nameWithType: AppCanvas.Clear()
-  fullName: BradleyLeach_BooseApp.AppCanvas.Clear()
+  nameWithType: AppICanvasAdapter.Clear()
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Clear()
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: Clear
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 123
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 72
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Reset canvas to background colour.
   example: []
   syntax:
     content: public void Clear()
     content.vb: Public Sub Clear()
-  overload: BradleyLeach_BooseApp.AppCanvas.Clear*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.Clear*
   implements:
   - BOOSE.ICanvas.Clear
-- uid: BradleyLeach_BooseApp.AppCanvas.DrawTo(System.Int32,System.Int32)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.DrawTo(System.Int32,System.Int32)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.DrawTo(System.Int32,System.Int32)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.DrawTo(System.Int32,System.Int32)
   id: DrawTo(System.Int32,System.Int32)
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: DrawTo(int, int)
-  nameWithType: AppCanvas.DrawTo(int, int)
-  fullName: BradleyLeach_BooseApp.AppCanvas.DrawTo(int, int)
+  nameWithType: AppICanvasAdapter.DrawTo(int, int)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.DrawTo(int, int)
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: DrawTo
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 133
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 77
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Draw line from current cursor position to x,y position.
   example: []
   syntax:
     content: public void DrawTo(int x, int y)
     parameters:
     - id: x
       type: System.Int32
-      description: X position to draw to
     - id: y
       type: System.Int32
-      description: Y position to draw to
     content.vb: Public Sub DrawTo(x As Integer, y As Integer)
-  overload: BradleyLeach_BooseApp.AppCanvas.DrawTo*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.DrawTo*
   implements:
   - BOOSE.ICanvas.DrawTo(System.Int32,System.Int32)
-  nameWithType.vb: AppCanvas.DrawTo(Integer, Integer)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.DrawTo(Integer, Integer)
+  nameWithType.vb: AppICanvasAdapter.DrawTo(Integer, Integer)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.DrawTo(Integer, Integer)
   name.vb: DrawTo(Integer, Integer)
-- uid: BradleyLeach_BooseApp.AppCanvas.getBitmap
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.getBitmap
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.getBitmap
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.getBitmap
   id: getBitmap
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: getBitmap()
-  nameWithType: AppCanvas.getBitmap()
-  fullName: BradleyLeach_BooseApp.AppCanvas.getBitmap()
+  nameWithType: AppICanvasAdapter.getBitmap()
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.getBitmap()
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: getBitmap
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 138
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 82
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
@@ -465,359 +472,262 @@ items:
     return:
       type: System.Object
     content.vb: Public Function getBitmap() As Object
-  overload: BradleyLeach_BooseApp.AppCanvas.getBitmap*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.getBitmap*
   implements:
   - BOOSE.ICanvas.getBitmap
-- uid: BradleyLeach_BooseApp.AppCanvas.MoveTo(System.Int32,System.Int32)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.MoveTo(System.Int32,System.Int32)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.MoveTo(System.Int32,System.Int32)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.MoveTo(System.Int32,System.Int32)
   id: MoveTo(System.Int32,System.Int32)
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: MoveTo(int, int)
-  nameWithType: AppCanvas.MoveTo(int, int)
-  fullName: BradleyLeach_BooseApp.AppCanvas.MoveTo(int, int)
+  nameWithType: AppICanvasAdapter.MoveTo(int, int)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.MoveTo(int, int)
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: MoveTo
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 148
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 87
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: move drawing cursor to x,y position.
   example: []
   syntax:
     content: public void MoveTo(int x, int y)
     parameters:
     - id: x
       type: System.Int32
-      description: xPosition to move to
     - id: y
       type: System.Int32
-      description: y Position to move to
     content.vb: Public Sub MoveTo(x As Integer, y As Integer)
-  overload: BradleyLeach_BooseApp.AppCanvas.MoveTo*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.MoveTo*
   implements:
   - BOOSE.ICanvas.MoveTo(System.Int32,System.Int32)
-  nameWithType.vb: AppCanvas.MoveTo(Integer, Integer)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.MoveTo(Integer, Integer)
+  nameWithType.vb: AppICanvasAdapter.MoveTo(Integer, Integer)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.MoveTo(Integer, Integer)
   name.vb: MoveTo(Integer, Integer)
-- uid: BradleyLeach_BooseApp.AppCanvas.Rect(System.Int32,System.Int32,System.Boolean)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.Rect(System.Int32,System.Int32,System.Boolean)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Rect(System.Int32,System.Int32,System.Boolean)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.Rect(System.Int32,System.Int32,System.Boolean)
   id: Rect(System.Int32,System.Int32,System.Boolean)
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: Rect(int, int, bool)
-  nameWithType: AppCanvas.Rect(int, int, bool)
-  fullName: BradleyLeach_BooseApp.AppCanvas.Rect(int, int, bool)
+  nameWithType: AppICanvasAdapter.Rect(int, int, bool)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Rect(int, int, bool)
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: Rect
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 160
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 92
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Draw a rectangle at cursor position of width and height.
   example: []
   syntax:
     content: public void Rect(int width, int height, bool filled)
     parameters:
     - id: width
       type: System.Int32
-      description: Width of rectangle
     - id: height
       type: System.Int32
-      description: Height of rectangle
     - id: filled
       type: System.Boolean
-      description: fills area of rectangle
     content.vb: Public Sub Rect(width As Integer, height As Integer, filled As Boolean)
-  overload: BradleyLeach_BooseApp.AppCanvas.Rect*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.Rect*
   implements:
   - BOOSE.ICanvas.Rect(System.Int32,System.Int32,System.Boolean)
-  nameWithType.vb: AppCanvas.Rect(Integer, Integer, Boolean)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.Rect(Integer, Integer, Boolean)
+  nameWithType.vb: AppICanvasAdapter.Rect(Integer, Integer, Boolean)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.Rect(Integer, Integer, Boolean)
   name.vb: Rect(Integer, Integer, Boolean)
-- uid: BradleyLeach_BooseApp.AppCanvas.RRect(System.Single,System.Single)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.RRect(System.Single,System.Single)
-  id: RRect(System.Single,System.Single)
-  parent: BradleyLeach_BooseApp.AppCanvas
-  langs:
-  - csharp
-  - vb
-  name: RRect(float, float)
-  nameWithType: AppCanvas.RRect(float, float)
-  fullName: BradleyLeach_BooseApp.AppCanvas.RRect(float, float)
-  type: Method
-  source:
-    remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
-      branch: main
-      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: RRect
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 177
-  assemblies:
-  - BradleyLeach_BooseApp
-  namespace: BradleyLeach_BooseApp
-  summary: Draw a circle centered at cursor position with specified radius.
-  example: []
-  syntax:
-    content: public void RRect(float width, float height)
-    parameters:
-    - id: width
-      type: System.Single
-      description: ''
-    - id: height
-      type: System.Single
-      description: ''
-    content.vb: Public Sub RRect(width As Single, height As Single)
-  overload: BradleyLeach_BooseApp.AppCanvas.RRect*
-  implements:
-  - BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
-  nameWithType.vb: AppCanvas.RRect(Single, Single)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.RRect(Single, Single)
-  name.vb: RRect(Single, Single)
-- uid: BradleyLeach_BooseApp.AppCanvas.Reset
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.Reset
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Reset
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.Reset
   id: Reset
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: Reset()
-  nameWithType: AppCanvas.Reset()
-  fullName: BradleyLeach_BooseApp.AppCanvas.Reset()
+  nameWithType: AppICanvasAdapter.Reset()
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Reset()
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: Reset
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 192
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 97
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Reset drawing cursor to 0,0 and reset pen to default.
   example: []
   syntax:
     content: public void Reset()
     content.vb: Public Sub Reset()
-  overload: BradleyLeach_BooseApp.AppCanvas.Reset*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.Reset*
   implements:
   - BOOSE.ICanvas.Reset
-- uid: BradleyLeach_BooseApp.AppCanvas.Set(System.Int32,System.Int32)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.Set(System.Int32,System.Int32)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Set(System.Int32,System.Int32)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.Set(System.Int32,System.Int32)
   id: Set(System.Int32,System.Int32)
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: Set(int, int)
-  nameWithType: AppCanvas.Set(int, int)
-  fullName: BradleyLeach_BooseApp.AppCanvas.Set(int, int)
+  nameWithType: AppICanvasAdapter.Set(int, int)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Set(int, int)
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: Set
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 205
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 102
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Set output display size.
   example: []
   syntax:
     content: public void Set(int width, int height)
     parameters:
     - id: width
       type: System.Int32
-      description: Width of output display
     - id: height
       type: System.Int32
-      description: Height of output display
     content.vb: Public Sub [Set](width As Integer, height As Integer)
-  overload: BradleyLeach_BooseApp.AppCanvas.Set*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.Set*
   implements:
   - BOOSE.ICanvas.Set(System.Int32,System.Int32)
-  nameWithType.vb: AppCanvas.Set(Integer, Integer)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.Set(Integer, Integer)
+  nameWithType.vb: AppICanvasAdapter.Set(Integer, Integer)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.Set(Integer, Integer)
   name.vb: Set(Integer, Integer)
-- uid: BradleyLeach_BooseApp.AppCanvas.SetColour(System.Int32,System.Int32,System.Int32)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.SetColour(System.Int32,System.Int32,System.Int32)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.SetColour(System.Int32,System.Int32,System.Int32)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.SetColour(System.Int32,System.Int32,System.Int32)
   id: SetColour(System.Int32,System.Int32,System.Int32)
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: SetColour(int, int, int)
-  nameWithType: AppCanvas.SetColour(int, int, int)
-  fullName: BradleyLeach_BooseApp.AppCanvas.SetColour(int, int, int)
+  nameWithType: AppICanvasAdapter.SetColour(int, int, int)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.SetColour(int, int, int)
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: SetColour
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 216
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 107
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Set pen colour using RGB values.
   example: []
   syntax:
     content: public void SetColour(int red, int green, int blue)
     parameters:
     - id: red
       type: System.Int32
-      description: red RGB pen component
     - id: green
       type: System.Int32
-      description: green RGB pen component
     - id: blue
       type: System.Int32
-      description: blue RGB pen component
     content.vb: Public Sub SetColour(red As Integer, green As Integer, blue As Integer)
-  overload: BradleyLeach_BooseApp.AppCanvas.SetColour*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.SetColour*
   implements:
   - BOOSE.ICanvas.SetColour(System.Int32,System.Int32,System.Int32)
-  nameWithType.vb: AppCanvas.SetColour(Integer, Integer, Integer)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.SetColour(Integer, Integer, Integer)
+  nameWithType.vb: AppICanvasAdapter.SetColour(Integer, Integer, Integer)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.SetColour(Integer, Integer, Integer)
   name.vb: SetColour(Integer, Integer, Integer)
-- uid: BradleyLeach_BooseApp.AppCanvas.Tri(System.Int32,System.Int32)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.Tri(System.Int32,System.Int32)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Tri(System.Int32,System.Int32)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.Tri(System.Int32,System.Int32)
   id: Tri(System.Int32,System.Int32)
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: Tri(int, int)
-  nameWithType: AppCanvas.Tri(int, int)
-  fullName: BradleyLeach_BooseApp.AppCanvas.Tri(int, int)
+  nameWithType: AppICanvasAdapter.Tri(int, int)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Tri(int, int)
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: Tri
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 228
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 112
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Draws a triangle in the bounding rectangle.
   example: []
   syntax:
     content: public void Tri(int width, int height)
     parameters:
     - id: width
       type: System.Int32
-      description: Width of bounding rectangle
     - id: height
       type: System.Int32
-      description: Height of bounding rectangle
     content.vb: Public Sub Tri(width As Integer, height As Integer)
-  overload: BradleyLeach_BooseApp.AppCanvas.Tri*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.Tri*
   implements:
   - BOOSE.ICanvas.Tri(System.Int32,System.Int32)
-  nameWithType.vb: AppCanvas.Tri(Integer, Integer)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.Tri(Integer, Integer)
+  nameWithType.vb: AppICanvasAdapter.Tri(Integer, Integer)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.Tri(Integer, Integer)
   name.vb: Tri(Integer, Integer)
-- uid: BradleyLeach_BooseApp.AppCanvas.WriteText(System.String)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.WriteText(System.String)
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.WriteText(System.String)
+  commentId: M:BradleyLeach_BooseApp.AppICanvasAdapter.WriteText(System.String)
   id: WriteText(System.String)
-  parent: BradleyLeach_BooseApp.AppCanvas
+  parent: BradleyLeach_BooseApp.AppICanvasAdapter
   langs:
   - csharp
   - vb
   name: WriteText(string)
-  nameWithType: AppCanvas.WriteText(string)
-  fullName: BradleyLeach_BooseApp.AppCanvas.WriteText(string)
+  nameWithType: AppICanvasAdapter.WriteText(string)
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.WriteText(string)
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
+      path: BradleyLeach_BooseApp/AppICanvasAdapter.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: WriteText
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 237
+    path: ../BradleyLeach_BooseApp/AppICanvasAdapter.cs
+    startLine: 117
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Writes text to the canvas at the current position.
   example: []
   syntax:
     content: public void WriteText(string text)
     parameters:
     - id: text
       type: System.String
-      description: Text to write to the canvas
     content.vb: Public Sub WriteText(text As String)
-  overload: BradleyLeach_BooseApp.AppCanvas.WriteText*
+  overload: BradleyLeach_BooseApp.AppICanvasAdapter.WriteText*
   implements:
   - BOOSE.ICanvas.WriteText(System.String)
-  nameWithType.vb: AppCanvas.WriteText(String)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.WriteText(String)
+  nameWithType.vb: AppICanvasAdapter.WriteText(String)
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.WriteText(String)
   name.vb: WriteText(String)
-- uid: BradleyLeach_BooseApp.AppCanvas.SetFill(System.Boolean)
-  commentId: M:BradleyLeach_BooseApp.AppCanvas.SetFill(System.Boolean)
-  id: SetFill(System.Boolean)
-  parent: BradleyLeach_BooseApp.AppCanvas
-  langs:
-  - csharp
-  - vb
-  name: SetFill(bool)
-  nameWithType: AppCanvas.SetFill(bool)
-  fullName: BradleyLeach_BooseApp.AppCanvas.SetFill(bool)
-  type: Method
-  source:
-    remote:
-      path: BradleyLeach_BooseApp/AppCanvas.cs
-      branch: main
-      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: SetFill
-    path: ../BradleyLeach_BooseApp/AppCanvas.cs
-    startLine: 246
-  assemblies:
-  - BradleyLeach_BooseApp
-  namespace: BradleyLeach_BooseApp
-  summary: Sets the fill state for subsequent shape drawing operations.
-  example: []
-  syntax:
-    content: public void SetFill(bool fillState)
-    parameters:
-    - id: fillState
-      type: System.Boolean
-      description: True of False value to set the fill
-    content.vb: Public Sub SetFill(fillState As Boolean)
-  overload: BradleyLeach_BooseApp.AppCanvas.SetFill*
-  implements:
-  - BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
-  nameWithType.vb: AppCanvas.SetFill(Boolean)
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.SetFill(Boolean)
-  name.vb: SetFill(Boolean)
 references:
 - uid: BradleyLeach_BooseApp
   commentId: N:BradleyLeach_BooseApp
@@ -1082,119 +992,52 @@ references:
   name: BOOSE
   nameWithType: BOOSE
   fullName: BOOSE
-- uid: System.Drawing.Color
-  commentId: T:System.Drawing.Color
-  parent: System.Drawing
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.drawing.color
-  name: Color
-  nameWithType: Color
-  fullName: System.Drawing.Color
-- uid: System.Drawing
-  commentId: N:System.Drawing
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system
-  name: System.Drawing
-  nameWithType: System.Drawing
-  fullName: System.Drawing
-  spec.csharp:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Drawing
-    name: Drawing
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.drawing
-  spec.vb:
-  - uid: System
-    name: System
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system
-  - name: .
-  - uid: System.Drawing
-    name: Drawing
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.drawing
-- uid: BradleyLeach_BooseApp.AppCanvas.#ctor*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.#ctor
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas__ctor_System_Int32_System_Int32_
-  name: AppCanvas
-  nameWithType: AppCanvas.AppCanvas
-  fullName: BradleyLeach_BooseApp.AppCanvas.AppCanvas
-  nameWithType.vb: AppCanvas.New
-  fullName.vb: BradleyLeach_BooseApp.AppCanvas.New
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.#ctor*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.#ctor
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter__ctor_BradleyLeach_BooseApp_IAppCanvas_
+  name: AppICanvasAdapter
+  nameWithType: AppICanvasAdapter.AppICanvasAdapter
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.AppICanvasAdapter
+  nameWithType.vb: AppICanvasAdapter.New
+  fullName.vb: BradleyLeach_BooseApp.AppICanvasAdapter.New
   name.vb: New
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: BradleyLeach_BooseApp.AppCanvas.Xpos*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Xpos
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Xpos
-  name: Xpos
-  nameWithType: AppCanvas.Xpos
-  fullName: BradleyLeach_BooseApp.AppCanvas.Xpos
-- uid: BOOSE.ICanvas.Xpos
-  commentId: P:BOOSE.ICanvas.Xpos
-  parent: BOOSE.ICanvas
-  isExternal: true
-  name: Xpos
-  nameWithType: ICanvas.Xpos
-  fullName: BOOSE.ICanvas.Xpos
-- uid: BradleyLeach_BooseApp.AppCanvas.Ypos*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Ypos
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Ypos
-  name: Ypos
-  nameWithType: AppCanvas.Ypos
-  fullName: BradleyLeach_BooseApp.AppCanvas.Ypos
-- uid: BOOSE.ICanvas.Ypos
-  commentId: P:BOOSE.ICanvas.Ypos
-  parent: BOOSE.ICanvas
-  isExternal: true
-  name: Ypos
-  nameWithType: ICanvas.Ypos
-  fullName: BOOSE.ICanvas.Ypos
-- uid: BradleyLeach_BooseApp.AppCanvas.PenColour*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.PenColour
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_PenColour
-  name: PenColour
-  nameWithType: AppCanvas.PenColour
-  fullName: BradleyLeach_BooseApp.AppCanvas.PenColour
-- uid: BOOSE.ICanvas.PenColour
-  commentId: P:BOOSE.ICanvas.PenColour
-  parent: BOOSE.ICanvas
-  isExternal: true
-  name: PenColour
-  nameWithType: ICanvas.PenColour
-  fullName: BOOSE.ICanvas.PenColour
-- uid: BradleyLeach_BooseApp.AppCanvas.BrushColour*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.BrushColour
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_BrushColour
-  name: BrushColour
-  nameWithType: AppCanvas.BrushColour
-  fullName: BradleyLeach_BooseApp.AppCanvas.BrushColour
-- uid: BradleyLeach_BooseApp.AppCanvas.FillShapes*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.FillShapes
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_FillShapes
-  name: FillShapes
-  nameWithType: AppCanvas.FillShapes
-  fullName: BradleyLeach_BooseApp.AppCanvas.FillShapes
-- uid: BradleyLeach_BooseApp.IAppCanvas.FillShapes
-  commentId: P:BradleyLeach_BooseApp.IAppCanvas.FillShapes
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.SetFill*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.SetFill
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_SetFill_System_Boolean_
+  name: SetFill
+  nameWithType: AppICanvasAdapter.SetFill
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.SetFill
+- uid: BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
+  commentId: M:BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
   parent: BradleyLeach_BooseApp.IAppCanvas
-  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_FillShapes
-  name: FillShapes
-  nameWithType: IAppCanvas.FillShapes
-  fullName: BradleyLeach_BooseApp.IAppCanvas.FillShapes
+  isExternal: true
+  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_SetFill_System_Boolean_
+  name: SetFill(bool)
+  nameWithType: IAppCanvas.SetFill(bool)
+  fullName: BradleyLeach_BooseApp.IAppCanvas.SetFill(bool)
+  nameWithType.vb: IAppCanvas.SetFill(Boolean)
+  fullName.vb: BradleyLeach_BooseApp.IAppCanvas.SetFill(Boolean)
+  name.vb: SetFill(Boolean)
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
+    name: SetFill
+    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_SetFill_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
+    name: SetFill
+    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_SetFill_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
 - uid: System.Boolean
   commentId: T:System.Boolean
   parent: System
@@ -1206,12 +1049,172 @@ references:
   nameWithType.vb: Boolean
   fullName.vb: Boolean
   name.vb: Boolean
-- uid: BradleyLeach_BooseApp.AppCanvas.Circle*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Circle
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Circle_System_Int32_System_Boolean_
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.RCircle*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.RCircle
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_RCircle_System_Single_
+  name: RCircle
+  nameWithType: AppICanvasAdapter.RCircle
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.RCircle
+- uid: BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
+  commentId: M:BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
+  parent: BradleyLeach_BooseApp.IAppCanvas
+  isExternal: true
+  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RCircle_System_Single_
+  name: RCircle(float)
+  nameWithType: IAppCanvas.RCircle(float)
+  fullName: BradleyLeach_BooseApp.IAppCanvas.RCircle(float)
+  nameWithType.vb: IAppCanvas.RCircle(Single)
+  fullName.vb: BradleyLeach_BooseApp.IAppCanvas.RCircle(Single)
+  name.vb: RCircle(Single)
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
+    name: RCircle
+    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RCircle_System_Single_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
+    name: RCircle
+    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RCircle_System_Single_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.RRect*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.RRect
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_RRect_System_Single_System_Single_
+  name: RRect
+  nameWithType: AppICanvasAdapter.RRect
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.RRect
+- uid: BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
+  commentId: M:BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
+  parent: BradleyLeach_BooseApp.IAppCanvas
+  isExternal: true
+  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RRect_System_Single_System_Single_
+  name: RRect(float, float)
+  nameWithType: IAppCanvas.RRect(float, float)
+  fullName: BradleyLeach_BooseApp.IAppCanvas.RRect(float, float)
+  nameWithType.vb: IAppCanvas.RRect(Single, Single)
+  fullName.vb: BradleyLeach_BooseApp.IAppCanvas.RRect(Single, Single)
+  name.vb: RRect(Single, Single)
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
+    name: RRect
+    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RRect_System_Single_System_Single_
+  - name: (
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: float
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
+    name: RRect
+    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RRect_System_Single_System_Single_
+  - name: (
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: ','
+  - name: " "
+  - uid: System.Single
+    name: Single
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.single
+  - name: )
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.FillShapes*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.FillShapes
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_FillShapes
+  name: FillShapes
+  nameWithType: AppICanvasAdapter.FillShapes
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.FillShapes
+- uid: BradleyLeach_BooseApp.IAppCanvas.FillShapes
+  commentId: P:BradleyLeach_BooseApp.IAppCanvas.FillShapes
+  parent: BradleyLeach_BooseApp.IAppCanvas
+  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_FillShapes
+  name: FillShapes
+  nameWithType: IAppCanvas.FillShapes
+  fullName: BradleyLeach_BooseApp.IAppCanvas.FillShapes
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Xpos*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.Xpos
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_Xpos
+  name: Xpos
+  nameWithType: AppICanvasAdapter.Xpos
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Xpos
+- uid: BOOSE.ICanvas.Xpos
+  commentId: P:BOOSE.ICanvas.Xpos
+  parent: BOOSE.ICanvas
+  isExternal: true
+  name: Xpos
+  nameWithType: ICanvas.Xpos
+  fullName: BOOSE.ICanvas.Xpos
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Ypos*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.Ypos
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_Ypos
+  name: Ypos
+  nameWithType: AppICanvasAdapter.Ypos
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Ypos
+- uid: BOOSE.ICanvas.Ypos
+  commentId: P:BOOSE.ICanvas.Ypos
+  parent: BOOSE.ICanvas
+  isExternal: true
+  name: Ypos
+  nameWithType: ICanvas.Ypos
+  fullName: BOOSE.ICanvas.Ypos
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.PenColour*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.PenColour
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_PenColour
+  name: PenColour
+  nameWithType: AppICanvasAdapter.PenColour
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.PenColour
+- uid: BOOSE.ICanvas.PenColour
+  commentId: P:BOOSE.ICanvas.PenColour
+  parent: BOOSE.ICanvas
+  isExternal: true
+  name: PenColour
+  nameWithType: ICanvas.PenColour
+  fullName: BOOSE.ICanvas.PenColour
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Circle*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.Circle
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_Circle_System_Int32_System_Boolean_
   name: Circle
-  nameWithType: AppCanvas.Circle
-  fullName: BradleyLeach_BooseApp.AppCanvas.Circle
+  nameWithType: AppICanvasAdapter.Circle
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Circle
 - uid: BOOSE.ICanvas.Circle(System.Int32,System.Boolean)
   commentId: M:BOOSE.ICanvas.Circle(System.Int32,System.Boolean)
   parent: BOOSE.ICanvas
@@ -1255,60 +1258,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.RCircle*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.RCircle
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_RCircle_System_Single_
-  name: RCircle
-  nameWithType: AppCanvas.RCircle
-  fullName: BradleyLeach_BooseApp.AppCanvas.RCircle
-- uid: BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
-  commentId: M:BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
-  parent: BradleyLeach_BooseApp.IAppCanvas
-  isExternal: true
-  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RCircle_System_Single_
-  name: RCircle(float)
-  nameWithType: IAppCanvas.RCircle(float)
-  fullName: BradleyLeach_BooseApp.IAppCanvas.RCircle(float)
-  nameWithType.vb: IAppCanvas.RCircle(Single)
-  fullName.vb: BradleyLeach_BooseApp.IAppCanvas.RCircle(Single)
-  name.vb: RCircle(Single)
-  spec.csharp:
-  - uid: BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
-    name: RCircle
-    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RCircle_System_Single_
-  - name: (
-  - uid: System.Single
-    name: float
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: )
-  spec.vb:
-  - uid: BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
-    name: RCircle
-    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RCircle_System_Single_
-  - name: (
-  - uid: System.Single
-    name: Single
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: )
-- uid: System.Single
-  commentId: T:System.Single
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.single
-  name: float
-  nameWithType: float
-  fullName: float
-  nameWithType.vb: Single
-  fullName.vb: Single
-  name.vb: Single
-- uid: BradleyLeach_BooseApp.AppCanvas.Clear*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Clear
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Clear
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Clear*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.Clear
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_Clear
   name: Clear
-  nameWithType: AppCanvas.Clear
-  fullName: BradleyLeach_BooseApp.AppCanvas.Clear
+  nameWithType: AppICanvasAdapter.Clear
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Clear
 - uid: BOOSE.ICanvas.Clear
   commentId: M:BOOSE.ICanvas.Clear
   parent: BOOSE.ICanvas
@@ -1328,12 +1283,12 @@ references:
     isExternal: true
   - name: (
   - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.DrawTo*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.DrawTo
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_DrawTo_System_Int32_System_Int32_
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.DrawTo*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.DrawTo
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_DrawTo_System_Int32_System_Int32_
   name: DrawTo
-  nameWithType: AppCanvas.DrawTo
-  fullName: BradleyLeach_BooseApp.AppCanvas.DrawTo
+  nameWithType: AppICanvasAdapter.DrawTo
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.DrawTo
 - uid: BOOSE.ICanvas.DrawTo(System.Int32,System.Int32)
   commentId: M:BOOSE.ICanvas.DrawTo(System.Int32,System.Int32)
   parent: BOOSE.ICanvas
@@ -1377,12 +1332,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.getBitmap*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.getBitmap
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_getBitmap
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.getBitmap*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.getBitmap
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_getBitmap
   name: getBitmap
-  nameWithType: AppCanvas.getBitmap
-  fullName: BradleyLeach_BooseApp.AppCanvas.getBitmap
+  nameWithType: AppICanvasAdapter.getBitmap
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.getBitmap
 - uid: BOOSE.ICanvas.getBitmap
   commentId: M:BOOSE.ICanvas.getBitmap
   parent: BOOSE.ICanvas
@@ -1402,12 +1357,12 @@ references:
     isExternal: true
   - name: (
   - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.MoveTo*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.MoveTo
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_MoveTo_System_Int32_System_Int32_
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.MoveTo*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.MoveTo
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_MoveTo_System_Int32_System_Int32_
   name: MoveTo
-  nameWithType: AppCanvas.MoveTo
-  fullName: BradleyLeach_BooseApp.AppCanvas.MoveTo
+  nameWithType: AppICanvasAdapter.MoveTo
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.MoveTo
 - uid: BOOSE.ICanvas.MoveTo(System.Int32,System.Int32)
   commentId: M:BOOSE.ICanvas.MoveTo(System.Int32,System.Int32)
   parent: BOOSE.ICanvas
@@ -1451,12 +1406,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.Rect*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Rect
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Rect_System_Int32_System_Int32_System_Boolean_
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Rect*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.Rect
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_Rect_System_Int32_System_Int32_System_Boolean_
   name: Rect
-  nameWithType: AppCanvas.Rect
-  fullName: BradleyLeach_BooseApp.AppCanvas.Rect
+  nameWithType: AppICanvasAdapter.Rect
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Rect
 - uid: BOOSE.ICanvas.Rect(System.Int32,System.Int32,System.Boolean)
   commentId: M:BOOSE.ICanvas.Rect(System.Int32,System.Int32,System.Boolean)
   parent: BOOSE.ICanvas
@@ -1512,61 +1467,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.boolean
   - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.RRect*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.RRect
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_RRect_System_Single_System_Single_
-  name: RRect
-  nameWithType: AppCanvas.RRect
-  fullName: BradleyLeach_BooseApp.AppCanvas.RRect
-- uid: BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
-  commentId: M:BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
-  parent: BradleyLeach_BooseApp.IAppCanvas
-  isExternal: true
-  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RRect_System_Single_System_Single_
-  name: RRect(float, float)
-  nameWithType: IAppCanvas.RRect(float, float)
-  fullName: BradleyLeach_BooseApp.IAppCanvas.RRect(float, float)
-  nameWithType.vb: IAppCanvas.RRect(Single, Single)
-  fullName.vb: BradleyLeach_BooseApp.IAppCanvas.RRect(Single, Single)
-  name.vb: RRect(Single, Single)
-  spec.csharp:
-  - uid: BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
-    name: RRect
-    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RRect_System_Single_System_Single_
-  - name: (
-  - uid: System.Single
-    name: float
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: ','
-  - name: " "
-  - uid: System.Single
-    name: float
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: )
-  spec.vb:
-  - uid: BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
-    name: RRect
-    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RRect_System_Single_System_Single_
-  - name: (
-  - uid: System.Single
-    name: Single
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: ','
-  - name: " "
-  - uid: System.Single
-    name: Single
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.single
-  - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.Reset*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Reset
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Reset
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Reset*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.Reset
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_Reset
   name: Reset
-  nameWithType: AppCanvas.Reset
-  fullName: BradleyLeach_BooseApp.AppCanvas.Reset
+  nameWithType: AppICanvasAdapter.Reset
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Reset
 - uid: BOOSE.ICanvas.Reset
   commentId: M:BOOSE.ICanvas.Reset
   parent: BOOSE.ICanvas
@@ -1586,12 +1492,12 @@ references:
     isExternal: true
   - name: (
   - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.Set*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Set
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Set_System_Int32_System_Int32_
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Set*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.Set
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_Set_System_Int32_System_Int32_
   name: Set
-  nameWithType: AppCanvas.Set
-  fullName: BradleyLeach_BooseApp.AppCanvas.Set
+  nameWithType: AppICanvasAdapter.Set
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Set
 - uid: BOOSE.ICanvas.Set(System.Int32,System.Int32)
   commentId: M:BOOSE.ICanvas.Set(System.Int32,System.Int32)
   parent: BOOSE.ICanvas
@@ -1635,12 +1541,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.SetColour*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.SetColour
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_SetColour_System_Int32_System_Int32_System_Int32_
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.SetColour*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.SetColour
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_SetColour_System_Int32_System_Int32_System_Int32_
   name: SetColour
-  nameWithType: AppCanvas.SetColour
-  fullName: BradleyLeach_BooseApp.AppCanvas.SetColour
+  nameWithType: AppICanvasAdapter.SetColour
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.SetColour
 - uid: BOOSE.ICanvas.SetColour(System.Int32,System.Int32,System.Int32)
   commentId: M:BOOSE.ICanvas.SetColour(System.Int32,System.Int32,System.Int32)
   parent: BOOSE.ICanvas
@@ -1696,12 +1602,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.Tri*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.Tri
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_Tri_System_Int32_System_Int32_
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.Tri*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.Tri
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_Tri_System_Int32_System_Int32_
   name: Tri
-  nameWithType: AppCanvas.Tri
-  fullName: BradleyLeach_BooseApp.AppCanvas.Tri
+  nameWithType: AppICanvasAdapter.Tri
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.Tri
 - uid: BOOSE.ICanvas.Tri(System.Int32,System.Int32)
   commentId: M:BOOSE.ICanvas.Tri(System.Int32,System.Int32)
   parent: BOOSE.ICanvas
@@ -1745,12 +1651,12 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
   - name: )
-- uid: BradleyLeach_BooseApp.AppCanvas.WriteText*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.WriteText
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_WriteText_System_String_
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter.WriteText*
+  commentId: Overload:BradleyLeach_BooseApp.AppICanvasAdapter.WriteText
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html#BradleyLeach_BooseApp_AppICanvasAdapter_WriteText_System_String_
   name: WriteText
-  nameWithType: AppCanvas.WriteText
-  fullName: BradleyLeach_BooseApp.AppCanvas.WriteText
+  nameWithType: AppICanvasAdapter.WriteText
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter.WriteText
 - uid: BOOSE.ICanvas.WriteText(System.String)
   commentId: M:BOOSE.ICanvas.WriteText(System.String)
   parent: BOOSE.ICanvas
@@ -1793,40 +1699,3 @@ references:
   nameWithType.vb: String
   fullName.vb: String
   name.vb: String
-- uid: BradleyLeach_BooseApp.AppCanvas.SetFill*
-  commentId: Overload:BradleyLeach_BooseApp.AppCanvas.SetFill
-  href: BradleyLeach_BooseApp.AppCanvas.html#BradleyLeach_BooseApp_AppCanvas_SetFill_System_Boolean_
-  name: SetFill
-  nameWithType: AppCanvas.SetFill
-  fullName: BradleyLeach_BooseApp.AppCanvas.SetFill
-- uid: BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
-  commentId: M:BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
-  parent: BradleyLeach_BooseApp.IAppCanvas
-  isExternal: true
-  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_SetFill_System_Boolean_
-  name: SetFill(bool)
-  nameWithType: IAppCanvas.SetFill(bool)
-  fullName: BradleyLeach_BooseApp.IAppCanvas.SetFill(bool)
-  nameWithType.vb: IAppCanvas.SetFill(Boolean)
-  fullName.vb: BradleyLeach_BooseApp.IAppCanvas.SetFill(Boolean)
-  name.vb: SetFill(Boolean)
-  spec.csharp:
-  - uid: BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
-    name: SetFill
-    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_SetFill_System_Boolean_
-  - name: (
-  - uid: System.Boolean
-    name: bool
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )
-  spec.vb:
-  - uid: BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
-    name: SetFill
-    href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_SetFill_System_Boolean_
-  - name: (
-  - uid: System.Boolean
-    name: Boolean
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.boolean
-  - name: )

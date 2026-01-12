@@ -11,6 +11,7 @@ items:
   - BradleyLeach_BooseApp.AppParser.ParseCommand(System.String)
   - BradleyLeach_BooseApp.AppParser.ParseProgram(System.String)
   - BradleyLeach_BooseApp.AppParser.Program
+  - BradleyLeach_BooseApp.AppParser.Tokenize(System.String)
   - BradleyLeach_BooseApp.AppParser.errorList
   langs:
   - csharp
@@ -228,15 +229,15 @@ items:
   summary: Creates, parses, and validates a single line of input into a command instance and adds it to the stored program.
   example: []
   syntax:
-    content: public ICommand ParseCommand(string Line)
+    content: public ICommand ParseCommand(string line)
     parameters:
-    - id: Line
+    - id: line
       type: System.String
       description: Single line from user input to parse
     return:
       type: BOOSE.ICommand
       description: Command object for further processing
-    content.vb: Public Function ParseCommand(Line As String) As ICommand
+    content.vb: Public Function ParseCommand(line As String) As ICommand
   overload: BradleyLeach_BooseApp.AppParser.ParseCommand*
   exceptions:
   - type: BOOSE.CommandException
@@ -265,7 +266,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: ParseProgram
     path: ../BradleyLeach_BooseApp/AppParser.cs
-    startLine: 76
+    startLine: 127
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
@@ -284,6 +285,44 @@ items:
   nameWithType.vb: AppParser.ParseProgram(String)
   fullName.vb: BradleyLeach_BooseApp.AppParser.ParseProgram(String)
   name.vb: ParseProgram(String)
+- uid: BradleyLeach_BooseApp.AppParser.Tokenize(System.String)
+  commentId: M:BradleyLeach_BooseApp.AppParser.Tokenize(System.String)
+  id: Tokenize(System.String)
+  parent: BradleyLeach_BooseApp.AppParser
+  langs:
+  - csharp
+  - vb
+  name: Tokenize(string)
+  nameWithType: AppParser.Tokenize(string)
+  fullName: BradleyLeach_BooseApp.AppParser.Tokenize(string)
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppParser.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: Tokenize
+    path: ../BradleyLeach_BooseApp/AppParser.cs
+    startLine: 168
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Tokenizes a line of input into individual components for parsing.
+  example: []
+  syntax:
+    content: public string[] Tokenize(string line)
+    parameters:
+    - id: line
+      type: System.String
+      description: ''
+    return:
+      type: System.String[]
+      description: ''
+    content.vb: Public Function Tokenize(line As String) As String()
+  overload: BradleyLeach_BooseApp.AppParser.Tokenize*
+  nameWithType.vb: AppParser.Tokenize(String)
+  fullName.vb: BradleyLeach_BooseApp.AppParser.Tokenize(String)
+  name.vb: Tokenize(String)
 references:
 - uid: BradleyLeach_BooseApp
   commentId: N:BradleyLeach_BooseApp
@@ -774,4 +813,33 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BradleyLeach_BooseApp.AppParser.Tokenize*
+  commentId: Overload:BradleyLeach_BooseApp.AppParser.Tokenize
+  href: BradleyLeach_BooseApp.AppParser.html#BradleyLeach_BooseApp_AppParser_Tokenize_System_String_
+  name: Tokenize
+  nameWithType: AppParser.Tokenize
+  fullName: BradleyLeach_BooseApp.AppParser.Tokenize
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
   - name: )

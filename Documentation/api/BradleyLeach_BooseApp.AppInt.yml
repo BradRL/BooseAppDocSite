@@ -1,64 +1,59 @@
 ### YamlMime:ManagedReference
 items:
-- uid: BradleyLeach_BooseApp.AppPenColour
-  commentId: T:BradleyLeach_BooseApp.AppPenColour
-  id: AppPenColour
+- uid: BradleyLeach_BooseApp.AppInt
+  commentId: T:BradleyLeach_BooseApp.AppInt
+  id: AppInt
   parent: BradleyLeach_BooseApp
   children:
-  - BradleyLeach_BooseApp.AppPenColour.#ctor
-  - BradleyLeach_BooseApp.AppPenColour.#ctor(BOOSE.Canvas,System.Int32,System.Int32,System.Int32)
-  - BradleyLeach_BooseApp.AppPenColour.CheckParameters(System.String[])
-  - BradleyLeach_BooseApp.AppPenColour.Execute
+  - BradleyLeach_BooseApp.AppInt.#ctor
+  - BradleyLeach_BooseApp.AppInt.Compile
+  - BradleyLeach_BooseApp.AppInt.Execute
   langs:
   - csharp
   - vb
-  name: AppPenColour
-  nameWithType: AppPenColour
-  fullName: BradleyLeach_BooseApp.AppPenColour
+  name: AppInt
+  nameWithType: AppInt
+  fullName: BradleyLeach_BooseApp.AppInt
   type: Class
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppPenColour.cs
+      path: BradleyLeach_BooseApp/AppInt.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: AppPenColour
-    path: ../BradleyLeach_BooseApp/AppPenColour.cs
+    id: AppInt
+    path: ../BradleyLeach_BooseApp/AppInt.cs
     startLine: 13
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Command class to change the current pen colour to specified RGB values.
+  summary: Command class responsible for dealing with Integer type varaibles.
   example: []
   syntax:
-    content: 'public class AppPenColour : CommandThreeParameters, ICommand'
-    content.vb: Public Class AppPenColour Inherits CommandThreeParameters Implements ICommand
+    content: 'public class AppInt : Evaluation, ICommand'
+    content.vb: Public Class AppInt Inherits Evaluation Implements ICommand
   inheritance:
   - System.Object
   - BOOSE.Command
-  - BOOSE.CanvasCommand
-  - BOOSE.CommandOneParameter
-  - BOOSE.CommandTwoParameters
-  - BOOSE.CommandThreeParameters
+  - BOOSE.Evaluation
   implements:
   - BOOSE.ICommand
   inheritedMembers:
-  - BOOSE.CommandThreeParameters.param3
-  - BOOSE.CommandThreeParameters.param3unprocessed
-  - BOOSE.CommandTwoParameters.param2
-  - BOOSE.CommandTwoParameters.param2unprocessed
-  - BOOSE.CommandOneParameter.param1
-  - BOOSE.CommandOneParameter.param1unprocessed
-  - BOOSE.CanvasCommand.yPos
-  - BOOSE.CanvasCommand.xPos
-  - BOOSE.CanvasCommand.canvas
-  - BOOSE.CanvasCommand.Canvas
+  - BOOSE.Evaluation.expression
+  - BOOSE.Evaluation.evaluatedExpression
+  - BOOSE.Evaluation.varName
+  - BOOSE.Evaluation.value
+  - BOOSE.Evaluation.CheckParameters(System.String[])
+  - BOOSE.Evaluation.ProcessExpression(System.String)
+  - BOOSE.Evaluation.Expression
+  - BOOSE.Evaluation.VarName
+  - BOOSE.Evaluation.Value
+  - BOOSE.Evaluation.Local
   - BOOSE.Command.IsDouble
   - BOOSE.Command.program
   - BOOSE.Command.parameterList
   - BOOSE.Command.parameters
   - BOOSE.Command.paramsint
   - BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
-  - BOOSE.Command.Compile
   - BOOSE.Command.ProcessParameters(System.String)
   - BOOSE.Command.ToString
   - BOOSE.Command.Program
@@ -72,156 +67,104 @@ items:
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
-- uid: BradleyLeach_BooseApp.AppPenColour.#ctor
-  commentId: M:BradleyLeach_BooseApp.AppPenColour.#ctor
+- uid: BradleyLeach_BooseApp.AppInt.#ctor
+  commentId: M:BradleyLeach_BooseApp.AppInt.#ctor
   id: '#ctor'
-  parent: BradleyLeach_BooseApp.AppPenColour
+  parent: BradleyLeach_BooseApp.AppInt
   langs:
   - csharp
   - vb
-  name: AppPenColour()
-  nameWithType: AppPenColour.AppPenColour()
-  fullName: BradleyLeach_BooseApp.AppPenColour.AppPenColour()
+  name: AppInt()
+  nameWithType: AppInt.AppInt()
+  fullName: BradleyLeach_BooseApp.AppInt.AppInt()
   type: Constructor
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppPenColour.cs
+      path: BradleyLeach_BooseApp/AppInt.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: .ctor
-    path: ../BradleyLeach_BooseApp/AppPenColour.cs
+    path: ../BradleyLeach_BooseApp/AppInt.cs
     startLine: 18
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Blank constructor for factory use.
+  summary: Blank construtor for factory
   example: []
   syntax:
-    content: public AppPenColour()
+    content: public AppInt()
     content.vb: Public Sub New()
-  overload: BradleyLeach_BooseApp.AppPenColour.#ctor*
-  nameWithType.vb: AppPenColour.New()
-  fullName.vb: BradleyLeach_BooseApp.AppPenColour.New()
+  overload: BradleyLeach_BooseApp.AppInt.#ctor*
+  nameWithType.vb: AppInt.New()
+  fullName.vb: BradleyLeach_BooseApp.AppInt.New()
   name.vb: New()
-- uid: BradleyLeach_BooseApp.AppPenColour.#ctor(BOOSE.Canvas,System.Int32,System.Int32,System.Int32)
-  commentId: M:BradleyLeach_BooseApp.AppPenColour.#ctor(BOOSE.Canvas,System.Int32,System.Int32,System.Int32)
-  id: '#ctor(BOOSE.Canvas,System.Int32,System.Int32,System.Int32)'
-  parent: BradleyLeach_BooseApp.AppPenColour
+- uid: BradleyLeach_BooseApp.AppInt.Compile
+  commentId: M:BradleyLeach_BooseApp.AppInt.Compile
+  id: Compile
+  parent: BradleyLeach_BooseApp.AppInt
   langs:
   - csharp
   - vb
-  name: AppPenColour(Canvas, int, int, int)
-  nameWithType: AppPenColour.AppPenColour(Canvas, int, int, int)
-  fullName: BradleyLeach_BooseApp.AppPenColour.AppPenColour(BOOSE.Canvas, int, int, int)
-  type: Constructor
-  source:
-    remote:
-      path: BradleyLeach_BooseApp/AppPenColour.cs
-      branch: main
-      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: .ctor
-    path: ../BradleyLeach_BooseApp/AppPenColour.cs
-    startLine: 27
-  assemblies:
-  - BradleyLeach_BooseApp
-  namespace: BradleyLeach_BooseApp
-  summary: Complete constructor, sets pen colour to specified RGB values.
-  example: []
-  syntax:
-    content: public AppPenColour(Canvas c, int r, int g, int b)
-    parameters:
-    - id: c
-      type: BOOSE.Canvas
-      description: Canvas which is being executed on
-    - id: r
-      type: System.Int32
-      description: red RGB component
-    - id: g
-      type: System.Int32
-      description: green RGB component
-    - id: b
-      type: System.Int32
-      description: blue RGB component
-    content.vb: Public Sub New(c As Canvas, r As Integer, g As Integer, b As Integer)
-  overload: BradleyLeach_BooseApp.AppPenColour.#ctor*
-  nameWithType.vb: AppPenColour.New(Canvas, Integer, Integer, Integer)
-  fullName.vb: BradleyLeach_BooseApp.AppPenColour.New(BOOSE.Canvas, Integer, Integer, Integer)
-  name.vb: New(Canvas, Integer, Integer, Integer)
-- uid: BradleyLeach_BooseApp.AppPenColour.CheckParameters(System.String[])
-  commentId: M:BradleyLeach_BooseApp.AppPenColour.CheckParameters(System.String[])
-  id: CheckParameters(System.String[])
-  parent: BradleyLeach_BooseApp.AppPenColour
-  langs:
-  - csharp
-  - vb
-  name: CheckParameters(string[])
-  nameWithType: AppPenColour.CheckParameters(string[])
-  fullName: BradleyLeach_BooseApp.AppPenColour.CheckParameters(string[])
+  name: Compile()
+  nameWithType: AppInt.Compile()
+  fullName: BradleyLeach_BooseApp.AppInt.Compile()
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppPenColour.cs
+      path: BradleyLeach_BooseApp/AppInt.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
-    id: CheckParameters
-    path: ../BradleyLeach_BooseApp/AppPenColour.cs
-    startLine: 37
+    id: Compile
+    path: ../BradleyLeach_BooseApp/AppInt.cs
+    startLine: 23
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Validates that the command has the correct number of parameters and sets unprocessed values for later processing.
+  summary: Compiles variable when created, stores this object (Int) within the stored programs variable table.
   example: []
   syntax:
-    content: public override void CheckParameters(string[] Parameters)
-    parameters:
-    - id: Parameters
-      type: System.String[]
-      description: List of parameters ("r","g","b")
-    content.vb: Public Overrides Sub CheckParameters(Parameters As String())
-  overridden: BOOSE.CommandThreeParameters.CheckParameters(System.String[])
-  overload: BradleyLeach_BooseApp.AppPenColour.CheckParameters*
-  exceptions:
-  - type: BOOSE.CommandException
-    commentId: T:BOOSE.CommandException
-    description: When invalid number of parameters given
+    content: public override void Compile()
+    content.vb: Public Overrides Sub Compile()
+  overridden: BOOSE.Evaluation.Compile
+  overload: BradleyLeach_BooseApp.AppInt.Compile*
   implements:
-  - BOOSE.ICommand.CheckParameters(System.String[])
-  nameWithType.vb: AppPenColour.CheckParameters(String())
-  fullName.vb: BradleyLeach_BooseApp.AppPenColour.CheckParameters(String())
-  name.vb: CheckParameters(String())
-- uid: BradleyLeach_BooseApp.AppPenColour.Execute
-  commentId: M:BradleyLeach_BooseApp.AppPenColour.Execute
+  - BOOSE.ICommand.Compile
+- uid: BradleyLeach_BooseApp.AppInt.Execute
+  commentId: M:BradleyLeach_BooseApp.AppInt.Execute
   id: Execute
-  parent: BradleyLeach_BooseApp.AppPenColour
+  parent: BradleyLeach_BooseApp.AppInt
   langs:
   - csharp
   - vb
   name: Execute()
-  nameWithType: AppPenColour.Execute()
-  fullName: BradleyLeach_BooseApp.AppPenColour.Execute()
+  nameWithType: AppInt.Execute()
+  fullName: BradleyLeach_BooseApp.AppInt.Execute()
   type: Method
   source:
     remote:
-      path: BradleyLeach_BooseApp/AppPenColour.cs
+      path: BradleyLeach_BooseApp/AppInt.cs
       branch: main
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: Execute
-    path: ../BradleyLeach_BooseApp/AppPenColour.cs
-    startLine: 56
+    path: ../BradleyLeach_BooseApp/AppInt.cs
+    startLine: 34
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
-  summary: Validates that parameters are integers and within valid range (0-255 inclusive), then calls the penColour method.
+  summary: >-
+    Validates and parses the current stored value is of the correct data type of Integer and updates the value.
+
+    Will floating point values to `Real` type varaibles in the case of an incorrect type.
   example: []
   syntax:
     content: public override void Execute()
     content.vb: Public Overrides Sub Execute()
-  overridden: BOOSE.Command.Execute
-  overload: BradleyLeach_BooseApp.AppPenColour.Execute*
+  overridden: BOOSE.Evaluation.Execute
+  overload: BradleyLeach_BooseApp.AppInt.Execute*
   exceptions:
-  - type: BOOSE.CanvasException
-    commentId: T:BOOSE.CanvasException
-    description: When parameter(s) are non integer or not in range 0-255 inclusive
+  - type: BOOSE.StoredProgramException
+    commentId: T:BOOSE.StoredProgramException
+    description: When stored value is neither an Integer or Real data type.
   implements:
   - BOOSE.ICommand.Execute
 references:
@@ -249,34 +192,13 @@ references:
   name: Command
   nameWithType: Command
   fullName: BOOSE.Command
-- uid: BOOSE.CanvasCommand
-  commentId: T:BOOSE.CanvasCommand
+- uid: BOOSE.Evaluation
+  commentId: T:BOOSE.Evaluation
   parent: BOOSE
   isExternal: true
-  name: CanvasCommand
-  nameWithType: CanvasCommand
-  fullName: BOOSE.CanvasCommand
-- uid: BOOSE.CommandOneParameter
-  commentId: T:BOOSE.CommandOneParameter
-  parent: BOOSE
-  isExternal: true
-  name: CommandOneParameter
-  nameWithType: CommandOneParameter
-  fullName: BOOSE.CommandOneParameter
-- uid: BOOSE.CommandTwoParameters
-  commentId: T:BOOSE.CommandTwoParameters
-  parent: BOOSE
-  isExternal: true
-  name: CommandTwoParameters
-  nameWithType: CommandTwoParameters
-  fullName: BOOSE.CommandTwoParameters
-- uid: BOOSE.CommandThreeParameters
-  commentId: T:BOOSE.CommandThreeParameters
-  parent: BOOSE
-  isExternal: true
-  name: CommandThreeParameters
-  nameWithType: CommandThreeParameters
-  fullName: BOOSE.CommandThreeParameters
+  name: Evaluation
+  nameWithType: Evaluation
+  fullName: BOOSE.Evaluation
 - uid: BOOSE.ICommand
   commentId: T:BOOSE.ICommand
   parent: BOOSE
@@ -284,76 +206,128 @@ references:
   name: ICommand
   nameWithType: ICommand
   fullName: BOOSE.ICommand
-- uid: BOOSE.CommandThreeParameters.param3
-  commentId: F:BOOSE.CommandThreeParameters.param3
-  parent: BOOSE.CommandThreeParameters
+- uid: BOOSE.Evaluation.expression
+  commentId: F:BOOSE.Evaluation.expression
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: param3
-  nameWithType: CommandThreeParameters.param3
-  fullName: BOOSE.CommandThreeParameters.param3
-- uid: BOOSE.CommandThreeParameters.param3unprocessed
-  commentId: F:BOOSE.CommandThreeParameters.param3unprocessed
-  parent: BOOSE.CommandThreeParameters
+  name: expression
+  nameWithType: Evaluation.expression
+  fullName: BOOSE.Evaluation.expression
+- uid: BOOSE.Evaluation.evaluatedExpression
+  commentId: F:BOOSE.Evaluation.evaluatedExpression
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: param3unprocessed
-  nameWithType: CommandThreeParameters.param3unprocessed
-  fullName: BOOSE.CommandThreeParameters.param3unprocessed
-- uid: BOOSE.CommandTwoParameters.param2
-  commentId: F:BOOSE.CommandTwoParameters.param2
-  parent: BOOSE.CommandTwoParameters
+  name: evaluatedExpression
+  nameWithType: Evaluation.evaluatedExpression
+  fullName: BOOSE.Evaluation.evaluatedExpression
+- uid: BOOSE.Evaluation.varName
+  commentId: F:BOOSE.Evaluation.varName
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: param2
-  nameWithType: CommandTwoParameters.param2
-  fullName: BOOSE.CommandTwoParameters.param2
-- uid: BOOSE.CommandTwoParameters.param2unprocessed
-  commentId: F:BOOSE.CommandTwoParameters.param2unprocessed
-  parent: BOOSE.CommandTwoParameters
+  name: varName
+  nameWithType: Evaluation.varName
+  fullName: BOOSE.Evaluation.varName
+- uid: BOOSE.Evaluation.value
+  commentId: F:BOOSE.Evaluation.value
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: param2unprocessed
-  nameWithType: CommandTwoParameters.param2unprocessed
-  fullName: BOOSE.CommandTwoParameters.param2unprocessed
-- uid: BOOSE.CommandOneParameter.param1
-  commentId: F:BOOSE.CommandOneParameter.param1
-  parent: BOOSE.CommandOneParameter
+  name: value
+  nameWithType: Evaluation.value
+  fullName: BOOSE.Evaluation.value
+- uid: BOOSE.Evaluation.CheckParameters(System.String[])
+  commentId: M:BOOSE.Evaluation.CheckParameters(System.String[])
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: param1
-  nameWithType: CommandOneParameter.param1
-  fullName: BOOSE.CommandOneParameter.param1
-- uid: BOOSE.CommandOneParameter.param1unprocessed
-  commentId: F:BOOSE.CommandOneParameter.param1unprocessed
-  parent: BOOSE.CommandOneParameter
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: CheckParameters(string[])
+  nameWithType: Evaluation.CheckParameters(string[])
+  fullName: BOOSE.Evaluation.CheckParameters(string[])
+  nameWithType.vb: Evaluation.CheckParameters(String())
+  fullName.vb: BOOSE.Evaluation.CheckParameters(String())
+  name.vb: CheckParameters(String())
+  spec.csharp:
+  - uid: BOOSE.Evaluation.CheckParameters(System.String[])
+    name: CheckParameters
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Evaluation.CheckParameters(System.String[])
+    name: CheckParameters
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: BOOSE.Evaluation.ProcessExpression(System.String)
+  commentId: M:BOOSE.Evaluation.ProcessExpression(System.String)
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: param1unprocessed
-  nameWithType: CommandOneParameter.param1unprocessed
-  fullName: BOOSE.CommandOneParameter.param1unprocessed
-- uid: BOOSE.CanvasCommand.yPos
-  commentId: F:BOOSE.CanvasCommand.yPos
-  parent: BOOSE.CanvasCommand
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: ProcessExpression(string)
+  nameWithType: Evaluation.ProcessExpression(string)
+  fullName: BOOSE.Evaluation.ProcessExpression(string)
+  nameWithType.vb: Evaluation.ProcessExpression(String)
+  fullName.vb: BOOSE.Evaluation.ProcessExpression(String)
+  name.vb: ProcessExpression(String)
+  spec.csharp:
+  - uid: BOOSE.Evaluation.ProcessExpression(System.String)
+    name: ProcessExpression
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Evaluation.ProcessExpression(System.String)
+    name: ProcessExpression
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BOOSE.Evaluation.Expression
+  commentId: P:BOOSE.Evaluation.Expression
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: yPos
-  nameWithType: CanvasCommand.yPos
-  fullName: BOOSE.CanvasCommand.yPos
-- uid: BOOSE.CanvasCommand.xPos
-  commentId: F:BOOSE.CanvasCommand.xPos
-  parent: BOOSE.CanvasCommand
+  name: Expression
+  nameWithType: Evaluation.Expression
+  fullName: BOOSE.Evaluation.Expression
+- uid: BOOSE.Evaluation.VarName
+  commentId: P:BOOSE.Evaluation.VarName
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: xPos
-  nameWithType: CanvasCommand.xPos
-  fullName: BOOSE.CanvasCommand.xPos
-- uid: BOOSE.CanvasCommand.canvas
-  commentId: F:BOOSE.CanvasCommand.canvas
-  parent: BOOSE.CanvasCommand
+  name: VarName
+  nameWithType: Evaluation.VarName
+  fullName: BOOSE.Evaluation.VarName
+- uid: BOOSE.Evaluation.Value
+  commentId: P:BOOSE.Evaluation.Value
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: canvas
-  nameWithType: CanvasCommand.canvas
-  fullName: BOOSE.CanvasCommand.canvas
-- uid: BOOSE.CanvasCommand.Canvas
-  commentId: P:BOOSE.CanvasCommand.Canvas
-  parent: BOOSE.CanvasCommand
+  name: Value
+  nameWithType: Evaluation.Value
+  fullName: BOOSE.Evaluation.Value
+- uid: BOOSE.Evaluation.Local
+  commentId: P:BOOSE.Evaluation.Local
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: Canvas
-  nameWithType: CanvasCommand.Canvas
-  fullName: BOOSE.CanvasCommand.Canvas
+  name: Local
+  nameWithType: Evaluation.Local
+  fullName: BOOSE.Evaluation.Local
 - uid: BOOSE.Command.IsDouble
   commentId: F:BOOSE.Command.IsDouble
   parent: BOOSE.Command
@@ -429,25 +403,6 @@ references:
     name: String
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-- uid: BOOSE.Command.Compile
-  commentId: M:BOOSE.Command.Compile
-  parent: BOOSE.Command
-  isExternal: true
-  name: Compile()
-  nameWithType: Command.Compile()
-  fullName: BOOSE.Command.Compile()
-  spec.csharp:
-  - uid: BOOSE.Command.Compile
-    name: Compile
-    isExternal: true
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: BOOSE.Command.Compile
-    name: Compile
-    isExternal: true
-  - name: (
   - name: )
 - uid: BOOSE.Command.ProcessParameters(System.String)
   commentId: M:BOOSE.Command.ProcessParameters(System.String)
@@ -742,169 +697,90 @@ references:
   name: BOOSE
   nameWithType: BOOSE
   fullName: BOOSE
-- uid: BradleyLeach_BooseApp.AppPenColour.#ctor*
-  commentId: Overload:BradleyLeach_BooseApp.AppPenColour.#ctor
-  href: BradleyLeach_BooseApp.AppPenColour.html#BradleyLeach_BooseApp_AppPenColour__ctor
-  name: AppPenColour
-  nameWithType: AppPenColour.AppPenColour
-  fullName: BradleyLeach_BooseApp.AppPenColour.AppPenColour
-  nameWithType.vb: AppPenColour.New
-  fullName.vb: BradleyLeach_BooseApp.AppPenColour.New
+- uid: BradleyLeach_BooseApp.AppInt.#ctor*
+  commentId: Overload:BradleyLeach_BooseApp.AppInt.#ctor
+  href: BradleyLeach_BooseApp.AppInt.html#BradleyLeach_BooseApp_AppInt__ctor
+  name: AppInt
+  nameWithType: AppInt.AppInt
+  fullName: BradleyLeach_BooseApp.AppInt.AppInt
+  nameWithType.vb: AppInt.New
+  fullName.vb: BradleyLeach_BooseApp.AppInt.New
   name.vb: New
-- uid: BOOSE.Canvas
-  commentId: T:BOOSE.Canvas
-  parent: BOOSE
+- uid: BOOSE.Evaluation.Compile
+  commentId: M:BOOSE.Evaluation.Compile
+  parent: BOOSE.Evaluation
   isExternal: true
-  name: Canvas
-  nameWithType: Canvas
-  fullName: BOOSE.Canvas
-- uid: System.Int32
-  commentId: T:System.Int32
-  parent: System
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.int32
-  name: int
-  nameWithType: int
-  fullName: int
-  nameWithType.vb: Integer
-  fullName.vb: Integer
-  name.vb: Integer
-- uid: BOOSE.CommandException
-  commentId: T:BOOSE.CommandException
-  isExternal: true
-  name: CommandException
-  nameWithType: CommandException
-  fullName: BOOSE.CommandException
-- uid: BOOSE.CommandThreeParameters.CheckParameters(System.String[])
-  commentId: M:BOOSE.CommandThreeParameters.CheckParameters(System.String[])
-  parent: BOOSE.CommandThreeParameters
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: CheckParameters(string[])
-  nameWithType: CommandThreeParameters.CheckParameters(string[])
-  fullName: BOOSE.CommandThreeParameters.CheckParameters(string[])
-  nameWithType.vb: CommandThreeParameters.CheckParameters(String())
-  fullName.vb: BOOSE.CommandThreeParameters.CheckParameters(String())
-  name.vb: CheckParameters(String())
+  name: Compile()
+  nameWithType: Evaluation.Compile()
+  fullName: BOOSE.Evaluation.Compile()
   spec.csharp:
-  - uid: BOOSE.CommandThreeParameters.CheckParameters(System.String[])
-    name: CheckParameters
+  - uid: BOOSE.Evaluation.Compile
+    name: Compile
     isExternal: true
   - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '['
-  - name: ']'
   - name: )
   spec.vb:
-  - uid: BOOSE.CommandThreeParameters.CheckParameters(System.String[])
-    name: CheckParameters
+  - uid: BOOSE.Evaluation.Compile
+    name: Compile
     isExternal: true
   - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: (
   - name: )
-  - name: )
-- uid: BradleyLeach_BooseApp.AppPenColour.CheckParameters*
-  commentId: Overload:BradleyLeach_BooseApp.AppPenColour.CheckParameters
-  href: BradleyLeach_BooseApp.AppPenColour.html#BradleyLeach_BooseApp_AppPenColour_CheckParameters_System_String___
-  name: CheckParameters
-  nameWithType: AppPenColour.CheckParameters
-  fullName: BradleyLeach_BooseApp.AppPenColour.CheckParameters
-- uid: BOOSE.ICommand.CheckParameters(System.String[])
-  commentId: M:BOOSE.ICommand.CheckParameters(System.String[])
+- uid: BradleyLeach_BooseApp.AppInt.Compile*
+  commentId: Overload:BradleyLeach_BooseApp.AppInt.Compile
+  href: BradleyLeach_BooseApp.AppInt.html#BradleyLeach_BooseApp_AppInt_Compile
+  name: Compile
+  nameWithType: AppInt.Compile
+  fullName: BradleyLeach_BooseApp.AppInt.Compile
+- uid: BOOSE.ICommand.Compile
+  commentId: M:BOOSE.ICommand.Compile
   parent: BOOSE.ICommand
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: CheckParameters(string[])
-  nameWithType: ICommand.CheckParameters(string[])
-  fullName: BOOSE.ICommand.CheckParameters(string[])
-  nameWithType.vb: ICommand.CheckParameters(String())
-  fullName.vb: BOOSE.ICommand.CheckParameters(String())
-  name.vb: CheckParameters(String())
+  name: Compile()
+  nameWithType: ICommand.Compile()
+  fullName: BOOSE.ICommand.Compile()
   spec.csharp:
-  - uid: BOOSE.ICommand.CheckParameters(System.String[])
-    name: CheckParameters
+  - uid: BOOSE.ICommand.Compile
+    name: Compile
     isExternal: true
   - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '['
-  - name: ']'
   - name: )
   spec.vb:
-  - uid: BOOSE.ICommand.CheckParameters(System.String[])
-    name: CheckParameters
+  - uid: BOOSE.ICommand.Compile
+    name: Compile
     isExternal: true
   - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: (
   - name: )
-  - name: )
-- uid: System.String[]
+- uid: BOOSE.StoredProgramException
+  commentId: T:BOOSE.StoredProgramException
   isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: string[]
-  nameWithType: string[]
-  fullName: string[]
-  nameWithType.vb: String()
-  fullName.vb: String()
-  name.vb: String()
-  spec.csharp:
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: '['
-  - name: ']'
-  spec.vb:
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: (
-  - name: )
-- uid: BOOSE.CanvasException
-  commentId: T:BOOSE.CanvasException
-  isExternal: true
-  name: CanvasException
-  nameWithType: CanvasException
-  fullName: BOOSE.CanvasException
-- uid: BOOSE.Command.Execute
-  commentId: M:BOOSE.Command.Execute
-  parent: BOOSE.Command
+  name: StoredProgramException
+  nameWithType: StoredProgramException
+  fullName: BOOSE.StoredProgramException
+- uid: BOOSE.Evaluation.Execute
+  commentId: M:BOOSE.Evaluation.Execute
+  parent: BOOSE.Evaluation
   isExternal: true
   name: Execute()
-  nameWithType: Command.Execute()
-  fullName: BOOSE.Command.Execute()
+  nameWithType: Evaluation.Execute()
+  fullName: BOOSE.Evaluation.Execute()
   spec.csharp:
-  - uid: BOOSE.Command.Execute
+  - uid: BOOSE.Evaluation.Execute
     name: Execute
     isExternal: true
   - name: (
   - name: )
   spec.vb:
-  - uid: BOOSE.Command.Execute
+  - uid: BOOSE.Evaluation.Execute
     name: Execute
     isExternal: true
   - name: (
   - name: )
-- uid: BradleyLeach_BooseApp.AppPenColour.Execute*
-  commentId: Overload:BradleyLeach_BooseApp.AppPenColour.Execute
-  href: BradleyLeach_BooseApp.AppPenColour.html#BradleyLeach_BooseApp_AppPenColour_Execute
+- uid: BradleyLeach_BooseApp.AppInt.Execute*
+  commentId: Overload:BradleyLeach_BooseApp.AppInt.Execute
+  href: BradleyLeach_BooseApp.AppInt.html#BradleyLeach_BooseApp_AppInt_Execute
   name: Execute
-  nameWithType: AppPenColour.Execute
-  fullName: BradleyLeach_BooseApp.AppPenColour.Execute
+  nameWithType: AppInt.Execute
+  fullName: BradleyLeach_BooseApp.AppInt.Execute
 - uid: BOOSE.ICommand.Execute
   commentId: M:BOOSE.ICommand.Execute
   parent: BOOSE.ICommand

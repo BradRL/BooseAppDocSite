@@ -4,6 +4,15 @@ items:
   name: BradleyLeach_BooseApp
   type: Namespace
   items:
+  - uid: BradleyLeach_BooseApp.AppArray
+    name: AppArray
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppBoolean
+    name: AppBoolean
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppBooseFacade
+    name: AppBooseFacade
+    type: Class
   - uid: BradleyLeach_BooseApp.AppCanvas
     name: AppCanvas
     type: Class
@@ -13,8 +22,38 @@ items:
   - uid: BradleyLeach_BooseApp.AppCommandFactory
     name: AppCommandFactory
     type: Class
+  - uid: BradleyLeach_BooseApp.AppCompoundCommand
+    name: AppCompoundCommand
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppConditionalCommand
+    name: AppConditionalCommand
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes
+    name: AppConditionalCommand.conditionalTypes
+    type: Enum
   - uid: BradleyLeach_BooseApp.AppDrawTo
     name: AppDrawTo
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppElse
+    name: AppElse
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppEnd
+    name: AppEnd
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppFill
+    name: AppFill
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppFor
+    name: AppFor
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppICanvasAdapter
+    name: AppICanvasAdapter
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppIf
+    name: AppIf
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppInt
+    name: AppInt
     type: Class
   - uid: BradleyLeach_BooseApp.AppMoveTo
     name: AppMoveTo
@@ -25,8 +64,17 @@ items:
   - uid: BradleyLeach_BooseApp.AppParser
     name: AppParser
     type: Class
+  - uid: BradleyLeach_BooseApp.AppPeek
+    name: AppPeek
+    type: Class
   - uid: BradleyLeach_BooseApp.AppPenColour
     name: AppPenColour
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppPoke
+    name: AppPoke
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppReal
+    name: AppReal
     type: Class
   - uid: BradleyLeach_BooseApp.AppRect
     name: AppRect
@@ -34,7 +82,16 @@ items:
   - uid: BradleyLeach_BooseApp.AppStoredProgram
     name: AppStoredProgram
     type: Class
+  - uid: BradleyLeach_BooseApp.AppWhile
+    name: AppWhile
+    type: Class
+  - uid: BradleyLeach_BooseApp.AppWrite
+    name: AppWrite
+    type: Class
   - uid: BradleyLeach_BooseApp.Form1
     name: Form1
     type: Class
+  - uid: BradleyLeach_BooseApp.IAppCanvas
+    name: IAppCanvas
+    type: Interface
 memberLayout: SamePage

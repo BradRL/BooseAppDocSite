@@ -1,0 +1,1275 @@
+### YamlMime:ManagedReference
+items:
+- uid: BradleyLeach_BooseApp.AppPoke
+  commentId: T:BradleyLeach_BooseApp.AppPoke
+  id: AppPoke
+  parent: BradleyLeach_BooseApp
+  children:
+  - BradleyLeach_BooseApp.AppPoke.CheckParameters(System.String[])
+  - BradleyLeach_BooseApp.AppPoke.Compile
+  - BradleyLeach_BooseApp.AppPoke.Execute
+  - BradleyLeach_BooseApp.AppPoke.Set(BOOSE.StoredProgram,System.String)
+  langs:
+  - csharp
+  - vb
+  name: AppPoke
+  nameWithType: AppPoke
+  fullName: BradleyLeach_BooseApp.AppPoke
+  type: Class
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppPoke.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: AppPoke
+    path: ../BradleyLeach_BooseApp/AppPoke.cs
+    startLine: 14
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: >-
+    Command class for writing a value into an array at a specified index (poke operation).
+
+    Inherits from <xref href="BradleyLeach_BooseApp.AppArray" data-throw-if-not-resolved="false"></xref> and implements the poke logic for both int and real arrays.
+  example: []
+  syntax:
+    content: 'public class AppPoke : AppArray, ICommand'
+    content.vb: Public Class AppPoke Inherits AppArray Implements ICommand
+  inheritance:
+  - System.Object
+  - BOOSE.Command
+  - BOOSE.Evaluation
+  - BradleyLeach_BooseApp.AppArray
+  implements:
+  - BOOSE.ICommand
+  inheritedMembers:
+  - BradleyLeach_BooseApp.AppArray.PEEK
+  - BradleyLeach_BooseApp.AppArray.POKE
+  - BradleyLeach_BooseApp.AppArray.type
+  - BradleyLeach_BooseApp.AppArray.rows
+  - BradleyLeach_BooseApp.AppArray.columns
+  - BradleyLeach_BooseApp.AppArray.valueInt
+  - BradleyLeach_BooseApp.AppArray.valueReal
+  - BradleyLeach_BooseApp.AppArray.intArray
+  - BradleyLeach_BooseApp.AppArray.realArray
+  - BradleyLeach_BooseApp.AppArray.pokeValue
+  - BradleyLeach_BooseApp.AppArray.peekVar
+  - BradleyLeach_BooseApp.AppArray.rowS
+  - BradleyLeach_BooseApp.AppArray.columnS
+  - BradleyLeach_BooseApp.AppArray.row
+  - BradleyLeach_BooseApp.AppArray.column
+  - BradleyLeach_BooseApp.AppArray.Rows
+  - BradleyLeach_BooseApp.AppArray.Columns
+  - BradleyLeach_BooseApp.AppArray.ArrayRestrictions
+  - BradleyLeach_BooseApp.AppArray.ProcessArrayParametersCompile(System.Boolean)
+  - BradleyLeach_BooseApp.AppArray.ProcessArrayParametersExecute(System.Boolean)
+  - BradleyLeach_BooseApp.AppArray.SetIntArray(System.Int32,System.Int32,System.Int32)
+  - BradleyLeach_BooseApp.AppArray.SetRealArray(System.Double,System.Int32,System.Int32)
+  - BradleyLeach_BooseApp.AppArray.GetIntArray(System.Int32,System.Int32)
+  - BradleyLeach_BooseApp.AppArray.GetRealArray(System.Int32,System.Int32)
+  - BOOSE.Evaluation.expression
+  - BOOSE.Evaluation.evaluatedExpression
+  - BOOSE.Evaluation.varName
+  - BOOSE.Evaluation.value
+  - BOOSE.Evaluation.ProcessExpression(System.String)
+  - BOOSE.Evaluation.Expression
+  - BOOSE.Evaluation.VarName
+  - BOOSE.Evaluation.Value
+  - BOOSE.Evaluation.Local
+  - BOOSE.Command.IsDouble
+  - BOOSE.Command.program
+  - BOOSE.Command.parameterList
+  - BOOSE.Command.parameters
+  - BOOSE.Command.paramsint
+  - BOOSE.Command.ProcessParameters(System.String)
+  - BOOSE.Command.ToString
+  - BOOSE.Command.Program
+  - BOOSE.Command.Name
+  - BOOSE.Command.ParameterList
+  - BOOSE.Command.Parameters
+  - BOOSE.Command.Paramsint
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+- uid: BradleyLeach_BooseApp.AppPoke.CheckParameters(System.String[])
+  commentId: M:BradleyLeach_BooseApp.AppPoke.CheckParameters(System.String[])
+  id: CheckParameters(System.String[])
+  parent: BradleyLeach_BooseApp.AppPoke
+  langs:
+  - csharp
+  - vb
+  name: CheckParameters(string[])
+  nameWithType: AppPoke.CheckParameters(string[])
+  fullName: BradleyLeach_BooseApp.AppPoke.CheckParameters(string[])
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppPoke.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: CheckParameters
+    path: ../BradleyLeach_BooseApp/AppPoke.cs
+    startLine: 21
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Checks that the correct number of parameters are provided for the poke command.
+  example: []
+  syntax:
+    content: public override void CheckParameters(string[] parameter)
+    parameters:
+    - id: parameter
+      type: System.String[]
+      description: The list of parameters to check.
+    content.vb: Public Overrides Sub CheckParameters(parameter As String())
+  overridden: BradleyLeach_BooseApp.AppArray.CheckParameters(System.String[])
+  overload: BradleyLeach_BooseApp.AppPoke.CheckParameters*
+  exceptions:
+  - type: BOOSE.CommandException
+    commentId: T:BOOSE.CommandException
+    description: Thrown if the number of parameters is not 2 or 3.
+  nameWithType.vb: AppPoke.CheckParameters(String())
+  fullName.vb: BradleyLeach_BooseApp.AppPoke.CheckParameters(String())
+  name.vb: CheckParameters(String())
+- uid: BradleyLeach_BooseApp.AppPoke.Compile
+  commentId: M:BradleyLeach_BooseApp.AppPoke.Compile
+  id: Compile
+  parent: BradleyLeach_BooseApp.AppPoke
+  langs:
+  - csharp
+  - vb
+  name: Compile()
+  nameWithType: AppPoke.Compile()
+  fullName: BradleyLeach_BooseApp.AppPoke.Compile()
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppPoke.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: Compile
+    path: ../BradleyLeach_BooseApp/AppPoke.cs
+    startLine: 32
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Compiles the poke command, processing array parameters for a poke operation.
+  example: []
+  syntax:
+    content: public override void Compile()
+    content.vb: Public Overrides Sub Compile()
+  overridden: BradleyLeach_BooseApp.AppArray.Compile
+  overload: BradleyLeach_BooseApp.AppPoke.Compile*
+- uid: BradleyLeach_BooseApp.AppPoke.Execute
+  commentId: M:BradleyLeach_BooseApp.AppPoke.Execute
+  id: Execute
+  parent: BradleyLeach_BooseApp.AppPoke
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: AppPoke.Execute()
+  fullName: BradleyLeach_BooseApp.AppPoke.Execute()
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppPoke.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: Execute
+    path: ../BradleyLeach_BooseApp/AppPoke.cs
+    startLine: 40
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Executes the poke command, writing the value into the array at the specified index.
+  example: []
+  syntax:
+    content: public override void Execute()
+    content.vb: Public Overrides Sub Execute()
+  overridden: BradleyLeach_BooseApp.AppArray.Execute
+  overload: BradleyLeach_BooseApp.AppPoke.Execute*
+- uid: BradleyLeach_BooseApp.AppPoke.Set(BOOSE.StoredProgram,System.String)
+  commentId: M:BradleyLeach_BooseApp.AppPoke.Set(BOOSE.StoredProgram,System.String)
+  id: Set(BOOSE.StoredProgram,System.String)
+  parent: BradleyLeach_BooseApp.AppPoke
+  langs:
+  - csharp
+  - vb
+  name: Set(StoredProgram, string)
+  nameWithType: AppPoke.Set(StoredProgram, string)
+  fullName: BradleyLeach_BooseApp.AppPoke.Set(BOOSE.StoredProgram, string)
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppPoke.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: Set
+    path: ../BradleyLeach_BooseApp/AppPoke.cs
+    startLine: 50
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Sets the program context and parameters for the poke command.
+  example: []
+  syntax:
+    content: public override void Set(StoredProgram Program, string Params)
+    parameters:
+    - id: Program
+      type: BOOSE.StoredProgram
+      description: The stored program context.
+    - id: Params
+      type: System.String
+      description: The parameters for the poke command.
+    content.vb: Public Overrides Sub [Set](Program As StoredProgram, Params As String)
+  overridden: BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
+  overload: BradleyLeach_BooseApp.AppPoke.Set*
+  nameWithType.vb: AppPoke.Set(StoredProgram, String)
+  fullName.vb: BradleyLeach_BooseApp.AppPoke.Set(BOOSE.StoredProgram, String)
+  name.vb: Set(StoredProgram, String)
+references:
+- uid: BradleyLeach_BooseApp.AppArray
+  commentId: T:BradleyLeach_BooseApp.AppArray
+  parent: BradleyLeach_BooseApp
+  href: BradleyLeach_BooseApp.AppArray.html
+  name: AppArray
+  nameWithType: AppArray
+  fullName: BradleyLeach_BooseApp.AppArray
+- uid: BradleyLeach_BooseApp
+  commentId: N:BradleyLeach_BooseApp
+  href: BradleyLeach_BooseApp.html
+  name: BradleyLeach_BooseApp
+  nameWithType: BradleyLeach_BooseApp
+  fullName: BradleyLeach_BooseApp
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: BOOSE.Command
+  commentId: T:BOOSE.Command
+  parent: BOOSE
+  isExternal: true
+  name: Command
+  nameWithType: Command
+  fullName: BOOSE.Command
+- uid: BOOSE.Evaluation
+  commentId: T:BOOSE.Evaluation
+  parent: BOOSE
+  isExternal: true
+  name: Evaluation
+  nameWithType: Evaluation
+  fullName: BOOSE.Evaluation
+- uid: BOOSE.ICommand
+  commentId: T:BOOSE.ICommand
+  parent: BOOSE
+  isExternal: true
+  name: ICommand
+  nameWithType: ICommand
+  fullName: BOOSE.ICommand
+- uid: BradleyLeach_BooseApp.AppArray.PEEK
+  commentId: F:BradleyLeach_BooseApp.AppArray.PEEK
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_PEEK
+  name: PEEK
+  nameWithType: AppArray.PEEK
+  fullName: BradleyLeach_BooseApp.AppArray.PEEK
+- uid: BradleyLeach_BooseApp.AppArray.POKE
+  commentId: F:BradleyLeach_BooseApp.AppArray.POKE
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_POKE
+  name: POKE
+  nameWithType: AppArray.POKE
+  fullName: BradleyLeach_BooseApp.AppArray.POKE
+- uid: BradleyLeach_BooseApp.AppArray.type
+  commentId: F:BradleyLeach_BooseApp.AppArray.type
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_type
+  name: type
+  nameWithType: AppArray.type
+  fullName: BradleyLeach_BooseApp.AppArray.type
+- uid: BradleyLeach_BooseApp.AppArray.rows
+  commentId: F:BradleyLeach_BooseApp.AppArray.rows
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_rows
+  name: rows
+  nameWithType: AppArray.rows
+  fullName: BradleyLeach_BooseApp.AppArray.rows
+- uid: BradleyLeach_BooseApp.AppArray.columns
+  commentId: F:BradleyLeach_BooseApp.AppArray.columns
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_columns
+  name: columns
+  nameWithType: AppArray.columns
+  fullName: BradleyLeach_BooseApp.AppArray.columns
+- uid: BradleyLeach_BooseApp.AppArray.valueInt
+  commentId: F:BradleyLeach_BooseApp.AppArray.valueInt
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_valueInt
+  name: valueInt
+  nameWithType: AppArray.valueInt
+  fullName: BradleyLeach_BooseApp.AppArray.valueInt
+- uid: BradleyLeach_BooseApp.AppArray.valueReal
+  commentId: F:BradleyLeach_BooseApp.AppArray.valueReal
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_valueReal
+  name: valueReal
+  nameWithType: AppArray.valueReal
+  fullName: BradleyLeach_BooseApp.AppArray.valueReal
+- uid: BradleyLeach_BooseApp.AppArray.intArray
+  commentId: F:BradleyLeach_BooseApp.AppArray.intArray
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_intArray
+  name: intArray
+  nameWithType: AppArray.intArray
+  fullName: BradleyLeach_BooseApp.AppArray.intArray
+- uid: BradleyLeach_BooseApp.AppArray.realArray
+  commentId: F:BradleyLeach_BooseApp.AppArray.realArray
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_realArray
+  name: realArray
+  nameWithType: AppArray.realArray
+  fullName: BradleyLeach_BooseApp.AppArray.realArray
+- uid: BradleyLeach_BooseApp.AppArray.pokeValue
+  commentId: F:BradleyLeach_BooseApp.AppArray.pokeValue
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_pokeValue
+  name: pokeValue
+  nameWithType: AppArray.pokeValue
+  fullName: BradleyLeach_BooseApp.AppArray.pokeValue
+- uid: BradleyLeach_BooseApp.AppArray.peekVar
+  commentId: F:BradleyLeach_BooseApp.AppArray.peekVar
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_peekVar
+  name: peekVar
+  nameWithType: AppArray.peekVar
+  fullName: BradleyLeach_BooseApp.AppArray.peekVar
+- uid: BradleyLeach_BooseApp.AppArray.rowS
+  commentId: F:BradleyLeach_BooseApp.AppArray.rowS
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_rowS
+  name: rowS
+  nameWithType: AppArray.rowS
+  fullName: BradleyLeach_BooseApp.AppArray.rowS
+- uid: BradleyLeach_BooseApp.AppArray.columnS
+  commentId: F:BradleyLeach_BooseApp.AppArray.columnS
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_columnS
+  name: columnS
+  nameWithType: AppArray.columnS
+  fullName: BradleyLeach_BooseApp.AppArray.columnS
+- uid: BradleyLeach_BooseApp.AppArray.row
+  commentId: F:BradleyLeach_BooseApp.AppArray.row
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_row
+  name: row
+  nameWithType: AppArray.row
+  fullName: BradleyLeach_BooseApp.AppArray.row
+- uid: BradleyLeach_BooseApp.AppArray.column
+  commentId: F:BradleyLeach_BooseApp.AppArray.column
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_column
+  name: column
+  nameWithType: AppArray.column
+  fullName: BradleyLeach_BooseApp.AppArray.column
+- uid: BradleyLeach_BooseApp.AppArray.Rows
+  commentId: P:BradleyLeach_BooseApp.AppArray.Rows
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_Rows
+  name: Rows
+  nameWithType: AppArray.Rows
+  fullName: BradleyLeach_BooseApp.AppArray.Rows
+- uid: BradleyLeach_BooseApp.AppArray.Columns
+  commentId: P:BradleyLeach_BooseApp.AppArray.Columns
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_Columns
+  name: Columns
+  nameWithType: AppArray.Columns
+  fullName: BradleyLeach_BooseApp.AppArray.Columns
+- uid: BradleyLeach_BooseApp.AppArray.ArrayRestrictions
+  commentId: M:BradleyLeach_BooseApp.AppArray.ArrayRestrictions
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_ArrayRestrictions
+  name: ArrayRestrictions()
+  nameWithType: AppArray.ArrayRestrictions()
+  fullName: BradleyLeach_BooseApp.AppArray.ArrayRestrictions()
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppArray.ArrayRestrictions
+    name: ArrayRestrictions
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_ArrayRestrictions
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppArray.ArrayRestrictions
+    name: ArrayRestrictions
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_ArrayRestrictions
+  - name: (
+  - name: )
+- uid: BradleyLeach_BooseApp.AppArray.ProcessArrayParametersCompile(System.Boolean)
+  commentId: M:BradleyLeach_BooseApp.AppArray.ProcessArrayParametersCompile(System.Boolean)
+  parent: BradleyLeach_BooseApp.AppArray
+  isExternal: true
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_ProcessArrayParametersCompile_System_Boolean_
+  name: ProcessArrayParametersCompile(bool)
+  nameWithType: AppArray.ProcessArrayParametersCompile(bool)
+  fullName: BradleyLeach_BooseApp.AppArray.ProcessArrayParametersCompile(bool)
+  nameWithType.vb: AppArray.ProcessArrayParametersCompile(Boolean)
+  fullName.vb: BradleyLeach_BooseApp.AppArray.ProcessArrayParametersCompile(Boolean)
+  name.vb: ProcessArrayParametersCompile(Boolean)
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppArray.ProcessArrayParametersCompile(System.Boolean)
+    name: ProcessArrayParametersCompile
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_ProcessArrayParametersCompile_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppArray.ProcessArrayParametersCompile(System.Boolean)
+    name: ProcessArrayParametersCompile
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_ProcessArrayParametersCompile_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: BradleyLeach_BooseApp.AppArray.ProcessArrayParametersExecute(System.Boolean)
+  commentId: M:BradleyLeach_BooseApp.AppArray.ProcessArrayParametersExecute(System.Boolean)
+  parent: BradleyLeach_BooseApp.AppArray
+  isExternal: true
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_ProcessArrayParametersExecute_System_Boolean_
+  name: ProcessArrayParametersExecute(bool)
+  nameWithType: AppArray.ProcessArrayParametersExecute(bool)
+  fullName: BradleyLeach_BooseApp.AppArray.ProcessArrayParametersExecute(bool)
+  nameWithType.vb: AppArray.ProcessArrayParametersExecute(Boolean)
+  fullName.vb: BradleyLeach_BooseApp.AppArray.ProcessArrayParametersExecute(Boolean)
+  name.vb: ProcessArrayParametersExecute(Boolean)
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppArray.ProcessArrayParametersExecute(System.Boolean)
+    name: ProcessArrayParametersExecute
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_ProcessArrayParametersExecute_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppArray.ProcessArrayParametersExecute(System.Boolean)
+    name: ProcessArrayParametersExecute
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_ProcessArrayParametersExecute_System_Boolean_
+  - name: (
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: BradleyLeach_BooseApp.AppArray.SetIntArray(System.Int32,System.Int32,System.Int32)
+  commentId: M:BradleyLeach_BooseApp.AppArray.SetIntArray(System.Int32,System.Int32,System.Int32)
+  parent: BradleyLeach_BooseApp.AppArray
+  isExternal: true
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_SetIntArray_System_Int32_System_Int32_System_Int32_
+  name: SetIntArray(int, int, int)
+  nameWithType: AppArray.SetIntArray(int, int, int)
+  fullName: BradleyLeach_BooseApp.AppArray.SetIntArray(int, int, int)
+  nameWithType.vb: AppArray.SetIntArray(Integer, Integer, Integer)
+  fullName.vb: BradleyLeach_BooseApp.AppArray.SetIntArray(Integer, Integer, Integer)
+  name.vb: SetIntArray(Integer, Integer, Integer)
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppArray.SetIntArray(System.Int32,System.Int32,System.Int32)
+    name: SetIntArray
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_SetIntArray_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppArray.SetIntArray(System.Int32,System.Int32,System.Int32)
+    name: SetIntArray
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_SetIntArray_System_Int32_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BradleyLeach_BooseApp.AppArray.SetRealArray(System.Double,System.Int32,System.Int32)
+  commentId: M:BradleyLeach_BooseApp.AppArray.SetRealArray(System.Double,System.Int32,System.Int32)
+  parent: BradleyLeach_BooseApp.AppArray
+  isExternal: true
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_SetRealArray_System_Double_System_Int32_System_Int32_
+  name: SetRealArray(double, int, int)
+  nameWithType: AppArray.SetRealArray(double, int, int)
+  fullName: BradleyLeach_BooseApp.AppArray.SetRealArray(double, int, int)
+  nameWithType.vb: AppArray.SetRealArray(Double, Integer, Integer)
+  fullName.vb: BradleyLeach_BooseApp.AppArray.SetRealArray(Double, Integer, Integer)
+  name.vb: SetRealArray(Double, Integer, Integer)
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppArray.SetRealArray(System.Double,System.Int32,System.Int32)
+    name: SetRealArray
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_SetRealArray_System_Double_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppArray.SetRealArray(System.Double,System.Int32,System.Int32)
+    name: SetRealArray
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_SetRealArray_System_Double_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BradleyLeach_BooseApp.AppArray.GetIntArray(System.Int32,System.Int32)
+  commentId: M:BradleyLeach_BooseApp.AppArray.GetIntArray(System.Int32,System.Int32)
+  parent: BradleyLeach_BooseApp.AppArray
+  isExternal: true
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_GetIntArray_System_Int32_System_Int32_
+  name: GetIntArray(int, int)
+  nameWithType: AppArray.GetIntArray(int, int)
+  fullName: BradleyLeach_BooseApp.AppArray.GetIntArray(int, int)
+  nameWithType.vb: AppArray.GetIntArray(Integer, Integer)
+  fullName.vb: BradleyLeach_BooseApp.AppArray.GetIntArray(Integer, Integer)
+  name.vb: GetIntArray(Integer, Integer)
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppArray.GetIntArray(System.Int32,System.Int32)
+    name: GetIntArray
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_GetIntArray_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppArray.GetIntArray(System.Int32,System.Int32)
+    name: GetIntArray
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_GetIntArray_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BradleyLeach_BooseApp.AppArray.GetRealArray(System.Int32,System.Int32)
+  commentId: M:BradleyLeach_BooseApp.AppArray.GetRealArray(System.Int32,System.Int32)
+  parent: BradleyLeach_BooseApp.AppArray
+  isExternal: true
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_GetRealArray_System_Int32_System_Int32_
+  name: GetRealArray(int, int)
+  nameWithType: AppArray.GetRealArray(int, int)
+  fullName: BradleyLeach_BooseApp.AppArray.GetRealArray(int, int)
+  nameWithType.vb: AppArray.GetRealArray(Integer, Integer)
+  fullName.vb: BradleyLeach_BooseApp.AppArray.GetRealArray(Integer, Integer)
+  name.vb: GetRealArray(Integer, Integer)
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppArray.GetRealArray(System.Int32,System.Int32)
+    name: GetRealArray
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_GetRealArray_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppArray.GetRealArray(System.Int32,System.Int32)
+    name: GetRealArray
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_GetRealArray_System_Int32_System_Int32_
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BOOSE.Evaluation.expression
+  commentId: F:BOOSE.Evaluation.expression
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: expression
+  nameWithType: Evaluation.expression
+  fullName: BOOSE.Evaluation.expression
+- uid: BOOSE.Evaluation.evaluatedExpression
+  commentId: F:BOOSE.Evaluation.evaluatedExpression
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: evaluatedExpression
+  nameWithType: Evaluation.evaluatedExpression
+  fullName: BOOSE.Evaluation.evaluatedExpression
+- uid: BOOSE.Evaluation.varName
+  commentId: F:BOOSE.Evaluation.varName
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: varName
+  nameWithType: Evaluation.varName
+  fullName: BOOSE.Evaluation.varName
+- uid: BOOSE.Evaluation.value
+  commentId: F:BOOSE.Evaluation.value
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: value
+  nameWithType: Evaluation.value
+  fullName: BOOSE.Evaluation.value
+- uid: BOOSE.Evaluation.ProcessExpression(System.String)
+  commentId: M:BOOSE.Evaluation.ProcessExpression(System.String)
+  parent: BOOSE.Evaluation
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: ProcessExpression(string)
+  nameWithType: Evaluation.ProcessExpression(string)
+  fullName: BOOSE.Evaluation.ProcessExpression(string)
+  nameWithType.vb: Evaluation.ProcessExpression(String)
+  fullName.vb: BOOSE.Evaluation.ProcessExpression(String)
+  name.vb: ProcessExpression(String)
+  spec.csharp:
+  - uid: BOOSE.Evaluation.ProcessExpression(System.String)
+    name: ProcessExpression
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Evaluation.ProcessExpression(System.String)
+    name: ProcessExpression
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BOOSE.Evaluation.Expression
+  commentId: P:BOOSE.Evaluation.Expression
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: Expression
+  nameWithType: Evaluation.Expression
+  fullName: BOOSE.Evaluation.Expression
+- uid: BOOSE.Evaluation.VarName
+  commentId: P:BOOSE.Evaluation.VarName
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: VarName
+  nameWithType: Evaluation.VarName
+  fullName: BOOSE.Evaluation.VarName
+- uid: BOOSE.Evaluation.Value
+  commentId: P:BOOSE.Evaluation.Value
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: Value
+  nameWithType: Evaluation.Value
+  fullName: BOOSE.Evaluation.Value
+- uid: BOOSE.Evaluation.Local
+  commentId: P:BOOSE.Evaluation.Local
+  parent: BOOSE.Evaluation
+  isExternal: true
+  name: Local
+  nameWithType: Evaluation.Local
+  fullName: BOOSE.Evaluation.Local
+- uid: BOOSE.Command.IsDouble
+  commentId: F:BOOSE.Command.IsDouble
+  parent: BOOSE.Command
+  isExternal: true
+  name: IsDouble
+  nameWithType: Command.IsDouble
+  fullName: BOOSE.Command.IsDouble
+- uid: BOOSE.Command.program
+  commentId: F:BOOSE.Command.program
+  parent: BOOSE.Command
+  isExternal: true
+  name: program
+  nameWithType: Command.program
+  fullName: BOOSE.Command.program
+- uid: BOOSE.Command.parameterList
+  commentId: F:BOOSE.Command.parameterList
+  parent: BOOSE.Command
+  isExternal: true
+  name: parameterList
+  nameWithType: Command.parameterList
+  fullName: BOOSE.Command.parameterList
+- uid: BOOSE.Command.parameters
+  commentId: F:BOOSE.Command.parameters
+  parent: BOOSE.Command
+  isExternal: true
+  name: parameters
+  nameWithType: Command.parameters
+  fullName: BOOSE.Command.parameters
+- uid: BOOSE.Command.paramsint
+  commentId: F:BOOSE.Command.paramsint
+  parent: BOOSE.Command
+  isExternal: true
+  name: paramsint
+  nameWithType: Command.paramsint
+  fullName: BOOSE.Command.paramsint
+- uid: BOOSE.Command.ProcessParameters(System.String)
+  commentId: M:BOOSE.Command.ProcessParameters(System.String)
+  parent: BOOSE.Command
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: ProcessParameters(string)
+  nameWithType: Command.ProcessParameters(string)
+  fullName: BOOSE.Command.ProcessParameters(string)
+  nameWithType.vb: Command.ProcessParameters(String)
+  fullName.vb: BOOSE.Command.ProcessParameters(String)
+  name.vb: ProcessParameters(String)
+  spec.csharp:
+  - uid: BOOSE.Command.ProcessParameters(System.String)
+    name: ProcessParameters
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Command.ProcessParameters(System.String)
+    name: ProcessParameters
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BOOSE.Command.ToString
+  commentId: M:BOOSE.Command.ToString
+  parent: BOOSE.Command
+  isExternal: true
+  name: ToString()
+  nameWithType: Command.ToString()
+  fullName: BOOSE.Command.ToString()
+  spec.csharp:
+  - uid: BOOSE.Command.ToString
+    name: ToString
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Command.ToString
+    name: ToString
+    isExternal: true
+  - name: (
+  - name: )
+- uid: BOOSE.Command.Program
+  commentId: P:BOOSE.Command.Program
+  parent: BOOSE.Command
+  isExternal: true
+  name: Program
+  nameWithType: Command.Program
+  fullName: BOOSE.Command.Program
+- uid: BOOSE.Command.Name
+  commentId: P:BOOSE.Command.Name
+  parent: BOOSE.Command
+  isExternal: true
+  name: Name
+  nameWithType: Command.Name
+  fullName: BOOSE.Command.Name
+- uid: BOOSE.Command.ParameterList
+  commentId: P:BOOSE.Command.ParameterList
+  parent: BOOSE.Command
+  isExternal: true
+  name: ParameterList
+  nameWithType: Command.ParameterList
+  fullName: BOOSE.Command.ParameterList
+- uid: BOOSE.Command.Parameters
+  commentId: P:BOOSE.Command.Parameters
+  parent: BOOSE.Command
+  isExternal: true
+  name: Parameters
+  nameWithType: Command.Parameters
+  fullName: BOOSE.Command.Parameters
+- uid: BOOSE.Command.Paramsint
+  commentId: P:BOOSE.Command.Paramsint
+  parent: BOOSE.Command
+  isExternal: true
+  name: Paramsint
+  nameWithType: Command.Paramsint
+  fullName: BOOSE.Command.Paramsint
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BOOSE
+  commentId: N:BOOSE
+  isExternal: true
+  name: BOOSE
+  nameWithType: BOOSE
+  fullName: BOOSE
+- uid: BOOSE.CommandException
+  commentId: T:BOOSE.CommandException
+  isExternal: true
+  name: CommandException
+  nameWithType: CommandException
+  fullName: BOOSE.CommandException
+- uid: BradleyLeach_BooseApp.AppArray.CheckParameters(System.String[])
+  commentId: M:BradleyLeach_BooseApp.AppArray.CheckParameters(System.String[])
+  parent: BradleyLeach_BooseApp.AppArray
+  isExternal: true
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_CheckParameters_System_String___
+  name: CheckParameters(string[])
+  nameWithType: AppArray.CheckParameters(string[])
+  fullName: BradleyLeach_BooseApp.AppArray.CheckParameters(string[])
+  nameWithType.vb: AppArray.CheckParameters(String())
+  fullName.vb: BradleyLeach_BooseApp.AppArray.CheckParameters(String())
+  name.vb: CheckParameters(String())
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppArray.CheckParameters(System.String[])
+    name: CheckParameters
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_CheckParameters_System_String___
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppArray.CheckParameters(System.String[])
+    name: CheckParameters
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_CheckParameters_System_String___
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+  - name: )
+- uid: BradleyLeach_BooseApp.AppPoke.CheckParameters*
+  commentId: Overload:BradleyLeach_BooseApp.AppPoke.CheckParameters
+  href: BradleyLeach_BooseApp.AppPoke.html#BradleyLeach_BooseApp_AppPoke_CheckParameters_System_String___
+  name: CheckParameters
+  nameWithType: AppPoke.CheckParameters
+  fullName: BradleyLeach_BooseApp.AppPoke.CheckParameters
+- uid: System.String[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string[]
+  nameWithType: string[]
+  fullName: string[]
+  nameWithType.vb: String()
+  fullName.vb: String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: (
+  - name: )
+- uid: BradleyLeach_BooseApp.AppArray.Compile
+  commentId: M:BradleyLeach_BooseApp.AppArray.Compile
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_Compile
+  name: Compile()
+  nameWithType: AppArray.Compile()
+  fullName: BradleyLeach_BooseApp.AppArray.Compile()
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppArray.Compile
+    name: Compile
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_Compile
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppArray.Compile
+    name: Compile
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_Compile
+  - name: (
+  - name: )
+- uid: BradleyLeach_BooseApp.AppPoke.Compile*
+  commentId: Overload:BradleyLeach_BooseApp.AppPoke.Compile
+  href: BradleyLeach_BooseApp.AppPoke.html#BradleyLeach_BooseApp_AppPoke_Compile
+  name: Compile
+  nameWithType: AppPoke.Compile
+  fullName: BradleyLeach_BooseApp.AppPoke.Compile
+- uid: BradleyLeach_BooseApp.AppArray.Execute
+  commentId: M:BradleyLeach_BooseApp.AppArray.Execute
+  parent: BradleyLeach_BooseApp.AppArray
+  href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_Execute
+  name: Execute()
+  nameWithType: AppArray.Execute()
+  fullName: BradleyLeach_BooseApp.AppArray.Execute()
+  spec.csharp:
+  - uid: BradleyLeach_BooseApp.AppArray.Execute
+    name: Execute
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_Execute
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BradleyLeach_BooseApp.AppArray.Execute
+    name: Execute
+    href: BradleyLeach_BooseApp.AppArray.html#BradleyLeach_BooseApp_AppArray_Execute
+  - name: (
+  - name: )
+- uid: BradleyLeach_BooseApp.AppPoke.Execute*
+  commentId: Overload:BradleyLeach_BooseApp.AppPoke.Execute
+  href: BradleyLeach_BooseApp.AppPoke.html#BradleyLeach_BooseApp_AppPoke_Execute
+  name: Execute
+  nameWithType: AppPoke.Execute
+  fullName: BradleyLeach_BooseApp.AppPoke.Execute
+- uid: BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
+  commentId: M:BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
+  parent: BOOSE.Command
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: Set(StoredProgram, string)
+  nameWithType: Command.Set(StoredProgram, string)
+  fullName: BOOSE.Command.Set(BOOSE.StoredProgram, string)
+  nameWithType.vb: Command.Set(StoredProgram, String)
+  fullName.vb: BOOSE.Command.Set(BOOSE.StoredProgram, String)
+  name.vb: Set(StoredProgram, String)
+  spec.csharp:
+  - uid: BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
+    name: Set
+    isExternal: true
+  - name: (
+  - uid: BOOSE.StoredProgram
+    name: StoredProgram
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.Command.Set(BOOSE.StoredProgram,System.String)
+    name: Set
+    isExternal: true
+  - name: (
+  - uid: BOOSE.StoredProgram
+    name: StoredProgram
+    isExternal: true
+  - name: ','
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BradleyLeach_BooseApp.AppPoke.Set*
+  commentId: Overload:BradleyLeach_BooseApp.AppPoke.Set
+  href: BradleyLeach_BooseApp.AppPoke.html#BradleyLeach_BooseApp_AppPoke_Set_BOOSE_StoredProgram_System_String_
+  name: Set
+  nameWithType: AppPoke.Set
+  fullName: BradleyLeach_BooseApp.AppPoke.Set
+- uid: BOOSE.StoredProgram
+  commentId: T:BOOSE.StoredProgram
+  parent: BOOSE
+  isExternal: true
+  name: StoredProgram
+  nameWithType: StoredProgram
+  fullName: BOOSE.StoredProgram
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

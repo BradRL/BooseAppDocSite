@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class AppCircle | BooseApp </title>
+      <title>Class AppEnd | BooseApp </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class AppCircle | BooseApp ">
+      <meta name="title" content="Class AppEnd | BooseApp ">
       
-      <meta name="description" content="Command class to draw circle centered at the current position with specified radius.">
+      <meta name="description" content="Command class representing the end of a control flow block (if, while, for) in the program. Handles linking to the corresponding start command and manages control flow for loops.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -16,7 +16,7 @@
       <meta name="docfx:rel" content="../">
       
       
-      <meta name="docfx:docurl" content="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/new/main/apiSpec/new?filename=BradleyLeach_BooseApp_AppCircle.md&amp;value=---%0Auid%3A%20BradleyLeach_BooseApp.AppCircle%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="docfx:docurl" content="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/new/main/apiSpec/new?filename=BradleyLeach_BooseApp_AppEnd.md&amp;value=---%0Auid%3A%20BradleyLeach_BooseApp.AppEnd%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
       <meta name="loc:inThisArticle" content="In this article">
       <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
       <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
@@ -84,12 +84,12 @@
           <nav id="breadcrumb"></nav>
         </div>
 
-        <article data-uid="BradleyLeach_BooseApp.AppCircle">
+        <article data-uid="BradleyLeach_BooseApp.AppEnd">
 
 
 
-  <h1 id="BradleyLeach_BooseApp_AppCircle" data-uid="BradleyLeach_BooseApp.AppCircle" class="text-break">
-Class AppCircle  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCircle.cs/#L14"><i class="bi bi-code-slash"></i></a>
+  <h1 id="BradleyLeach_BooseApp_AppEnd" data-uid="BradleyLeach_BooseApp.AppEnd" class="text-break">
+Class AppEnd  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppEnd.cs/#L17"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -97,12 +97,13 @@ Class AppCircle  <a class="header-action link-secondary" title="View source" hre
   <dl><dt>Assembly</dt><dd>BradleyLeach_BooseApp.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Command class to draw circle centered at the current position with specified radius.</p>
+  <div class="markdown summary"><p>Command class representing the end of a control flow block (if, while, for) in the program.
+Handles linking to the corresponding start command and manages control flow for loops.</p>
 </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AppCircle : CommandOneParameter, ICommand</code></pre>
+    <pre><code class="lang-csharp hljs">public class AppEnd : AppCompoundCommand, ICommand</code></pre>
   </div>
 
 
@@ -113,9 +114,11 @@ Class AppCircle  <a class="header-action link-secondary" title="View source" hre
     <dd>
       <div><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></div>
       <div><span class="xref">Command</span></div>
-      <div><span class="xref">CanvasCommand</span></div>
-      <div><span class="xref">CommandOneParameter</span></div>
-      <div><span class="xref">AppCircle</span></div>
+      <div><span class="xref">Evaluation</span></div>
+      <div><a class="xref" href="BradleyLeach_BooseApp.AppBoolean.html">AppBoolean</a></div>
+      <div><a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.html">AppConditionalCommand</a></div>
+      <div><a class="xref" href="BradleyLeach_BooseApp.AppCompoundCommand.html">AppCompoundCommand</a></div>
+      <div><span class="xref">AppEnd</span></div>
     </dd>
   </dl>
 
@@ -131,22 +134,58 @@ Class AppCircle  <a class="header-action link-secondary" title="View source" hre
     <dt>Inherited Members</dt>
     <dd>
     <div>
-      <span class="xref">CommandOneParameter.param1</span>
+      <a class="xref" href="BradleyLeach_BooseApp.AppCompoundCommand.html#BradleyLeach_BooseApp_AppCompoundCommand_CorrespondingCommand">AppCompoundCommand.CorrespondingCommand</a>
     </div>
     <div>
-      <span class="xref">CommandOneParameter.param1unprocessed</span>
+      <a class="xref" href="BradleyLeach_BooseApp.AppCompoundCommand.html#BradleyLeach_BooseApp_AppCompoundCommand_ReduceRestrictions">AppCompoundCommand.ReduceRestrictions()</a>
     </div>
     <div>
-      <span class="xref">CanvasCommand.yPos</span>
+      <a class="xref" href="BradleyLeach_BooseApp.AppCompoundCommand.html#BradleyLeach_BooseApp_AppCompoundCommand_CheckParameters_System_String___">AppCompoundCommand.CheckParameters(string[])</a>
     </div>
     <div>
-      <span class="xref">CanvasCommand.xPos</span>
+      <a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.html#BradleyLeach_BooseApp_AppConditionalCommand_endLineNumber">AppConditionalCommand.endLineNumber</a>
     </div>
     <div>
-      <span class="xref">CanvasCommand.canvas</span>
+      <a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.html#BradleyLeach_BooseApp_AppConditionalCommand_EndLineNumber">AppConditionalCommand.EndLineNumber</a>
     </div>
     <div>
-      <span class="xref">CanvasCommand.Canvas</span>
+      <a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.html#BradleyLeach_BooseApp_AppConditionalCommand_LineNumber">AppConditionalCommand.LineNumber</a>
+    </div>
+    <div>
+      <a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.html#BradleyLeach_BooseApp_AppConditionalCommand_Condition">AppConditionalCommand.Condition</a>
+    </div>
+    <div>
+      <a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.html#BradleyLeach_BooseApp_AppConditionalCommand_CondType">AppConditionalCommand.CondType</a>
+    </div>
+    <div>
+      <a class="xref" href="BradleyLeach_BooseApp.AppBoolean.html#BradleyLeach_BooseApp_AppBoolean_BoolValue">AppBoolean.BoolValue</a>
+    </div>
+    <div>
+      <span class="xref">Evaluation.expression</span>
+    </div>
+    <div>
+      <span class="xref">Evaluation.evaluatedExpression</span>
+    </div>
+    <div>
+      <span class="xref">Evaluation.varName</span>
+    </div>
+    <div>
+      <span class="xref">Evaluation.value</span>
+    </div>
+    <div>
+      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Evaluation.ProcessExpression(string)</a>
+    </div>
+    <div>
+      <span class="xref">Evaluation.Expression</span>
+    </div>
+    <div>
+      <span class="xref">Evaluation.VarName</span>
+    </div>
+    <div>
+      <span class="xref">Evaluation.Value</span>
+    </div>
+    <div>
+      <span class="xref">Evaluation.Local</span>
     </div>
     <div>
       <span class="xref">Command.IsDouble</span>
@@ -165,9 +204,6 @@ Class AppCircle  <a class="header-action link-secondary" title="View source" hre
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Command.Set(StoredProgram, string)</a>
-    </div>
-    <div>
-      <span class="xref">Command.Compile()</span>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">Command.ProcessParameters(string)</a>
@@ -219,57 +255,21 @@ Class AppCircle  <a class="header-action link-secondary" title="View source" hre
 </h2>
 
 
-  <a id="BradleyLeach_BooseApp_AppCircle__ctor_" data-uid="BradleyLeach_BooseApp.AppCircle.#ctor*"></a>
+  <a id="BradleyLeach_BooseApp_AppEnd__ctor_" data-uid="BradleyLeach_BooseApp.AppEnd.#ctor*"></a>
 
-  <h3 id="BradleyLeach_BooseApp_AppCircle__ctor" data-uid="BradleyLeach_BooseApp.AppCircle.#ctor">
-  AppCircle()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCircle.cs/#L19"><i class="bi bi-code-slash"></i></a>
+  <h3 id="BradleyLeach_BooseApp_AppEnd__ctor" data-uid="BradleyLeach_BooseApp.AppEnd.#ctor">
+  AppEnd()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppEnd.cs/#L22"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Blank constructor for factory use.</p>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="BradleyLeach_BooseApp.AppEnd.html">AppEnd</a> class for factory use.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AppCircle()</code></pre>
+    <pre><code class="lang-csharp hljs">public AppEnd()</code></pre>
   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-  <a id="BradleyLeach_BooseApp_AppCircle__ctor_" data-uid="BradleyLeach_BooseApp.AppCircle.#ctor*"></a>
-
-  <h3 id="BradleyLeach_BooseApp_AppCircle__ctor_BOOSE_Canvas_System_Int32_" data-uid="BradleyLeach_BooseApp.AppCircle.#ctor(BOOSE.Canvas,System.Int32)">
-  AppCircle(Canvas, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCircle.cs/#L26"><i class="bi bi-code-slash"></i></a>
-  </h3>
-
-  <div class="markdown level1 summary"><p>Complete constructor, draws circle of specified radius.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AppCircle(Canvas c, int radius)</code></pre>
-  </div>
-
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>c</code> <span class="xref">Canvas</span></dt>
-    <dd><p>Canvas which is being executed on</p>
-</dd>
-    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.int32">int</a></dt>
-    <dd><p>radius of the circle</p>
-</dd>
-  </dl>
 
 
 
@@ -286,27 +286,22 @@ Class AppCircle  <a class="header-action link-secondary" title="View source" hre
 </h2>
 
 
-  <a id="BradleyLeach_BooseApp_AppCircle_CheckParameters_" data-uid="BradleyLeach_BooseApp.AppCircle.CheckParameters*"></a>
+  <a id="BradleyLeach_BooseApp_AppEnd_Compile_" data-uid="BradleyLeach_BooseApp.AppEnd.Compile*"></a>
 
-  <h3 id="BradleyLeach_BooseApp_AppCircle_CheckParameters_System_String___" data-uid="BradleyLeach_BooseApp.AppCircle.CheckParameters(System.String[])">
-  CheckParameters(string[])
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCircle.cs/#L36"><i class="bi bi-code-slash"></i></a>
+  <h3 id="BradleyLeach_BooseApp_AppEnd_Compile" data-uid="BradleyLeach_BooseApp.AppEnd.Compile">
+  Compile()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppEnd.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Validates that the command has the correct number of parameters and sets unprocessed values for later processing.</p>
+  <div class="markdown level1 summary"><p>Compiles the end command, linking it to the corresponding control flow start command
+and setting line numbers for block navigation.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override void CheckParameters(string[] Parameters)</code></pre>
+    <pre><code class="lang-csharp hljs">public override void Compile()</code></pre>
   </div>
 
-  <h4 class="section">Parameters</h4>
-  <dl class="parameters">
-    <dt><code>Parameters</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
-    <dd><p>List of parameters (&quot;radius&quot;)</p>
-</dd>
-  </dl>
 
 
 
@@ -319,20 +314,22 @@ Class AppCircle  <a class="header-action link-secondary" title="View source" hre
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
     <dt><span class="xref">CommandException</span></dt>
-    <dd><p>When invalid number of parameters given</p>
+    <dd><p>Thrown if the end command does not match the expected control flow block type.</p>
 </dd>
   </dl>
 
 
 
-  <a id="BradleyLeach_BooseApp_AppCircle_Execute_" data-uid="BradleyLeach_BooseApp.AppCircle.Execute*"></a>
+  <a id="BradleyLeach_BooseApp_AppEnd_Execute_" data-uid="BradleyLeach_BooseApp.AppEnd.Execute*"></a>
 
-  <h3 id="BradleyLeach_BooseApp_AppCircle_Execute" data-uid="BradleyLeach_BooseApp.AppCircle.Execute">
+  <h3 id="BradleyLeach_BooseApp_AppEnd_Execute" data-uid="BradleyLeach_BooseApp.AppEnd.Execute">
   Execute()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCircle.cs/#L48"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppEnd.cs/#L66"><i class="bi bi-code-slash"></i></a>
   </h3>
 
-  <div class="markdown level1 summary"><p>Validates that parameters are integers and within valid range (&gt; 0), then calls the circle draw method.</p>
+  <div class="markdown level1 summary"><p>Executes the end command, managing control flow for while and for loops.
+For while loops, jumps back to the start if the condition is true.
+For for loops, updates the loop variable and determines if the loop should continue.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
 
@@ -351,8 +348,8 @@ Class AppCircle  <a class="header-action link-secondary" title="View source" hre
 
   <h4 class="section">Exceptions</h4>
   <dl class="parameters">
-    <dt><span class="xref">CanvasException</span></dt>
-    <dd><p>When parameter(s) are non integer or less than 1</p>
+    <dt><span class="xref">CommandException</span></dt>
+    <dd><p>Thrown if the loop variable does not exist for a for loop.</p>
 </dd>
   </dl>
 
@@ -362,7 +359,7 @@ Class AppCircle  <a class="header-action link-secondary" title="View source" hre
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCircle.cs/#L14" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppEnd.cs/#L17" class="edit-link">Edit this page</a>
         </div>
 
 

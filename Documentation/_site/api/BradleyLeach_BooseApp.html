@@ -95,6 +95,24 @@
 Classes
 </h3>
     <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppArray.html">AppArray</a></dt>
+      <dd><p>Represents an array variable (int or real) in the program, supporting both declaration and array operations.
+Provides logic for array creation, parameter validation, and value access/modification.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppBoolean.html">AppBoolean</a></dt>
+      <dd><p>Represents a boolean variable or expression within the program.
+Provides logic for compiling and evaluating boolean values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppBooseFacade.html">AppBooseFacade</a></dt>
+      <dd><p>Facade class for storing all BOOSE app funcionality together, keeps GUI form clean from any
+BOOSE dependent code.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="BradleyLeach_BooseApp.AppCanvas.html">AppCanvas</a></dt>
       <dd><p>This class is responsible for drawing on the canvas.</p>
 </dd>
@@ -110,8 +128,60 @@ Classes
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppCompoundCommand.html">AppCompoundCommand</a></dt>
+      <dd><p>Represents a compound control flow command (such as if, while, for, or switch) that can contain nested commands.
+Inherits from <a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.html">AppConditionalCommand</a> and provides linking to the corresponding control command.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.html">AppConditionalCommand</a></dt>
+      <dd><p>Base class for conditional control flow commands such as if, while, and for.
+Provides common properties and logic for managing block structure and condition evaluation.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="BradleyLeach_BooseApp.AppDrawTo.html">AppDrawTo</a></dt>
       <dd><p>Command class to draw a line from the current position to a specified position.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppElse.html">AppElse</a></dt>
+      <dd><p>Command class representing an 'else' block in the program.
+Handles control flow for the 'else' part of an if-else conditional structure.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppEnd.html">AppEnd</a></dt>
+      <dd><p>Command class representing the end of a control flow block (if, while, for) in the program.
+Handles linking to the corresponding start command and manages control flow for loops.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppFill.html">AppFill</a></dt>
+      <dd><p>Command class for the shape fill toggle command.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppFor.html">AppFor</a></dt>
+      <dd><p>Command class representing a 'for' loop block in the program.
+Evaluates start, end, and step expressions, manages the loop variable, and controls program flow for iteration.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppICanvasAdapter.html">AppICanvasAdapter</a></dt>
+      <dd><p>Adapter class responsible for porting core BOOSE command class' / interfaces to the new app version.
+Allows for additional canvas functionality with the IAppCanvas interface.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppIf.html">AppIf</a></dt>
+      <dd><p>Command class representing an 'if' conditional block in the program.
+Evaluates a boolean condition and controls program flow based on the result.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppInt.html">AppInt</a></dt>
+      <dd><p>Command class responsible for dealing with Integer type varaibles.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -131,8 +201,25 @@ Used for maintaining correct line numbering in case of commands with invlaid syn
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppPeek.html">AppPeek</a></dt>
+      <dd><p>Command class for reading a value from an array at a specified index (peek operation) and assigning it to a variable.
+Inherits from <a class="xref" href="BradleyLeach_BooseApp.AppArray.html">AppArray</a> and implements the peek logic for both int and real arrays.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="BradleyLeach_BooseApp.AppPenColour.html">AppPenColour</a></dt>
       <dd><p>Command class to change the current pen colour to specified RGB values.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppPoke.html">AppPoke</a></dt>
+      <dd><p>Command class for writing a value into an array at a specified index (poke operation).
+Inherits from <a class="xref" href="BradleyLeach_BooseApp.AppArray.html">AppArray</a> and implements the poke logic for both int and real arrays.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppReal.html">AppReal</a></dt>
+      <dd><p>Command class responsible for dealing with Floating point (Real) varaibles.</p>
 </dd>
     </dl>
     <dl class="jumplist">
@@ -146,9 +233,36 @@ Used for maintaining correct line numbering in case of commands with invlaid syn
 </dd>
     </dl>
     <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppWhile.html">AppWhile</a></dt>
+      <dd><p>Command class representing a 'while' loop block in the program.
+Evaluates a boolean condition and controls program flow to repeat the block while the condition is true.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppWrite.html">AppWrite</a></dt>
+      <dd><p>Command class for writing text or evaluated expressions to the canvas.</p>
+</dd>
+    </dl>
+    <dl class="jumplist">
       <dt><a class="xref" href="BradleyLeach_BooseApp.Form1.html">Form1</a></dt>
       <dd><p>Represents the main form of the application, providing the user interface for rendering a canvas, parsing and
 executing commands, and displaying runtime results or errors.</p>
+</dd>
+    </dl>
+    <h3 id="interfaces">
+Interfaces
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.IAppCanvas.html">IAppCanvas</a></dt>
+      <dd><p>Overridden <span class="xref">BOOSE.ICanvas</span> interface to allow for custom methods for additional commands to <a class="xref" href="BradleyLeach_BooseApp.AppCanvas.html">AppCanvas</a>.</p>
+</dd>
+    </dl>
+    <h3 id="enums">
+Enums
+</h3>
+    <dl class="jumplist">
+      <dt><a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.conditionalTypes.html">AppConditionalCommand.conditionalTypes</a></dt>
+      <dd><p>Enumeration of supported conditional command types.</p>
 </dd>
     </dl>
 

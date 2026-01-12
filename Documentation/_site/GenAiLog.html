@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>✅ 1. Install DocFX | BooseApp </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="✅ 1. Install DocFX | BooseApp ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/Documentation/GenAiLog.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="BooseApp">
+            BooseApp
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+
+<p><strong>me:</strong> Hi have a .net c# project i want to make a docsite for using docfx whats the commands i need for this any any changes to files
+<strong>ChatGPT:</strong> Below is a clear, minimal set of steps and commands to create a <strong>DocFX documentation site for a .NET C# project</strong>, including what files you need to add or modify.</p>
+<hr>
+<h1 id="-1-install-docfx">✅ <strong>1. Install DocFX</strong></h1>
+<p>If you don’t already have DocFX installed:</p>
+<h3 id="option-1--net-tool-recommended-for-docfx-270"><strong>Option 1 — .NET tool (recommended for DocFX 2.70+)</strong></h3>
+<pre><code class="lang-bash">dotnet tool update -g docfx
+</code></pre>
+<h3 id="option-2--chocolatey"><strong>Option 2 — Chocolatey</strong></h3>
+<pre><code class="lang-bash">choco install docfx -y
+</code></pre>
+<hr>
+<h1 id="-2-create-a-docfx-project">✅ <strong>2. Create a DocFX project</strong></h1>
+<p>Navigate to your solution root:</p>
+<pre><code class="lang-bash">cd YourSolution/
+docfx init -q
+</code></pre>
+<p>This creates a <code>docfx_project</code> folder containing:</p>
+<ul>
+<li><code>docfx.json</code> — main configuration file</li>
+<li><code>api/</code> — API documentation placeholder</li>
+<li><code>articles/</code> — pages for guides and tutorials</li>
+<li><code>index.md</code> — homepage</li>
+</ul>
+<hr>
+<h1 id="-3-generate-api-documentation-from-your-c-code">✅ <strong>3. Generate API Documentation from Your C# Code</strong></h1>
+<p>Inside <code>docfx.json</code>, make sure the <code>metadata</code> section points to your project or solution:</p>
+<h3 id="example-for-a-solution">Example for a solution:</h3>
+<pre><code class="lang-json">&quot;metadata&quot;: [
+  {
+    &quot;src&quot;: [
+      { &quot;files&quot;: [ &quot;**/*.csproj&quot; ], &quot;cwd&quot;: &quot;../&quot; }
+    ],
+    &quot;dest&quot;: &quot;api&quot;
+  }
+]
+</code></pre>
+<h3 id="example-for-a-single-project">Example for a single project:</h3>
+<pre><code class="lang-json">&quot;metadata&quot;: [
+  {
+    &quot;src&quot;: [
+      { &quot;files&quot;: [ &quot;YourProject.csproj&quot; ] }
+    ],
+    &quot;dest&quot;: &quot;api&quot;
+  }
+]
+</code></pre>
+<hr>
+<h1 id="-4-add-xml-documentation-output-to-your-c-project">✅ <strong>4. Add XML documentation output to your C# project</strong></h1>
+<p>DocFX reads the XML comments from your code.</p>
+<p>Edit your <code>.csproj</code> to include:</p>
+<pre><code class="lang-xml">&lt;PropertyGroup&gt;
+  &lt;GenerateDocumentationFile&gt;true&lt;/GenerateDocumentationFile&gt;
+  &lt;NoWarn&gt;1591&lt;/NoWarn&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<hr>
+<h1 id="-5-build-metadata-api-docs">✅ <strong>5. Build metadata (API docs)</strong></h1>
+<p>From inside the docfx project folder:</p>
+<pre><code class="lang-bash">docfx metadata
+</code></pre>
+<p>DocFX will scan your C# code and generate YAML files under <code>/api</code>.</p>
+<hr>
+<h1 id="-6-build-the-full-documentation-site">✅ <strong>6. Build the full documentation site</strong></h1>
+<pre><code class="lang-bash">docfx build
+</code></pre>
+<p>This generates your static site under <code>_site</code>.</p>
+<hr>
+<h1 id="-7-preview-the-documentation-locally">✅ <strong>7. Preview the documentation locally</strong></h1>
+<pre><code class="lang-bash">docfx serve _site
+</code></pre>
+<p>Open:</p>
+<pre><code>http://localhost:8080
+</code></pre>
+<hr>
+<h1 id="-summary-of-file-changes">📁 Summary of File Changes</h1>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>What to change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>YourProject.csproj</code></td>
+<td>Add XML doc generation block</td>
+</tr>
+<tr>
+<td><code>docfx.json</code></td>
+<td>Update <code>metadata</code> → <code>src</code> to point to <code>.csproj</code> or <code>.sln</code></td>
+</tr>
+<tr>
+<td><code>articles/*.md</code></td>
+<td>Write your guides/tutorials</td>
+</tr>
+<tr>
+<td><code>index.md</code></td>
+<td>Edit your docsite homepage</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h1 id="-typical-folder-structure-after-setup">⭐ Typical Folder Structure After Setup</h1>
+<pre><code>YourSolution/
+ ├─ src/
+ │   └─ YourProject.csproj
+ ├─ docfx_project/
+ │   ├─ api/
+ │   ├─ articles/
+ │   ├─ index.md
+ │   ├─ docfx.json
+ │   └─ _site/ (generated)
+</code></pre>
+<hr>
+<p>If you want, I can also generate a <strong>ready-to-use docfx.json</strong> for your exact project structure—just tell me what your folders are called.</p>
+<p><strong>me:</strong> PS C:\Users\mrble\OneDrive - Leeds Beckett University\University Files\Year-3\ASE\ase-boose-assignment-BradRL&gt; docfx metadata
+FileNotFoundException: Cannot find config file C:\Users\mrble\OneDrive - Leeds Beckett University\University
+Files\Year-3\ASE\ase-boose-assignment-BradRL\docfx.json
+at (DocfxConfig , string configDirectory) GetConfig(string configFile) in Docset.cs:73
+at void <execute>b__0() in MetadataCommand.cs:16
+at int Run(LogOptions options, Action run) in CommandHelper.cs:48
+at int Execute(CommandContext context, MetadataCommandOptions options) in MetadataCommand.cs:14
+at Task<int> Execute(CommandContext context, CommandSettings settings) in CommandOfT.cs:40
+at async Task<int> Execute(CommandTree leaf, CommandTree tree, CommandContext context, ITypeResolver resolver,
+IConfiguration configuration) in CommandExecutor.cs:259
+<strong>ChatGPT:</strong> Ah! That error is actually very clear:</int></int></execute></p>
+<blockquote>
+<p><code>FileNotFoundException: Cannot find config file ... docfx.json</code></p>
+</blockquote>
+<p>It means DocFX is looking for a <code>docfx.json</code> file in your current folder, but it doesn’t exist. The <code>metadata</code> command requires a config file to know <strong>what projects to scan and where to put the output</strong>.</p>
+<hr>
+<h1 id="how-to-fix">How to fix</h1>
+<h3 id="option-1--initialize-a-new-docfx-project"><strong>Option 1 — Initialize a new DocFX project</strong></h3>
+<p>From your solution root:</p>
+<pre><code class="lang-powershell">docfx init -q
+</code></pre>
+<p>This will create a <code>docfx_project</code> folder with a <code>docfx.json</code> file. After that, either:</p>
+<pre><code class="lang-powershell">cd docfx_project
+docfx metadata
+</code></pre>
+<p>or reference the config file explicitly:</p>
+<pre><code class="lang-powershell">docfx metadata docfx.json
+</code></pre>
+<hr>
+<h3 id="option-2--create-a-docfxjson-manually"><strong>Option 2 — Create a docfx.json manually</strong></h3>
+<p>If you don’t want the default init structure, create a <code>docfx.json</code> in your project root:</p>
+<pre><code class="lang-json">{
+  &quot;metadata&quot;: [
+    {
+      &quot;src&quot;: [
+        { &quot;files&quot;: [&quot;*.csproj&quot;] }
+      ],
+      &quot;dest&quot;: &quot;api&quot;
+    }
+  ],
+  &quot;build&quot;: {
+    &quot;content&quot;: [
+      { &quot;files&quot;: [&quot;articles/**.md&quot;] },
+      { &quot;files&quot;: [&quot;api/**.yml&quot;] },
+      { &quot;files&quot;: [&quot;index.md&quot;] }
+    ],
+    &quot;dest&quot;: &quot;_site&quot;
+  }
+}
+</code></pre>
+<p>Then you can run:</p>
+<pre><code class="lang-powershell">docfx metadata
+docfx build
+</code></pre>
+<hr>
+<h3 id="-tip">✅ <strong>Tip</strong></h3>
+<p>If your path has spaces (like <code>OneDrive - Leeds Beckett University</code>), wrap paths in quotes when running commands. DocFX usually handles this, but it avoids headaches.</p>
+<hr>
+<p>If you want, I can write a <strong>ready-to-use docfx.json</strong> specifically for your <code>ase-boose-assignment-BradRL</code> project that points to your <code>.csproj</code> and sets up <code>articles</code> and <code>api</code> automatically. This will get you running in one go.</p>
+<p>Do you want me to do that?</p>
+<p><strong>me:</strong> code to add to it for this to work ?
+<strong>ChatGPT:</strong> Perfect! Since your <code>.csproj</code> is already there, the <strong>only thing you need to do</strong> to make DocFX generate API docs from your project is <strong>enable XML documentation output</strong>. DocFX reads the XML comments from your build to generate the metadata.</p>
+<p>Here’s exactly what to add to your <code>.csproj</code>:</p>
+<hr>
+<h3 id="add-inside-the-existing-propertygroup"><strong>Add inside the existing <code>&lt;PropertyGroup&gt;</code></strong></h3>
+<pre><code class="lang-xml">&lt;GenerateDocumentationFile&gt;true&lt;/GenerateDocumentationFile&gt;
+&lt;NoWarn&gt;1591&lt;/NoWarn&gt;
+</code></pre>
+<ul>
+<li><code>&lt;GenerateDocumentationFile&gt;</code> → Tells the compiler to produce an XML file with all your code comments.</li>
+<li><code>&lt;NoWarn&gt;1591&lt;/NoWarn&gt;</code> → Suppresses warnings for missing XML comments (optional but convenient).</li>
+</ul>
+<p>So your <code>&lt;PropertyGroup&gt;</code> will look like this:</p>
+<pre><code class="lang-xml">&lt;PropertyGroup&gt;
+  &lt;OutputType&gt;WinExe&lt;/OutputType&gt;
+  &lt;TargetFramework&gt;net8.0-windows&lt;/TargetFramework&gt;
+  &lt;Nullable&gt;enable&lt;/Nullable&gt;
+  &lt;UseWindowsForms&gt;true&lt;/UseWindowsForms&gt;
+  &lt;ImplicitUsings&gt;enable&lt;/ImplicitUsings&gt;
+  &lt;GenerateDocumentationFile&gt;true&lt;/GenerateDocumentationFile&gt;
+  &lt;NoWarn&gt;1591&lt;/NoWarn&gt;
+&lt;/PropertyGroup&gt;
+</code></pre>
+<hr>
+<h3 id="after-that"><strong>After that</strong></h3>
+<ol>
+<li>Rebuild your project so the XML file is created:</li>
+</ol>
+<pre><code class="lang-powershell">dotnet build
+</code></pre>
+<p>You should see a <code>.xml</code> file next to your <code>.exe</code> or <code>.dll</code> in <code>bin/Debug/net8.0-windows</code>.</p>
+<ol start="2">
+<li>Then generate DocFX metadata:</li>
+</ol>
+<pre><code class="lang-powershell">docfx metadata
+</code></pre>
+<ol start="3">
+<li>Build the site:</li>
+</ol>
+<pre><code class="lang-powershell">docfx build
+docfx serve _site
+</code></pre>
+<p>You’ll now have a full documentation site with your <strong>API reference</strong> included.</p>
+<hr>
+<p>If you want, I can write the <strong>exact <code>docfx.json</code></strong> that points to your <code>.csproj</code> and sets up articles, API, and homepage ready to go for your project folder. It would save you a few manual steps.</p>
+<p><strong>me:</strong> docfx metadata
+No files are found with glob pattern **/*.csproj, excluding <none>, under directory &quot;C:\Users\mrble\OneDrive - Leeds Beckett University\University Files\Year-3\ASE\ase-boose-assignment-BradRL\C:\Users\mrble\OneDrive - Leeds Beckett University\University Files\Year-3\ASE\ase-boose-assignment-BradRL\BradleyLeach_BooseApp&quot;
+warning: No .NET API project detected.
+Creating output...
+warning: No .NET API detected for .</none></p>
+<p>Build succeeded with warning.</p>
+<pre><code>2 warning(s)
+0 error(s)
+</code></pre>
+<p><strong>ChatGPT:</strong> Ah! Now the issue is clear — the error message is showing that <strong>DocFX cannot find your <code>.csproj</code> file</strong> because the path in your <code>docfx.json</code> is wrong. Notice this part of your error:</p>
+<pre><code>under directory &quot;C:\Users\mrble\OneDrive - Leeds Beckett University\University Files\Year-3\ASE\ase-boose-assignment-BradRL\C:\Users\mrble\OneDrive - Leeds Beckett University\University Files\Year-3\ASE\ase-boose-assignment-BradRL\BradleyLeach_BooseApp&quot;
+</code></pre>
+<p>It’s <strong>duplicating your folder path</strong>. This usually happens when the <code>files</code> or <code>cwd</code> in <code>docfx.json</code> is set incorrectly.</p>
+<hr>
+<h2 id="-how-to-fix-it">✅ How to fix it</h2>
+<ol>
+<li>Find the exact location of your <code>.csproj</code>. For example, let’s say it’s here:</li>
+</ol>
+<pre><code>C:\Users\mrble\OneDrive - Leeds Beckett University\University Files\Year-3\ASE\ase-boose-assignment-BradRL\BradleyLeach_BooseApp\BradleyLeach_BooseApp.csproj
+</code></pre>
+<ol start="2">
+<li>Update your <code>docfx.json</code> <strong>metadata section</strong> to point to it <strong>relative to the <code>docfx_project</code> folder</strong>:</li>
+</ol>
+<p>Assuming your <code>docfx_project</code> folder is at:</p>
+<pre><code>C:\Users\mrble\OneDrive - Leeds Beckett University\University Files\Year-3\ASE\ase-boose-assignment-BradRL\docfx_project
+</code></pre>
+<p>Use:</p>
+<pre><code class="lang-json">{
+  &quot;metadata&quot;: [
+    {
+      &quot;src&quot;: [
+        { &quot;files&quot;: [&quot;../BradleyLeach_BooseApp/BradleyLeach_BooseApp.csproj&quot;] }
+      ],
+      &quot;dest&quot;: &quot;api&quot;
+    }
+  ],
+  &quot;build&quot;: {
+    &quot;content&quot;: [
+      { &quot;files&quot;: [&quot;articles/**.md&quot;] },
+      { &quot;files&quot;: [&quot;api/**.yml&quot;] },
+      { &quot;files&quot;: [&quot;index.md&quot;] }
+    ],
+    &quot;dest&quot;: &quot;_site&quot;
+  }
+}
+</code></pre>
+<hr>
+<ol start="3">
+<li><strong>Run commands from <code>docfx_project</code> folder</strong>:</li>
+</ol>
+<pre><code class="lang-powershell">docfx metadata
+docfx build
+docfx serve _site
+</code></pre>
+<p>You should now see API documentation generated.</p>
+<hr>
+<p>💡 <strong>Tip:</strong></p>
+<ul>
+<li>Always make <code>files</code> <strong>relative to the <code>docfx_project</code> folder</strong>.</li>
+<li>Avoid absolute paths; if you do use them, make sure they’re correctly escaped in JSON (<code>\\</code> in Windows paths).</li>
+</ul>
+<hr>
+<p>If you want, I can make a <strong>ready-to-use <code>docfx.json</code></strong> specifically for your <code>BradleyLeach_BooseApp</code> folder so this works in one shot.</p>
+<p>Do you want me to do that?</p>
+<p><strong>me:</strong> modift this with those changes {
+&quot;$schema&quot;: &quot;https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json&quot;,
+&quot;metadata&quot;: [
+{
+&quot;src&quot;: [
+{
+&quot;src&quot;: &quot;../C:\Users\mrble\OneDrive - Leeds Beckett University\University Files\Year-3\ASE\ase-boose-assignment-BradRL\BradleyLeach_BooseApp&quot;,
+&quot;files&quot;: [
+&quot;<strong>/*.csproj&quot;
+]
+}
+],
+&quot;dest&quot;: &quot;api&quot;
+}
+],
+&quot;build&quot;: {
+&quot;content&quot;: [
+{
+&quot;files&quot;: [
+&quot;</strong>/*.{md,yml}&quot;
+],
+&quot;exclude&quot;: [
+&quot;_site/<strong>&quot;
+]
+}
+],
+&quot;resource&quot;: [
+{
+&quot;files&quot;: [
+&quot;images/</strong>&quot;
+]
+}
+],
+&quot;output&quot;: &quot;_site&quot;,
+&quot;template&quot;: [
+&quot;default&quot;,
+&quot;modern&quot;
+],
+&quot;globalMetadata&quot;: {
+&quot;_appName&quot;: &quot;BooseApp&quot;,
+&quot;_appTitle&quot;: &quot;BooseApp&quot;,
+&quot;_enableSearch&quot;: true,
+&quot;pdf&quot;: true
+}
+}
+}
+<strong>ChatGPT:</strong> Ah! That warning explains exactly what’s happening:</p>
+<blockquote>
+<p><code>../</code> is currently not supported in glob pattern, please use ../ in src option instead.</p>
+</blockquote>
+<p>DocFX <strong>doesn’t allow <code>../</code> in the <code>files</code> glob</strong>, only in the <code>&quot;src&quot;</code> folder itself. In other words:</p>
+<ul>
+<li><code>files</code> should be just the filename or pattern inside the folder.</li>
+<li><code>src</code> should point to the folder containing the <code>.csproj</code>.</li>
+</ul>
+<hr>
+<p>Here’s how to fix your <code>docfx.json</code>:</p>
+<pre><code class="lang-json">{
+  &quot;$schema&quot;: &quot;https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json&quot;,
+  &quot;metadata&quot;: [
+    {
+      &quot;src&quot;: [
+        {
+          &quot;src&quot;: &quot;../BradleyLeach_BooseApp&quot;,
+          &quot;files&quot;: [
+            &quot;BradleyLeach_BooseApp.csproj&quot;
+          ]
+        }
+      ],
+      &quot;dest&quot;: &quot;api&quot;
+    }
+  ],
+  &quot;build&quot;: {
+    &quot;content&quot;: [
+      {
+        &quot;files&quot;: [
+          &quot;**/*.{md,yml}&quot;
+        ],
+        &quot;exclude&quot;: [
+          &quot;_site/**&quot;
+        ]
+      }
+    ],
+    &quot;resource&quot;: [
+      {
+        &quot;files&quot;: [
+          &quot;images/**&quot;
+        ]
+      }
+    ],
+    &quot;output&quot;: &quot;_site&quot;,
+    &quot;template&quot;: [
+      &quot;default&quot;,
+      &quot;modern&quot;
+    ],
+    &quot;globalMetadata&quot;: {
+      &quot;_appName&quot;: &quot;BooseApp&quot;,
+      &quot;_appTitle&quot;: &quot;BooseApp&quot;,
+      &quot;_enableSearch&quot;: true,
+      &quot;pdf&quot;: true
+    }
+  }
+}
+</code></pre>
+<h3 id="-key-change">✅ Key change:</h3>
+<pre><code class="lang-json">&quot;src&quot;: &quot;../BradleyLeach_BooseApp&quot;,
+&quot;files&quot;: [
+  &quot;BradleyLeach_BooseApp.csproj&quot;
+]
+</code></pre>
+<ul>
+<li><code>src</code> points to the <strong>folder containing the <code>.csproj</code></strong>.</li>
+<li><code>files</code> is the <strong>name of the <code>.csproj</code> file inside that folder</strong>.</li>
+<li>No <code>../</code> in <code>files</code>.</li>
+</ul>
+<hr>
+<p>After saving, run <strong>inside <code>docfx_project</code></strong>:</p>
+<pre><code class="lang-powershell">docfx metadata
+docfx build
+docfx serve _site
+</code></pre>
+<p>This should finally generate your <strong>API docs</strong>.</p>
+<p>If you want, I can also give you a <strong>version that automatically detects all <code>.csproj</code> files in subfolders</strong>, so you won’t have to manually change <code>docfx.json</code> if you add projects later.</p>
+<p>Do you want me to do that?</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/Documentation/GenAiLog.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

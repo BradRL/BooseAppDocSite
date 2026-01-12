@@ -102,7 +102,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AppCanvas : ICanvas</code></pre>
+    <pre><code class="lang-csharp hljs">public class AppCanvas : IAppCanvas, ICanvas</code></pre>
   </div>
 
 
@@ -119,6 +119,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
   <dl class="typelist implements">
     <dt>Implements</dt>
     <dd>
+      <div><a class="xref" href="BradleyLeach_BooseApp.IAppCanvas.html">IAppCanvas</a></div>
       <div><span class="xref">ICanvas</span></div>
     </dd>
   </dl>
@@ -163,7 +164,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas__ctor_System_Int32_System_Int32_" data-uid="BradleyLeach_BooseApp.AppCanvas.#ctor(System.Int32,System.Int32)">
   AppCanvas(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L50"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L56"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructor to create a canvas of specified size.</p>
@@ -200,7 +201,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_backgroundColour" data-uid="BradleyLeach_BooseApp.AppCanvas.backgroundColour">
   backgroundColour
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L43"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L49"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Solid background colour for the canvas.</p>
@@ -232,11 +233,74 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 </h2>
 
 
+  <a id="BradleyLeach_BooseApp_AppCanvas_BrushColour_" data-uid="BradleyLeach_BooseApp.AppCanvas.BrushColour*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppCanvas_BrushColour" data-uid="BradleyLeach_BooseApp.AppCanvas.BrushColour">
+  BrushColour
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L81"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public object BrushColour { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <a id="BradleyLeach_BooseApp_AppCanvas_FillShapes_" data-uid="BradleyLeach_BooseApp.AppCanvas.FillShapes*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppCanvas_FillShapes" data-uid="BradleyLeach_BooseApp.AppCanvas.FillShapes">
+  FillShapes
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L86"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Expression to get and set whether shapes are filled when drawn.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool FillShapes { get; set; }</code></pre>
+  </div>
+
+
+
+
+
+  <h4 class="section">Property Value</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
   <a id="BradleyLeach_BooseApp_AppCanvas_PenColour_" data-uid="BradleyLeach_BooseApp.AppCanvas.PenColour*"></a>
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_PenColour" data-uid="BradleyLeach_BooseApp.AppCanvas.PenColour">
   PenColour
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L73"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L79"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Expression to get and set the current pen colour.</p>
@@ -268,7 +332,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_Xpos" data-uid="BradleyLeach_BooseApp.AppCanvas.Xpos">
   Xpos
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L63"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L69"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Expression to get and set the current drawing X position.</p>
@@ -300,7 +364,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_Ypos" data-uid="BradleyLeach_BooseApp.AppCanvas.Ypos">
   Ypos
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L68"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L74"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Expression to get and set the current drawing Y position.</p>
@@ -336,7 +400,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_Circle_System_Int32_System_Boolean_" data-uid="BradleyLeach_BooseApp.AppCanvas.Circle(System.Int32,System.Boolean)">
   Circle(int, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L80"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L93"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Draw a circle centered at cursor position with specified radius.</p>
@@ -372,7 +436,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_Clear" data-uid="BradleyLeach_BooseApp.AppCanvas.Clear">
   Clear()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L96"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L124"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reset canvas to background colour.</p>
@@ -399,7 +463,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_DrawTo_System_Int32_System_Int32_" data-uid="BradleyLeach_BooseApp.AppCanvas.DrawTo(System.Int32,System.Int32)">
   DrawTo(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L106"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L134"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Draw line from current cursor position to x,y position.</p>
@@ -435,7 +499,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_MoveTo_System_Int32_System_Int32_" data-uid="BradleyLeach_BooseApp.AppCanvas.MoveTo(System.Int32,System.Int32)">
   MoveTo(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L121"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L149"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>move drawing cursor to x,y position.</p>
@@ -467,11 +531,78 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <a id="BradleyLeach_BooseApp_AppCanvas_RCircle_" data-uid="BradleyLeach_BooseApp.AppCanvas.RCircle*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppCanvas_RCircle_System_Single_" data-uid="BradleyLeach_BooseApp.AppCanvas.RCircle(System.Single)">
+  RCircle(float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L109"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draw a circle centered at cursor position with specified radius.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RCircle(float radius)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>radius</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd><p>Radius of circle being drawn (Int or Real)</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BradleyLeach_BooseApp_AppCanvas_RRect_" data-uid="BradleyLeach_BooseApp.AppCanvas.RRect*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppCanvas_RRect_System_Single_System_Single_" data-uid="BradleyLeach_BooseApp.AppCanvas.RRect(System.Single,System.Single)">
+  RRect(float, float)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L178"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Draw a circle centered at cursor position with specified radius.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void RRect(float width, float height)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>width</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+    <dt><code>height</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.single">float</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="BradleyLeach_BooseApp_AppCanvas_Rect_" data-uid="BradleyLeach_BooseApp.AppCanvas.Rect*"></a>
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_Rect_System_Int32_System_Int32_System_Boolean_" data-uid="BradleyLeach_BooseApp.AppCanvas.Rect(System.Int32,System.Int32,System.Boolean)">
   Rect(int, int, bool)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L133"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L161"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Draw a rectangle at cursor position of width and height.</p>
@@ -510,7 +641,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_Reset" data-uid="BradleyLeach_BooseApp.AppCanvas.Reset">
   Reset()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L148"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L193"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Reset drawing cursor to 0,0 and reset pen to default.</p>
@@ -537,7 +668,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_Set_System_Int32_System_Int32_" data-uid="BradleyLeach_BooseApp.AppCanvas.Set(System.Int32,System.Int32)">
   Set(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L160"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L206"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set output display size.</p>
@@ -573,7 +704,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_SetColour_System_Int32_System_Int32_System_Int32_" data-uid="BradleyLeach_BooseApp.AppCanvas.SetColour(System.Int32,System.Int32,System.Int32)">
   SetColour(int, int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L171"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L217"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Set pen colour using RGB values.</p>
@@ -608,11 +739,44 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
 
 
+  <a id="BradleyLeach_BooseApp_AppCanvas_SetFill_" data-uid="BradleyLeach_BooseApp.AppCanvas.SetFill*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppCanvas_SetFill_System_Boolean_" data-uid="BradleyLeach_BooseApp.AppCanvas.SetFill(System.Boolean)">
+  SetFill(bool)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L247"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Sets the fill state for subsequent shape drawing operations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFill(bool fillState)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>fillState</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.boolean">bool</a></dt>
+    <dd><p>True of False value to set the fill</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="BradleyLeach_BooseApp_AppCanvas_Tri_" data-uid="BradleyLeach_BooseApp.AppCanvas.Tri*"></a>
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_Tri_System_Int32_System_Int32_" data-uid="BradleyLeach_BooseApp.AppCanvas.Tri(System.Int32,System.Int32)">
   Tri(int, int)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L181"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L229"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Draws a triangle in the bounding rectangle.</p>
@@ -648,7 +812,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_WriteText_System_String_" data-uid="BradleyLeach_BooseApp.AppCanvas.WriteText(System.String)">
   WriteText(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L190"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L238"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Writes text to the canvas at the current position.</p>
@@ -681,7 +845,7 @@ Class AppCanvas  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppCanvas_getBitmap" data-uid="BradleyLeach_BooseApp.AppCanvas.getBitmap">
   getBitmap()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L111"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppCanvas.cs/#L139"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"></div>

@@ -89,7 +89,7 @@
 
 
   <h1 id="BradleyLeach_BooseApp_AppStoredProgram" data-uid="BradleyLeach_BooseApp.AppStoredProgram" class="text-break">
-Class AppStoredProgram  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L13"><i class="bi bi-code-slash"></i></a>
+Class AppStoredProgram  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L15"><i class="bi bi-code-slash"></i></a>
   </h1>
 
   <div class="facts text-secondary">
@@ -164,13 +164,7 @@ Class AppStoredProgram  <a class="header-action link-secondary" title="View sour
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.VariableExists(string)</a>
     </div>
     <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.GetVarValue(string)</a>
-    </div>
-    <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.UpdateVariable(string, int)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.UpdateVariable(string, double)</a>
     </div>
     <div>
       <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">StoredProgram.UpdateVariable(string, bool)</a>
@@ -191,16 +185,10 @@ Class AppStoredProgram  <a class="header-action link-secondary" title="View sour
       <span class="xref">StoredProgram.Push(ConditionalCommand)</span>
     </div>
     <div>
-      <span class="xref">StoredProgram.Pop()</span>
-    </div>
-    <div>
       <span class="xref">StoredProgram.Add(Command)</span>
     </div>
     <div>
       <span class="xref">StoredProgram.NextCommand()</span>
-    </div>
-    <div>
-      <span class="xref">StoredProgram.ResetProgram()</span>
     </div>
     <div>
       <span class="xref">StoredProgram.Commandsleft()</span>
@@ -389,9 +377,9 @@ Class AppStoredProgram  <a class="header-action link-secondary" title="View sour
 
   <a id="BradleyLeach_BooseApp_AppStoredProgram__ctor_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.#ctor*"></a>
 
-  <h3 id="BradleyLeach_BooseApp_AppStoredProgram__ctor_BOOSE_ICanvas_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.#ctor(BOOSE.ICanvas)">
-  AppStoredProgram(ICanvas)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L29"><i class="bi bi-code-slash"></i></a>
+  <h3 id="BradleyLeach_BooseApp_AppStoredProgram__ctor_BradleyLeach_BooseApp_AppICanvasAdapter_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.#ctor(BradleyLeach_BooseApp.AppICanvasAdapter)">
+  AppStoredProgram(AppICanvasAdapter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L31"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Constructor that initializes the stored program with a given canvas.</p>
@@ -399,12 +387,12 @@ Class AppStoredProgram  <a class="header-action link-secondary" title="View sour
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public AppStoredProgram(ICanvas c)</code></pre>
+    <pre><code class="lang-csharp hljs">public AppStoredProgram(AppICanvasAdapter c)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>c</code> <span class="xref">ICanvas</span></dt>
+    <dt><code>c</code> <a class="xref" href="BradleyLeach_BooseApp.AppICanvasAdapter.html">AppICanvasAdapter</a></dt>
     <dd><p>Canvas being drawn to</p>
 </dd>
   </dl>
@@ -427,7 +415,7 @@ Class AppStoredProgram  <a class="header-action link-secondary" title="View sour
 
   <h3 id="BradleyLeach_BooseApp_AppStoredProgram_errorList" data-uid="BradleyLeach_BooseApp.AppStoredProgram.errorList">
   errorList
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L18"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L20"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Stores runtime error messages encountered during program execution.</p>
@@ -463,7 +451,7 @@ Class AppStoredProgram  <a class="header-action link-secondary" title="View sour
 
   <h3 id="BradleyLeach_BooseApp_AppStoredProgram_ErrorList" data-uid="BradleyLeach_BooseApp.AppStoredProgram.ErrorList">
   ErrorList
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L23"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L25"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Public accessor for retrieving the list of runtime error messages.</p>
@@ -495,11 +483,152 @@ Class AppStoredProgram  <a class="header-action link-secondary" title="View sour
 </h2>
 
 
+  <a id="BradleyLeach_BooseApp_AppStoredProgram_GetVarValue_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.GetVarValue*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppStoredProgram_GetVarValue_System_String_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.GetVarValue(System.String)">
+  GetVarValue(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L104"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overridden method to be compatable with <code>AppReal</code>, returns the string value of a given variable name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string GetVarValue(string varName)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>varName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>variable name to find value for</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>String value of given variable</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">StoredProgramException</span></dt>
+    <dd><p>Throws error if variable given is not found</p>
+</dd>
+  </dl>
+
+
+
+  <a id="BradleyLeach_BooseApp_AppStoredProgram_Pop_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.Pop*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppStoredProgram_Pop" data-uid="BradleyLeach_BooseApp.AppStoredProgram.Pop">
+  Pop()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L146"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overwritten pop method to remove and return custom conditional commands from the stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public AppConditionalCommand Pop()</code></pre>
+  </div>
+
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.html">AppConditionalCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+  <h4 class="section">Exceptions</h4>
+  <dl class="parameters">
+    <dt><span class="xref">StoredProgramException</span></dt>
+    <dd></dd>
+  </dl>
+
+
+
+  <a id="BradleyLeach_BooseApp_AppStoredProgram_Push_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.Push*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppStoredProgram_Push_BradleyLeach_BooseApp_AppConditionalCommand_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.Push(BradleyLeach_BooseApp.AppConditionalCommand)">
+  Push(AppConditionalCommand)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L136"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overwritten push method to add custom conditional commands to the stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Push(AppConditionalCommand Com)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>Com</code> <a class="xref" href="BradleyLeach_BooseApp.AppConditionalCommand.html">AppConditionalCommand</a></dt>
+    <dd></dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BradleyLeach_BooseApp_AppStoredProgram_ResetProgram_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.ResetProgram*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppStoredProgram_ResetProgram" data-uid="BradleyLeach_BooseApp.AppStoredProgram.ResetProgram">
+  ResetProgram()
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L161"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Resets the program to its initial state by clearing the execution stack.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void ResetProgram()</code></pre>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   <a id="BradleyLeach_BooseApp_AppStoredProgram_Run_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.Run*"></a>
 
   <h3 id="BradleyLeach_BooseApp_AppStoredProgram_Run" data-uid="BradleyLeach_BooseApp.AppStoredProgram.Run">
   Run()
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L38"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L40"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Executes the stored program command by command, handling errors and detecting potential infinite loops.</p>
@@ -528,11 +657,47 @@ Class AppStoredProgram  <a class="header-action link-secondary" title="View sour
 
 
 
+  <a id="BradleyLeach_BooseApp_AppStoredProgram_UpdateVariable_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppStoredProgram_UpdateVariable_System_String_System_Double_" data-uid="BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable(System.String,System.Double)">
+  UpdateVariable(string, double)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L87"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Overridden method to be compatable with <code>AppReal</code>, updates value of <code>AppReal</code> variables</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override void UpdateVariable(string varName, double value)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>varName</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd><p>variable name to be effected</p>
+</dd>
+    <dt><code>value</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.double">double</a></dt>
+    <dd><p>actual value to attached to variable name</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
 
 </article>
 
         <div class="contribution d-print-none">
-          <a href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L13" class="edit-link">Edit this page</a>
+          <a href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppStoredProgram.cs/#L15" class="edit-link">Edit this page</a>
         </div>
 
 

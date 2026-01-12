@@ -5,9 +5,14 @@ items:
   id: AppStoredProgram
   parent: BradleyLeach_BooseApp
   children:
-  - BradleyLeach_BooseApp.AppStoredProgram.#ctor(BOOSE.ICanvas)
+  - BradleyLeach_BooseApp.AppStoredProgram.#ctor(BradleyLeach_BooseApp.AppICanvasAdapter)
   - BradleyLeach_BooseApp.AppStoredProgram.ErrorList
+  - BradleyLeach_BooseApp.AppStoredProgram.GetVarValue(System.String)
+  - BradleyLeach_BooseApp.AppStoredProgram.Pop
+  - BradleyLeach_BooseApp.AppStoredProgram.Push(BradleyLeach_BooseApp.AppConditionalCommand)
+  - BradleyLeach_BooseApp.AppStoredProgram.ResetProgram
   - BradleyLeach_BooseApp.AppStoredProgram.Run
+  - BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable(System.String,System.Double)
   - BradleyLeach_BooseApp.AppStoredProgram.errorList
   langs:
   - csharp
@@ -23,7 +28,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: AppStoredProgram
     path: ../BradleyLeach_BooseApp/AppStoredProgram.cs
-    startLine: 12
+    startLine: 14
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
@@ -53,19 +58,15 @@ items:
   - BOOSE.StoredProgram.FindVariable(BOOSE.Evaluation)
   - BOOSE.StoredProgram.FindVariable(System.String)
   - BOOSE.StoredProgram.VariableExists(System.String)
-  - BOOSE.StoredProgram.GetVarValue(System.String)
   - BOOSE.StoredProgram.UpdateVariable(System.String,System.Int32)
-  - BOOSE.StoredProgram.UpdateVariable(System.String,System.Double)
   - BOOSE.StoredProgram.UpdateVariable(System.String,System.Boolean)
   - BOOSE.StoredProgram.DeleteVariable(System.String)
   - BOOSE.StoredProgram.IsExpression(System.String)
   - BOOSE.StoredProgram.EvaluateExpressionWithString(System.String)
   - BOOSE.StoredProgram.EvaluateExpression(System.String)
   - BOOSE.StoredProgram.Push(BOOSE.ConditionalCommand)
-  - BOOSE.StoredProgram.Pop
   - BOOSE.StoredProgram.Add(BOOSE.Command)
   - BOOSE.StoredProgram.NextCommand
-  - BOOSE.StoredProgram.ResetProgram
   - BOOSE.StoredProgram.Commandsleft
   - BOOSE.StoredProgram.PC
   - System.Collections.ArrayList.Adapter(System.Collections.IList)
@@ -142,7 +143,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: errorList
     path: ../BradleyLeach_BooseApp/AppStoredProgram.cs
-    startLine: 17
+    startLine: 19
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
@@ -171,7 +172,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: ErrorList
     path: ../BradleyLeach_BooseApp/AppStoredProgram.cs
-    startLine: 22
+    startLine: 24
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
@@ -184,16 +185,16 @@ items:
       type: System.Collections.Generic.List{System.String}
     content.vb: Public ReadOnly Property ErrorList As List(Of String)
   overload: BradleyLeach_BooseApp.AppStoredProgram.ErrorList*
-- uid: BradleyLeach_BooseApp.AppStoredProgram.#ctor(BOOSE.ICanvas)
-  commentId: M:BradleyLeach_BooseApp.AppStoredProgram.#ctor(BOOSE.ICanvas)
-  id: '#ctor(BOOSE.ICanvas)'
+- uid: BradleyLeach_BooseApp.AppStoredProgram.#ctor(BradleyLeach_BooseApp.AppICanvasAdapter)
+  commentId: M:BradleyLeach_BooseApp.AppStoredProgram.#ctor(BradleyLeach_BooseApp.AppICanvasAdapter)
+  id: '#ctor(BradleyLeach_BooseApp.AppICanvasAdapter)'
   parent: BradleyLeach_BooseApp.AppStoredProgram
   langs:
   - csharp
   - vb
-  name: AppStoredProgram(ICanvas)
-  nameWithType: AppStoredProgram.AppStoredProgram(ICanvas)
-  fullName: BradleyLeach_BooseApp.AppStoredProgram.AppStoredProgram(BOOSE.ICanvas)
+  name: AppStoredProgram(AppICanvasAdapter)
+  nameWithType: AppStoredProgram.AppStoredProgram(AppICanvasAdapter)
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.AppStoredProgram(BradleyLeach_BooseApp.AppICanvasAdapter)
   type: Constructor
   source:
     remote:
@@ -202,23 +203,23 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: .ctor
     path: ../BradleyLeach_BooseApp/AppStoredProgram.cs
-    startLine: 28
+    startLine: 30
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
   summary: Constructor that initializes the stored program with a given canvas.
   example: []
   syntax:
-    content: public AppStoredProgram(ICanvas c)
+    content: public AppStoredProgram(AppICanvasAdapter c)
     parameters:
     - id: c
-      type: BOOSE.ICanvas
+      type: BradleyLeach_BooseApp.AppICanvasAdapter
       description: Canvas being drawn to
-    content.vb: Public Sub New(c As ICanvas)
+    content.vb: Public Sub New(c As AppICanvasAdapter)
   overload: BradleyLeach_BooseApp.AppStoredProgram.#ctor*
-  nameWithType.vb: AppStoredProgram.New(ICanvas)
-  fullName.vb: BradleyLeach_BooseApp.AppStoredProgram.New(BOOSE.ICanvas)
-  name.vb: New(ICanvas)
+  nameWithType.vb: AppStoredProgram.New(AppICanvasAdapter)
+  fullName.vb: BradleyLeach_BooseApp.AppStoredProgram.New(BradleyLeach_BooseApp.AppICanvasAdapter)
+  name.vb: New(AppICanvasAdapter)
 - uid: BradleyLeach_BooseApp.AppStoredProgram.Run
   commentId: M:BradleyLeach_BooseApp.AppStoredProgram.Run
   id: Run
@@ -237,7 +238,7 @@ items:
       repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
     id: Run
     path: ../BradleyLeach_BooseApp/AppStoredProgram.cs
-    startLine: 37
+    startLine: 39
   assemblies:
   - BradleyLeach_BooseApp
   namespace: BradleyLeach_BooseApp
@@ -252,6 +253,184 @@ items:
   - type: BOOSE.StoredProgramException
     commentId: T:BOOSE.StoredProgramException
     description: When an infinite loop or execution error occurs
+- uid: BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable(System.String,System.Double)
+  commentId: M:BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable(System.String,System.Double)
+  id: UpdateVariable(System.String,System.Double)
+  parent: BradleyLeach_BooseApp.AppStoredProgram
+  langs:
+  - csharp
+  - vb
+  name: UpdateVariable(string, double)
+  nameWithType: AppStoredProgram.UpdateVariable(string, double)
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable(string, double)
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppStoredProgram.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: UpdateVariable
+    path: ../BradleyLeach_BooseApp/AppStoredProgram.cs
+    startLine: 86
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Overridden method to be compatable with `AppReal`, updates value of `AppReal` variables
+  example: []
+  syntax:
+    content: public override void UpdateVariable(string varName, double value)
+    parameters:
+    - id: varName
+      type: System.String
+      description: variable name to be effected
+    - id: value
+      type: System.Double
+      description: actual value to attached to variable name
+    content.vb: Public Overrides Sub UpdateVariable(varName As String, value As Double)
+  overridden: BOOSE.StoredProgram.UpdateVariable(System.String,System.Double)
+  overload: BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable*
+  nameWithType.vb: AppStoredProgram.UpdateVariable(String, Double)
+  fullName.vb: BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable(String, Double)
+  name.vb: UpdateVariable(String, Double)
+- uid: BradleyLeach_BooseApp.AppStoredProgram.GetVarValue(System.String)
+  commentId: M:BradleyLeach_BooseApp.AppStoredProgram.GetVarValue(System.String)
+  id: GetVarValue(System.String)
+  parent: BradleyLeach_BooseApp.AppStoredProgram
+  langs:
+  - csharp
+  - vb
+  name: GetVarValue(string)
+  nameWithType: AppStoredProgram.GetVarValue(string)
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.GetVarValue(string)
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppStoredProgram.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: GetVarValue
+    path: ../BradleyLeach_BooseApp/AppStoredProgram.cs
+    startLine: 103
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Overridden method to be compatable with `AppReal`, returns the string value of a given variable name.
+  example: []
+  syntax:
+    content: public override string GetVarValue(string varName)
+    parameters:
+    - id: varName
+      type: System.String
+      description: variable name to find value for
+    return:
+      type: System.String
+      description: String value of given variable
+    content.vb: Public Overrides Function GetVarValue(varName As String) As String
+  overridden: BOOSE.StoredProgram.GetVarValue(System.String)
+  overload: BradleyLeach_BooseApp.AppStoredProgram.GetVarValue*
+  exceptions:
+  - type: BOOSE.StoredProgramException
+    commentId: T:BOOSE.StoredProgramException
+    description: Throws error if variable given is not found
+  nameWithType.vb: AppStoredProgram.GetVarValue(String)
+  fullName.vb: BradleyLeach_BooseApp.AppStoredProgram.GetVarValue(String)
+  name.vb: GetVarValue(String)
+- uid: BradleyLeach_BooseApp.AppStoredProgram.Push(BradleyLeach_BooseApp.AppConditionalCommand)
+  commentId: M:BradleyLeach_BooseApp.AppStoredProgram.Push(BradleyLeach_BooseApp.AppConditionalCommand)
+  id: Push(BradleyLeach_BooseApp.AppConditionalCommand)
+  parent: BradleyLeach_BooseApp.AppStoredProgram
+  langs:
+  - csharp
+  - vb
+  name: Push(AppConditionalCommand)
+  nameWithType: AppStoredProgram.Push(AppConditionalCommand)
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.Push(BradleyLeach_BooseApp.AppConditionalCommand)
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppStoredProgram.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: Push
+    path: ../BradleyLeach_BooseApp/AppStoredProgram.cs
+    startLine: 135
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Overwritten push method to add custom conditional commands to the stack.
+  example: []
+  syntax:
+    content: public void Push(AppConditionalCommand Com)
+    parameters:
+    - id: Com
+      type: BradleyLeach_BooseApp.AppConditionalCommand
+      description: ''
+    content.vb: Public Sub Push(Com As AppConditionalCommand)
+  overload: BradleyLeach_BooseApp.AppStoredProgram.Push*
+- uid: BradleyLeach_BooseApp.AppStoredProgram.Pop
+  commentId: M:BradleyLeach_BooseApp.AppStoredProgram.Pop
+  id: Pop
+  parent: BradleyLeach_BooseApp.AppStoredProgram
+  langs:
+  - csharp
+  - vb
+  name: Pop()
+  nameWithType: AppStoredProgram.Pop()
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.Pop()
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppStoredProgram.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: Pop
+    path: ../BradleyLeach_BooseApp/AppStoredProgram.cs
+    startLine: 145
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Overwritten pop method to remove and return custom conditional commands from the stack.
+  example: []
+  syntax:
+    content: public AppConditionalCommand Pop()
+    return:
+      type: BradleyLeach_BooseApp.AppConditionalCommand
+      description: ''
+    content.vb: Public Function Pop() As AppConditionalCommand
+  overload: BradleyLeach_BooseApp.AppStoredProgram.Pop*
+  exceptions:
+  - type: BOOSE.StoredProgramException
+    commentId: T:BOOSE.StoredProgramException
+    description: ''
+- uid: BradleyLeach_BooseApp.AppStoredProgram.ResetProgram
+  commentId: M:BradleyLeach_BooseApp.AppStoredProgram.ResetProgram
+  id: ResetProgram
+  parent: BradleyLeach_BooseApp.AppStoredProgram
+  langs:
+  - csharp
+  - vb
+  name: ResetProgram()
+  nameWithType: AppStoredProgram.ResetProgram()
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.ResetProgram()
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/AppStoredProgram.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: ResetProgram
+    path: ../BradleyLeach_BooseApp/AppStoredProgram.cs
+    startLine: 160
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Resets the program to its initial state by clearing the execution stack.
+  example: []
+  syntax:
+    content: public override void ResetProgram()
+    content.vb: Public Overrides Sub ResetProgram()
+  overridden: BOOSE.StoredProgram.ResetProgram
+  overload: BradleyLeach_BooseApp.AppStoredProgram.ResetProgram*
 references:
 - uid: BradleyLeach_BooseApp
   commentId: N:BradleyLeach_BooseApp
@@ -604,37 +783,6 @@ references:
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.string
   - name: )
-- uid: BOOSE.StoredProgram.GetVarValue(System.String)
-  commentId: M:BOOSE.StoredProgram.GetVarValue(System.String)
-  parent: BOOSE.StoredProgram
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: GetVarValue(string)
-  nameWithType: StoredProgram.GetVarValue(string)
-  fullName: BOOSE.StoredProgram.GetVarValue(string)
-  nameWithType.vb: StoredProgram.GetVarValue(String)
-  fullName.vb: BOOSE.StoredProgram.GetVarValue(String)
-  name.vb: GetVarValue(String)
-  spec.csharp:
-  - uid: BOOSE.StoredProgram.GetVarValue(System.String)
-    name: GetVarValue
-    isExternal: true
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
-  spec.vb:
-  - uid: BOOSE.StoredProgram.GetVarValue(System.String)
-    name: GetVarValue
-    isExternal: true
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: )
 - uid: BOOSE.StoredProgram.UpdateVariable(System.String,System.Int32)
   commentId: M:BOOSE.StoredProgram.UpdateVariable(System.String,System.Int32)
   parent: BOOSE.StoredProgram
@@ -677,49 +825,6 @@ references:
     name: Integer
     isExternal: true
     href: https://learn.microsoft.com/dotnet/api/system.int32
-  - name: )
-- uid: BOOSE.StoredProgram.UpdateVariable(System.String,System.Double)
-  commentId: M:BOOSE.StoredProgram.UpdateVariable(System.String,System.Double)
-  parent: BOOSE.StoredProgram
-  isExternal: true
-  href: https://learn.microsoft.com/dotnet/api/system.string
-  name: UpdateVariable(string, double)
-  nameWithType: StoredProgram.UpdateVariable(string, double)
-  fullName: BOOSE.StoredProgram.UpdateVariable(string, double)
-  nameWithType.vb: StoredProgram.UpdateVariable(String, Double)
-  fullName.vb: BOOSE.StoredProgram.UpdateVariable(String, Double)
-  name.vb: UpdateVariable(String, Double)
-  spec.csharp:
-  - uid: BOOSE.StoredProgram.UpdateVariable(System.String,System.Double)
-    name: UpdateVariable
-    isExternal: true
-  - name: (
-  - uid: System.String
-    name: string
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Double
-    name: double
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.double
-  - name: )
-  spec.vb:
-  - uid: BOOSE.StoredProgram.UpdateVariable(System.String,System.Double)
-    name: UpdateVariable
-    isExternal: true
-  - name: (
-  - uid: System.String
-    name: String
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.string
-  - name: ','
-  - name: " "
-  - uid: System.Double
-    name: Double
-    isExternal: true
-    href: https://learn.microsoft.com/dotnet/api/system.double
   - name: )
 - uid: BOOSE.StoredProgram.UpdateVariable(System.String,System.Boolean)
   commentId: M:BOOSE.StoredProgram.UpdateVariable(System.String,System.Boolean)
@@ -913,25 +1018,6 @@ references:
     name: ConditionalCommand
     isExternal: true
   - name: )
-- uid: BOOSE.StoredProgram.Pop
-  commentId: M:BOOSE.StoredProgram.Pop
-  parent: BOOSE.StoredProgram
-  isExternal: true
-  name: Pop()
-  nameWithType: StoredProgram.Pop()
-  fullName: BOOSE.StoredProgram.Pop()
-  spec.csharp:
-  - uid: BOOSE.StoredProgram.Pop
-    name: Pop
-    isExternal: true
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: BOOSE.StoredProgram.Pop
-    name: Pop
-    isExternal: true
-  - name: (
-  - name: )
 - uid: BOOSE.StoredProgram.Add(BOOSE.Command)
   commentId: M:BOOSE.StoredProgram.Add(BOOSE.Command)
   parent: BOOSE.StoredProgram
@@ -973,25 +1059,6 @@ references:
   spec.vb:
   - uid: BOOSE.StoredProgram.NextCommand
     name: NextCommand
-    isExternal: true
-  - name: (
-  - name: )
-- uid: BOOSE.StoredProgram.ResetProgram
-  commentId: M:BOOSE.StoredProgram.ResetProgram
-  parent: BOOSE.StoredProgram
-  isExternal: true
-  name: ResetProgram()
-  nameWithType: StoredProgram.ResetProgram()
-  fullName: BOOSE.StoredProgram.ResetProgram()
-  spec.csharp:
-  - uid: BOOSE.StoredProgram.ResetProgram
-    name: ResetProgram
-    isExternal: true
-  - name: (
-  - name: )
-  spec.vb:
-  - uid: BOOSE.StoredProgram.ResetProgram
-    name: ResetProgram
     isExternal: true
   - name: (
   - name: )
@@ -3030,20 +3097,20 @@ references:
   fullName: BradleyLeach_BooseApp.AppStoredProgram.ErrorList
 - uid: BradleyLeach_BooseApp.AppStoredProgram.#ctor*
   commentId: Overload:BradleyLeach_BooseApp.AppStoredProgram.#ctor
-  href: BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram__ctor_BOOSE_ICanvas_
+  href: BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram__ctor_BradleyLeach_BooseApp_AppICanvasAdapter_
   name: AppStoredProgram
   nameWithType: AppStoredProgram.AppStoredProgram
   fullName: BradleyLeach_BooseApp.AppStoredProgram.AppStoredProgram
   nameWithType.vb: AppStoredProgram.New
   fullName.vb: BradleyLeach_BooseApp.AppStoredProgram.New
   name.vb: New
-- uid: BOOSE.ICanvas
-  commentId: T:BOOSE.ICanvas
-  parent: BOOSE
-  isExternal: true
-  name: ICanvas
-  nameWithType: ICanvas
-  fullName: BOOSE.ICanvas
+- uid: BradleyLeach_BooseApp.AppICanvasAdapter
+  commentId: T:BradleyLeach_BooseApp.AppICanvasAdapter
+  parent: BradleyLeach_BooseApp
+  href: BradleyLeach_BooseApp.AppICanvasAdapter.html
+  name: AppICanvasAdapter
+  nameWithType: AppICanvasAdapter
+  fullName: BradleyLeach_BooseApp.AppICanvasAdapter
 - uid: BOOSE.StoredProgramException
   commentId: T:BOOSE.StoredProgramException
   isExternal: true
@@ -3075,3 +3142,155 @@ references:
   name: Run
   nameWithType: AppStoredProgram.Run
   fullName: BradleyLeach_BooseApp.AppStoredProgram.Run
+- uid: BOOSE.StoredProgram.UpdateVariable(System.String,System.Double)
+  commentId: M:BOOSE.StoredProgram.UpdateVariable(System.String,System.Double)
+  parent: BOOSE.StoredProgram
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: UpdateVariable(string, double)
+  nameWithType: StoredProgram.UpdateVariable(string, double)
+  fullName: BOOSE.StoredProgram.UpdateVariable(string, double)
+  nameWithType.vb: StoredProgram.UpdateVariable(String, Double)
+  fullName.vb: BOOSE.StoredProgram.UpdateVariable(String, Double)
+  name.vb: UpdateVariable(String, Double)
+  spec.csharp:
+  - uid: BOOSE.StoredProgram.UpdateVariable(System.String,System.Double)
+    name: UpdateVariable
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: BOOSE.StoredProgram.UpdateVariable(System.String,System.Double)
+    name: UpdateVariable
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable*
+  commentId: Overload:BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable
+  href: BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram_UpdateVariable_System_String_System_Double_
+  name: UpdateVariable
+  nameWithType: AppStoredProgram.UpdateVariable
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.UpdateVariable
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: BOOSE.StoredProgram.GetVarValue(System.String)
+  commentId: M:BOOSE.StoredProgram.GetVarValue(System.String)
+  parent: BOOSE.StoredProgram
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: GetVarValue(string)
+  nameWithType: StoredProgram.GetVarValue(string)
+  fullName: BOOSE.StoredProgram.GetVarValue(string)
+  nameWithType.vb: StoredProgram.GetVarValue(String)
+  fullName.vb: BOOSE.StoredProgram.GetVarValue(String)
+  name.vb: GetVarValue(String)
+  spec.csharp:
+  - uid: BOOSE.StoredProgram.GetVarValue(System.String)
+    name: GetVarValue
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.StoredProgram.GetVarValue(System.String)
+    name: GetVarValue
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BradleyLeach_BooseApp.AppStoredProgram.GetVarValue*
+  commentId: Overload:BradleyLeach_BooseApp.AppStoredProgram.GetVarValue
+  href: BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram_GetVarValue_System_String_
+  name: GetVarValue
+  nameWithType: AppStoredProgram.GetVarValue
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.GetVarValue
+- uid: BradleyLeach_BooseApp.AppStoredProgram.Push*
+  commentId: Overload:BradleyLeach_BooseApp.AppStoredProgram.Push
+  href: BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram_Push_BradleyLeach_BooseApp_AppConditionalCommand_
+  name: Push
+  nameWithType: AppStoredProgram.Push
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.Push
+- uid: BradleyLeach_BooseApp.AppConditionalCommand
+  commentId: T:BradleyLeach_BooseApp.AppConditionalCommand
+  parent: BradleyLeach_BooseApp
+  href: BradleyLeach_BooseApp.AppConditionalCommand.html
+  name: AppConditionalCommand
+  nameWithType: AppConditionalCommand
+  fullName: BradleyLeach_BooseApp.AppConditionalCommand
+- uid: BradleyLeach_BooseApp.AppStoredProgram.Pop*
+  commentId: Overload:BradleyLeach_BooseApp.AppStoredProgram.Pop
+  href: BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram_Pop
+  name: Pop
+  nameWithType: AppStoredProgram.Pop
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.Pop
+- uid: BOOSE.StoredProgram.ResetProgram
+  commentId: M:BOOSE.StoredProgram.ResetProgram
+  parent: BOOSE.StoredProgram
+  isExternal: true
+  name: ResetProgram()
+  nameWithType: StoredProgram.ResetProgram()
+  fullName: BOOSE.StoredProgram.ResetProgram()
+  spec.csharp:
+  - uid: BOOSE.StoredProgram.ResetProgram
+    name: ResetProgram
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSE.StoredProgram.ResetProgram
+    name: ResetProgram
+    isExternal: true
+  - name: (
+  - name: )
+- uid: BradleyLeach_BooseApp.AppStoredProgram.ResetProgram*
+  commentId: Overload:BradleyLeach_BooseApp.AppStoredProgram.ResetProgram
+  href: BradleyLeach_BooseApp.AppStoredProgram.html#BradleyLeach_BooseApp_AppStoredProgram_ResetProgram
+  name: ResetProgram
+  nameWithType: AppStoredProgram.ResetProgram
+  fullName: BradleyLeach_BooseApp.AppStoredProgram.ResetProgram

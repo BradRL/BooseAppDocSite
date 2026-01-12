@@ -1,0 +1,701 @@
+### YamlMime:ManagedReference
+items:
+- uid: BradleyLeach_BooseApp.IAppCanvas
+  commentId: T:BradleyLeach_BooseApp.IAppCanvas
+  id: IAppCanvas
+  parent: BradleyLeach_BooseApp
+  children:
+  - BradleyLeach_BooseApp.IAppCanvas.FillShapes
+  - BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
+  - BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
+  - BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: IAppCanvas
+  nameWithType: IAppCanvas
+  fullName: BradleyLeach_BooseApp.IAppCanvas
+  type: Interface
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/IAppCanvas.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: IAppCanvas
+    path: ../BradleyLeach_BooseApp/IAppCanvas.cs
+    startLine: 12
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Overridden <xref href="BOOSE.ICanvas" data-throw-if-not-resolved="false"></xref> interface to allow for custom methods for additional commands to <xref href="BradleyLeach_BooseApp.AppCanvas" data-throw-if-not-resolved="false"></xref>.
+  example: []
+  syntax:
+    content: 'public interface IAppCanvas : ICanvas'
+    content.vb: Public Interface IAppCanvas Inherits ICanvas
+  inheritedMembers:
+  - BOOSE.ICanvas.Set(System.Int32,System.Int32)
+  - BOOSE.ICanvas.SetColour(System.Int32,System.Int32,System.Int32)
+  - BOOSE.ICanvas.MoveTo(System.Int32,System.Int32)
+  - BOOSE.ICanvas.DrawTo(System.Int32,System.Int32)
+  - BOOSE.ICanvas.Clear
+  - BOOSE.ICanvas.Reset
+  - BOOSE.ICanvas.Circle(System.Int32,System.Boolean)
+  - BOOSE.ICanvas.Rect(System.Int32,System.Int32,System.Boolean)
+  - BOOSE.ICanvas.Tri(System.Int32,System.Int32)
+  - BOOSE.ICanvas.WriteText(System.String)
+  - BOOSE.ICanvas.getBitmap
+  - BOOSE.ICanvas.Xpos
+  - BOOSE.ICanvas.Ypos
+  - BOOSE.ICanvas.PenColour
+- uid: BradleyLeach_BooseApp.IAppCanvas.FillShapes
+  commentId: P:BradleyLeach_BooseApp.IAppCanvas.FillShapes
+  id: FillShapes
+  parent: BradleyLeach_BooseApp.IAppCanvas
+  langs:
+  - csharp
+  - vb
+  name: FillShapes
+  nameWithType: IAppCanvas.FillShapes
+  fullName: BradleyLeach_BooseApp.IAppCanvas.FillShapes
+  type: Property
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/IAppCanvas.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: FillShapes
+    path: ../BradleyLeach_BooseApp/IAppCanvas.cs
+    startLine: 17
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Gets or sets a value indicating whether shapes should be filled when drawn.
+  example: []
+  syntax:
+    content: bool FillShapes { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Property FillShapes As Boolean
+  overload: BradleyLeach_BooseApp.IAppCanvas.FillShapes*
+- uid: BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
+  commentId: M:BradleyLeach_BooseApp.IAppCanvas.SetFill(System.Boolean)
+  id: SetFill(System.Boolean)
+  parent: BradleyLeach_BooseApp.IAppCanvas
+  langs:
+  - csharp
+  - vb
+  name: SetFill(bool)
+  nameWithType: IAppCanvas.SetFill(bool)
+  fullName: BradleyLeach_BooseApp.IAppCanvas.SetFill(bool)
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/IAppCanvas.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: SetFill
+    path: ../BradleyLeach_BooseApp/IAppCanvas.cs
+    startLine: 23
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Sets the fill state for subsequent shape drawing operations.
+  example: []
+  syntax:
+    content: void SetFill(bool fillState)
+    parameters:
+    - id: fillState
+      type: System.Boolean
+      description: If <code>true</code>, shapes will be filled; otherwise, they will be outlined only.
+    content.vb: Sub SetFill(fillState As Boolean)
+  overload: BradleyLeach_BooseApp.IAppCanvas.SetFill*
+  nameWithType.vb: IAppCanvas.SetFill(Boolean)
+  fullName.vb: BradleyLeach_BooseApp.IAppCanvas.SetFill(Boolean)
+  name.vb: SetFill(Boolean)
+- uid: BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
+  commentId: M:BradleyLeach_BooseApp.IAppCanvas.RCircle(System.Single)
+  id: RCircle(System.Single)
+  parent: BradleyLeach_BooseApp.IAppCanvas
+  langs:
+  - csharp
+  - vb
+  name: RCircle(float)
+  nameWithType: IAppCanvas.RCircle(float)
+  fullName: BradleyLeach_BooseApp.IAppCanvas.RCircle(float)
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/IAppCanvas.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: RCircle
+    path: ../BradleyLeach_BooseApp/IAppCanvas.cs
+    startLine: 29
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Draws a relative circle with the specified radius.
+  example: []
+  syntax:
+    content: void RCircle(float radius)
+    parameters:
+    - id: radius
+      type: System.Single
+      description: The radius of the circle to draw.
+    content.vb: Sub RCircle(radius As Single)
+  overload: BradleyLeach_BooseApp.IAppCanvas.RCircle*
+  nameWithType.vb: IAppCanvas.RCircle(Single)
+  fullName.vb: BradleyLeach_BooseApp.IAppCanvas.RCircle(Single)
+  name.vb: RCircle(Single)
+- uid: BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
+  commentId: M:BradleyLeach_BooseApp.IAppCanvas.RRect(System.Single,System.Single)
+  id: RRect(System.Single,System.Single)
+  parent: BradleyLeach_BooseApp.IAppCanvas
+  langs:
+  - csharp
+  - vb
+  name: RRect(float, float)
+  nameWithType: IAppCanvas.RRect(float, float)
+  fullName: BradleyLeach_BooseApp.IAppCanvas.RRect(float, float)
+  type: Method
+  source:
+    remote:
+      path: BradleyLeach_BooseApp/IAppCanvas.cs
+      branch: main
+      repo: https://github.com/ASE2025repos/ase-boose-assignment-BradRL
+    id: RRect
+    path: ../BradleyLeach_BooseApp/IAppCanvas.cs
+    startLine: 36
+  assemblies:
+  - BradleyLeach_BooseApp
+  namespace: BradleyLeach_BooseApp
+  summary: Draws a relative rectangle with the specified width and height.
+  example: []
+  syntax:
+    content: void RRect(float width, float height)
+    parameters:
+    - id: width
+      type: System.Single
+      description: The width of the rectangle to draw.
+    - id: height
+      type: System.Single
+      description: The height of the rectangle to draw.
+    content.vb: Sub RRect(width As Single, height As Single)
+  overload: BradleyLeach_BooseApp.IAppCanvas.RRect*
+  nameWithType.vb: IAppCanvas.RRect(Single, Single)
+  fullName.vb: BradleyLeach_BooseApp.IAppCanvas.RRect(Single, Single)
+  name.vb: RRect(Single, Single)
+references:
+- uid: BOOSE.ICanvas
+  commentId: T:BOOSE.ICanvas
+  parent: BOOSE
+  isExternal: true
+  name: ICanvas
+  nameWithType: ICanvas
+  fullName: BOOSE.ICanvas
+- uid: BradleyLeach_BooseApp.AppCanvas
+  commentId: T:BradleyLeach_BooseApp.AppCanvas
+  href: BradleyLeach_BooseApp.AppCanvas.html
+  name: AppCanvas
+  nameWithType: AppCanvas
+  fullName: BradleyLeach_BooseApp.AppCanvas
+- uid: BradleyLeach_BooseApp
+  commentId: N:BradleyLeach_BooseApp
+  href: BradleyLeach_BooseApp.html
+  name: BradleyLeach_BooseApp
+  nameWithType: BradleyLeach_BooseApp
+  fullName: BradleyLeach_BooseApp
+- uid: BOOSE.ICanvas.Set(System.Int32,System.Int32)
+  commentId: M:BOOSE.ICanvas.Set(System.Int32,System.Int32)
+  parent: BOOSE.ICanvas
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Set(int, int)
+  nameWithType: ICanvas.Set(int, int)
+  fullName: BOOSE.ICanvas.Set(int, int)
+  nameWithType.vb: ICanvas.Set(Integer, Integer)
+  fullName.vb: BOOSE.ICanvas.Set(Integer, Integer)
+  name.vb: Set(Integer, Integer)
+  spec.csharp:
+  - uid: BOOSE.ICanvas.Set(System.Int32,System.Int32)
+    name: Set
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.Set(System.Int32,System.Int32)
+    name: Set
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BOOSE.ICanvas.SetColour(System.Int32,System.Int32,System.Int32)
+  commentId: M:BOOSE.ICanvas.SetColour(System.Int32,System.Int32,System.Int32)
+  parent: BOOSE.ICanvas
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: SetColour(int, int, int)
+  nameWithType: ICanvas.SetColour(int, int, int)
+  fullName: BOOSE.ICanvas.SetColour(int, int, int)
+  nameWithType.vb: ICanvas.SetColour(Integer, Integer, Integer)
+  fullName.vb: BOOSE.ICanvas.SetColour(Integer, Integer, Integer)
+  name.vb: SetColour(Integer, Integer, Integer)
+  spec.csharp:
+  - uid: BOOSE.ICanvas.SetColour(System.Int32,System.Int32,System.Int32)
+    name: SetColour
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.SetColour(System.Int32,System.Int32,System.Int32)
+    name: SetColour
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BOOSE.ICanvas.MoveTo(System.Int32,System.Int32)
+  commentId: M:BOOSE.ICanvas.MoveTo(System.Int32,System.Int32)
+  parent: BOOSE.ICanvas
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: MoveTo(int, int)
+  nameWithType: ICanvas.MoveTo(int, int)
+  fullName: BOOSE.ICanvas.MoveTo(int, int)
+  nameWithType.vb: ICanvas.MoveTo(Integer, Integer)
+  fullName.vb: BOOSE.ICanvas.MoveTo(Integer, Integer)
+  name.vb: MoveTo(Integer, Integer)
+  spec.csharp:
+  - uid: BOOSE.ICanvas.MoveTo(System.Int32,System.Int32)
+    name: MoveTo
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.MoveTo(System.Int32,System.Int32)
+    name: MoveTo
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BOOSE.ICanvas.DrawTo(System.Int32,System.Int32)
+  commentId: M:BOOSE.ICanvas.DrawTo(System.Int32,System.Int32)
+  parent: BOOSE.ICanvas
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: DrawTo(int, int)
+  nameWithType: ICanvas.DrawTo(int, int)
+  fullName: BOOSE.ICanvas.DrawTo(int, int)
+  nameWithType.vb: ICanvas.DrawTo(Integer, Integer)
+  fullName.vb: BOOSE.ICanvas.DrawTo(Integer, Integer)
+  name.vb: DrawTo(Integer, Integer)
+  spec.csharp:
+  - uid: BOOSE.ICanvas.DrawTo(System.Int32,System.Int32)
+    name: DrawTo
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.DrawTo(System.Int32,System.Int32)
+    name: DrawTo
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BOOSE.ICanvas.Clear
+  commentId: M:BOOSE.ICanvas.Clear
+  parent: BOOSE.ICanvas
+  isExternal: true
+  name: Clear()
+  nameWithType: ICanvas.Clear()
+  fullName: BOOSE.ICanvas.Clear()
+  spec.csharp:
+  - uid: BOOSE.ICanvas.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.Clear
+    name: Clear
+    isExternal: true
+  - name: (
+  - name: )
+- uid: BOOSE.ICanvas.Reset
+  commentId: M:BOOSE.ICanvas.Reset
+  parent: BOOSE.ICanvas
+  isExternal: true
+  name: Reset()
+  nameWithType: ICanvas.Reset()
+  fullName: BOOSE.ICanvas.Reset()
+  spec.csharp:
+  - uid: BOOSE.ICanvas.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.Reset
+    name: Reset
+    isExternal: true
+  - name: (
+  - name: )
+- uid: BOOSE.ICanvas.Circle(System.Int32,System.Boolean)
+  commentId: M:BOOSE.ICanvas.Circle(System.Int32,System.Boolean)
+  parent: BOOSE.ICanvas
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Circle(int, bool)
+  nameWithType: ICanvas.Circle(int, bool)
+  fullName: BOOSE.ICanvas.Circle(int, bool)
+  nameWithType.vb: ICanvas.Circle(Integer, Boolean)
+  fullName.vb: BOOSE.ICanvas.Circle(Integer, Boolean)
+  name.vb: Circle(Integer, Boolean)
+  spec.csharp:
+  - uid: BOOSE.ICanvas.Circle(System.Int32,System.Boolean)
+    name: Circle
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.Circle(System.Int32,System.Boolean)
+    name: Circle
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: BOOSE.ICanvas.Rect(System.Int32,System.Int32,System.Boolean)
+  commentId: M:BOOSE.ICanvas.Rect(System.Int32,System.Int32,System.Boolean)
+  parent: BOOSE.ICanvas
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Rect(int, int, bool)
+  nameWithType: ICanvas.Rect(int, int, bool)
+  fullName: BOOSE.ICanvas.Rect(int, int, bool)
+  nameWithType.vb: ICanvas.Rect(Integer, Integer, Boolean)
+  fullName.vb: BOOSE.ICanvas.Rect(Integer, Integer, Boolean)
+  name.vb: Rect(Integer, Integer, Boolean)
+  spec.csharp:
+  - uid: BOOSE.ICanvas.Rect(System.Int32,System.Int32,System.Boolean)
+    name: Rect
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: bool
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.Rect(System.Int32,System.Int32,System.Boolean)
+    name: Rect
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Boolean
+    name: Boolean
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.boolean
+  - name: )
+- uid: BOOSE.ICanvas.Tri(System.Int32,System.Int32)
+  commentId: M:BOOSE.ICanvas.Tri(System.Int32,System.Int32)
+  parent: BOOSE.ICanvas
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: Tri(int, int)
+  nameWithType: ICanvas.Tri(int, int)
+  fullName: BOOSE.ICanvas.Tri(int, int)
+  nameWithType.vb: ICanvas.Tri(Integer, Integer)
+  fullName.vb: BOOSE.ICanvas.Tri(Integer, Integer)
+  name.vb: Tri(Integer, Integer)
+  spec.csharp:
+  - uid: BOOSE.ICanvas.Tri(System.Int32,System.Int32)
+    name: Tri
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.Tri(System.Int32,System.Int32)
+    name: Tri
+    isExternal: true
+  - name: (
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: BOOSE.ICanvas.WriteText(System.String)
+  commentId: M:BOOSE.ICanvas.WriteText(System.String)
+  parent: BOOSE.ICanvas
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: WriteText(string)
+  nameWithType: ICanvas.WriteText(string)
+  fullName: BOOSE.ICanvas.WriteText(string)
+  nameWithType.vb: ICanvas.WriteText(String)
+  fullName.vb: BOOSE.ICanvas.WriteText(String)
+  name.vb: WriteText(String)
+  spec.csharp:
+  - uid: BOOSE.ICanvas.WriteText(System.String)
+    name: WriteText
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.WriteText(System.String)
+    name: WriteText
+    isExternal: true
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: BOOSE.ICanvas.getBitmap
+  commentId: M:BOOSE.ICanvas.getBitmap
+  parent: BOOSE.ICanvas
+  isExternal: true
+  name: getBitmap()
+  nameWithType: ICanvas.getBitmap()
+  fullName: BOOSE.ICanvas.getBitmap()
+  spec.csharp:
+  - uid: BOOSE.ICanvas.getBitmap
+    name: getBitmap
+    isExternal: true
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: BOOSE.ICanvas.getBitmap
+    name: getBitmap
+    isExternal: true
+  - name: (
+  - name: )
+- uid: BOOSE.ICanvas.Xpos
+  commentId: P:BOOSE.ICanvas.Xpos
+  parent: BOOSE.ICanvas
+  isExternal: true
+  name: Xpos
+  nameWithType: ICanvas.Xpos
+  fullName: BOOSE.ICanvas.Xpos
+- uid: BOOSE.ICanvas.Ypos
+  commentId: P:BOOSE.ICanvas.Ypos
+  parent: BOOSE.ICanvas
+  isExternal: true
+  name: Ypos
+  nameWithType: ICanvas.Ypos
+  fullName: BOOSE.ICanvas.Ypos
+- uid: BOOSE.ICanvas.PenColour
+  commentId: P:BOOSE.ICanvas.PenColour
+  parent: BOOSE.ICanvas
+  isExternal: true
+  name: PenColour
+  nameWithType: ICanvas.PenColour
+  fullName: BOOSE.ICanvas.PenColour
+- uid: BOOSE
+  commentId: N:BOOSE
+  isExternal: true
+  name: BOOSE
+  nameWithType: BOOSE
+  fullName: BOOSE
+- uid: BradleyLeach_BooseApp.IAppCanvas.FillShapes*
+  commentId: Overload:BradleyLeach_BooseApp.IAppCanvas.FillShapes
+  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_FillShapes
+  name: FillShapes
+  nameWithType: IAppCanvas.FillShapes
+  fullName: BradleyLeach_BooseApp.IAppCanvas.FillShapes
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: BradleyLeach_BooseApp.IAppCanvas.SetFill*
+  commentId: Overload:BradleyLeach_BooseApp.IAppCanvas.SetFill
+  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_SetFill_System_Boolean_
+  name: SetFill
+  nameWithType: IAppCanvas.SetFill
+  fullName: BradleyLeach_BooseApp.IAppCanvas.SetFill
+- uid: BradleyLeach_BooseApp.IAppCanvas.RCircle*
+  commentId: Overload:BradleyLeach_BooseApp.IAppCanvas.RCircle
+  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RCircle_System_Single_
+  name: RCircle
+  nameWithType: IAppCanvas.RCircle
+  fullName: BradleyLeach_BooseApp.IAppCanvas.RCircle
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.single
+  name: float
+  nameWithType: float
+  fullName: float
+  nameWithType.vb: Single
+  fullName.vb: Single
+  name.vb: Single
+- uid: BradleyLeach_BooseApp.IAppCanvas.RRect*
+  commentId: Overload:BradleyLeach_BooseApp.IAppCanvas.RRect
+  href: BradleyLeach_BooseApp.IAppCanvas.html#BradleyLeach_BooseApp_IAppCanvas_RRect_System_Single_System_Single_
+  name: RRect
+  nameWithType: IAppCanvas.RRect
+  fullName: BradleyLeach_BooseApp.IAppCanvas.RRect

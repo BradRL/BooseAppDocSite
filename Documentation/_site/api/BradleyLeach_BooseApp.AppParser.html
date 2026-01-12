@@ -344,12 +344,12 @@ Class AppParser  <a class="header-action link-secondary" title="View source" hre
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ICommand ParseCommand(string Line)</code></pre>
+    <pre><code class="lang-csharp hljs">public ICommand ParseCommand(string line)</code></pre>
   </div>
 
   <h4 class="section">Parameters</h4>
   <dl class="parameters">
-    <dt><code>Line</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dt><code>line</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
     <dd><p>Single line from user input to parse</p>
 </dd>
   </dl>
@@ -381,7 +381,7 @@ Class AppParser  <a class="header-action link-secondary" title="View source" hre
 
   <h3 id="BradleyLeach_BooseApp_AppParser_ParseProgram_System_String_" data-uid="BradleyLeach_BooseApp.AppParser.ParseProgram(System.String)">
   ParseProgram(string)
-  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppParser.cs/#L77"><i class="bi bi-code-slash"></i></a>
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppParser.cs/#L128"><i class="bi bi-code-slash"></i></a>
   </h3>
 
   <div class="markdown level1 summary"><p>Parses an entire program input string line by line, using ParseCommand to process each line and storing commands in the stored program.</p>
@@ -399,6 +399,43 @@ Class AppParser  <a class="header-action link-secondary" title="View source" hre
 </dd>
   </dl>
 
+
+
+
+
+
+
+
+
+
+
+
+  <a id="BradleyLeach_BooseApp_AppParser_Tokenize_" data-uid="BradleyLeach_BooseApp.AppParser.Tokenize*"></a>
+
+  <h3 id="BradleyLeach_BooseApp_AppParser_Tokenize_System_String_" data-uid="BradleyLeach_BooseApp.AppParser.Tokenize(System.String)">
+  Tokenize(string)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/ASE2025repos/ase-boose-assignment-BradRL/blob/main/BradleyLeach_BooseApp/AppParser.cs/#L169"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Tokenizes a line of input into individual components for parsing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public string[] Tokenize(string line)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>line</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a></dt>
+    <dd></dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.string">string</a>[]</dt>
+    <dd></dd>
+  </dl>
 
 
 
