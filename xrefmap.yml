@@ -2559,6 +2559,47 @@ references:
   isSpec: "True"
   fullName: BradleyLeach_BooseApp.AppWrite.Execute
   nameWithType: AppWrite.Execute
+- uid: BradleyLeach_BooseApp.BradLR_BooseApp
+  name: BradLR_BooseApp
+  href: api/BradleyLeach_BooseApp.BradLR_BooseApp.html
+  commentId: T:BradleyLeach_BooseApp.BradLR_BooseApp
+  fullName: BradleyLeach_BooseApp.BradLR_BooseApp
+  nameWithType: BradLR_BooseApp
+- uid: BradleyLeach_BooseApp.BradLR_BooseApp.#ctor
+  name: BradLR_BooseApp()
+  href: api/BradleyLeach_BooseApp.BradLR_BooseApp.html#BradleyLeach_BooseApp_BradLR_BooseApp__ctor
+  commentId: M:BradleyLeach_BooseApp.BradLR_BooseApp.#ctor
+  name.vb: New()
+  fullName: BradleyLeach_BooseApp.BradLR_BooseApp.BradLR_BooseApp()
+  fullName.vb: BradleyLeach_BooseApp.BradLR_BooseApp.New()
+  nameWithType: BradLR_BooseApp.BradLR_BooseApp()
+  nameWithType.vb: BradLR_BooseApp.New()
+- uid: BradleyLeach_BooseApp.BradLR_BooseApp.#ctor*
+  name: BradLR_BooseApp
+  href: api/BradleyLeach_BooseApp.BradLR_BooseApp.html#BradleyLeach_BooseApp_BradLR_BooseApp__ctor_
+  commentId: Overload:BradleyLeach_BooseApp.BradLR_BooseApp.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: BradleyLeach_BooseApp.BradLR_BooseApp.BradLR_BooseApp
+  fullName.vb: BradleyLeach_BooseApp.BradLR_BooseApp.New
+  nameWithType: BradLR_BooseApp.BradLR_BooseApp
+  nameWithType.vb: BradLR_BooseApp.New
+- uid: BradleyLeach_BooseApp.BradLR_BooseApp.Dispose(System.Boolean)
+  name: Dispose(bool)
+  href: api/BradleyLeach_BooseApp.BradLR_BooseApp.html#BradleyLeach_BooseApp_BradLR_BooseApp_Dispose_System_Boolean_
+  commentId: M:BradleyLeach_BooseApp.BradLR_BooseApp.Dispose(System.Boolean)
+  name.vb: Dispose(Boolean)
+  fullName: BradleyLeach_BooseApp.BradLR_BooseApp.Dispose(bool)
+  fullName.vb: BradleyLeach_BooseApp.BradLR_BooseApp.Dispose(Boolean)
+  nameWithType: BradLR_BooseApp.Dispose(bool)
+  nameWithType.vb: BradLR_BooseApp.Dispose(Boolean)
+- uid: BradleyLeach_BooseApp.BradLR_BooseApp.Dispose*
+  name: Dispose
+  href: api/BradleyLeach_BooseApp.BradLR_BooseApp.html#BradleyLeach_BooseApp_BradLR_BooseApp_Dispose_
+  commentId: Overload:BradleyLeach_BooseApp.BradLR_BooseApp.Dispose
+  isSpec: "True"
+  fullName: BradleyLeach_BooseApp.BradLR_BooseApp.Dispose
+  nameWithType: BradLR_BooseApp.Dispose
 - uid: BradleyLeach_BooseApp.Form1
   name: Form1
   href: api/BradleyLeach_BooseApp.Form1.html

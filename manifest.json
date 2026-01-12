@@ -414,6 +414,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/BradleyLeach_BooseApp.BradLR_BooseApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/BradleyLeach_BooseApp.BradLR_BooseApp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "BradleyLeach_BooseApp.BradLR_BooseApp",
+      "Summary": "<p sourcefile=\"api/BradleyLeach_BooseApp.BradLR_BooseApp.yml\" sourcestartlinenumber=\"1\">Represents the main form of the application, providing the user interface for rendering a canvas, parsing and\nexecuting commands, and displaying runtime results or errors.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/BradleyLeach_BooseApp.Form1.yml",
       "output": {
         ".html": {
