@@ -78,6 +78,8 @@ namespace BradleyLeach_BooseApp
         /// </summary>
         public object PenColour { get => Pen.Color; set => Pen.Color = (Color)value; }
 
+        public object BrushColour { get => Brush; set => Brush = new SolidBrush((Color)value); }
+
         /// <summary>
         /// Expression to get and set whether shapes are filled when drawn.
         /// </summary>
@@ -193,6 +195,7 @@ namespace BradleyLeach_BooseApp
             Xpos=0;
             Ypos=0;
             PenColour = Color.Black;
+            BrushColour = Color.Black;
         }
 
         /// <summary>
@@ -213,7 +216,9 @@ namespace BradleyLeach_BooseApp
         /// <param name="blue">blue RGB pen component</param>
         public void SetColour(int red, int green, int blue)
         {
-            PenColour = Color.FromArgb(red, green, blue);
+            Color newColour = Color.FromArgb(red, green, blue);
+            PenColour = newColour;
+            BrushColour = newColour;
         }
 
         /// <summary>

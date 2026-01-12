@@ -27,21 +27,43 @@ namespace BradleyLeach_BooseApp
 
         public override void Execute() 
         {
-            string param1resolved;
+            string[] components = param1unprocessed.Trim().Split("\"");
+            string output = string.Empty;
 
-            if (Program.IsExpression(param1unprocessed))
+            foreach (string component in components)
             {
-                param1resolved = Program.EvaluateExpression(param1unprocessed).Trim();
-            }
-            else
-            {
-                try { param1resolved = this.Program.GetVarValue(param1unprocessed); }
-                catch { param1resolved = param1unprocessed; }
+                string part = string.Empty;
+
+                if (string.IsNullOrWhiteSpace(component))
+                {
+                    continue;
+                }
+
+                try
+                {
+                    part = Program.EvaluateExpression(component).Trim();
+                }
+                catch 
+                {
+                    if (component.StartsWith(" +") && component.EndsWith("+ "))
+                    {
+                        try
+                        {
+                            part = component.Substring(2, component.Length - 4).Trim();
+                            part = Program.EvaluateExpression(part).Trim();
+                        }
+                        catch { }
+                    }
+                    else
+                    {
+                        output += component;
+                    }
+                }
+
+                output += part;
             }
 
-            Canvas.WriteText(param1unprocessed);
+            Canvas.WriteText(output);
         }
-
-
     }
 }

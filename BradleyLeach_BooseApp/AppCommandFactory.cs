@@ -42,8 +42,8 @@ namespace BradleyLeach_BooseApp
                 "boolean" => new AppBoolean(),
                 "bool" => new AppBoolean(),
                 "array" => new AppArray(),
-                "poke" => new AppNoCommand(),
-                "peek" => new AppNoCommand(),
+                "poke" => new AppPoke(),
+                "peek" => new AppPeek(),
 
                 // Control Structures
                 "if" => new AppIf(),

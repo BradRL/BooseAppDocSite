@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace BradleyLeach_BooseApp
 {
@@ -60,7 +59,7 @@ namespace BradleyLeach_BooseApp
                 flag = int.TryParse(parameters[3], out columns);
             }
 
-            if (!parameters[0].Equals("int") && !parameters[0].Equals("real"));
+            if (!parameters[0].Equals("int") && !parameters[0].Equals("real"))
             {
                 flag = false;
             }
@@ -77,8 +76,9 @@ namespace BradleyLeach_BooseApp
         public override void CheckParameters(string[] parameterList)
         {
             ArrayRestrictions();
-            base.Parameters = base.ParameterList.Trim().Split(",");
-            if (base.Parameters.Length != 3 && base.Parameters.Length != 4)
+            base.Parameters = base.ParameterList.Trim().Split(" ");
+            
+            if (base.Parameters.Length < 3 || base.Parameters.Length > 4)
             {
                 throw new CommandException("Invalid array type or size");
             }
@@ -125,7 +125,7 @@ namespace BradleyLeach_BooseApp
                 peekVar = pokeValue;
             }
 
-            string[] array2 = array[num2].Trim().Split(",");
+            string[] array2 = array[num2].Trim().Split(" ");
             if (array.Length < 2 || array2.Length < 1)
             {
                 throw new CommandException("Invalid array assignment");
@@ -166,10 +166,22 @@ namespace BradleyLeach_BooseApp
             }
 
             bool num = int.TryParse(s, out row);
-            flag = int.TryParse(s2, out column);
-            if (!num || !flag)
+
+            if (string.IsNullOrWhiteSpace(s2))
             {
-                throw new CommandException("Row or column not a number");
+                column = 0;
+            }
+            else
+            {
+                if (int.TryParse(s2, out column)) 
+                { 
+                    throw new CommandException("Row or column not a number"); 
+                }
+            }
+
+            if (!num)
+            {
+                throw new CommandException("Row is not a number");
             }
 
             AppArray array = (AppArray)program.GetVariable(varName);
