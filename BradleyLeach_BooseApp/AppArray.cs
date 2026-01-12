@@ -8,46 +8,111 @@ using System.Windows.Forms;
 
 namespace BradleyLeach_BooseApp
 {
+    /// <summary>
+    /// Represents an array variable (int or real) in the program, supporting both declaration and array operations.
+    /// Provides logic for array creation, parameter validation, and value access/modification.
+    /// </summary>
     public class AppArray : Evaluation, ICommand
     {
+        /// <summary>
+        /// Constant indicating a peek operation (read from array).
+        /// </summary>
         protected const bool PEEK = false;
 
+        /// <summary>
+        /// Constant indicating a poke operation (write to array).
+        /// </summary>
         public const bool POKE = true;
 
+        /// <summary>
+        /// The type of the array ("int" or "real").
+        /// </summary>
         protected string type = "int";
 
+        /// <summary>
+        /// The number of rows in the array.
+        /// </summary>
         protected int rows;
 
+        /// <summary>
+        /// The number of columns in the array (default is 1 for 1D arrays).
+        /// </summary>
         protected int columns = 1;
 
+        /// <summary>
+        /// The last integer value used in array operations.
+        /// </summary>
         protected int valueInt;
 
+        /// <summary>
+        /// The last real (double) value used in array operations.
+        /// </summary>
         protected double valueReal;
 
+        /// <summary>
+        /// The underlying integer array storage.
+        /// </summary>
         protected int[,] intArray;
 
+        /// <summary>
+        /// The underlying real (double) array storage.
+        /// </summary>
         protected double[,] realArray;
 
+        /// <summary>
+        /// The value to be written in a poke operation.
+        /// </summary>
         protected string pokeValue;
 
+        /// <summary>
+        /// The variable name to assign in a peek operation.
+        /// </summary>
         protected string peekVar;
 
+        /// <summary>
+        /// The row index as a string (may be an expression).
+        /// </summary>
         protected string rowS = "";
 
+        /// <summary>
+        /// The column index as a string (may be an expression).
+        /// </summary>
         protected string columnS = "";
 
+        /// <summary>
+        /// The resolved row index.
+        /// </summary>
         protected int row;
 
+        /// <summary>
+        /// The resolved column index.
+        /// </summary>
         protected int column;
 
+        /// <summary>
+        /// Gets the number of rows in the array.
+        /// </summary>
         protected int Rows => rows;
 
+        /// <summary>
+        /// Gets the number of columns in the array.
+        /// </summary>
         protected int Columns => columns;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppArray"/> class.
+        /// </summary>
         public AppArray() { }
 
+        /// <summary>
+        /// Placeholder for implementing array-specific restrictions.
+        /// </summary>
         public void ArrayRestrictions() { }
 
+        /// <summary>
+        /// Compiles the array declaration, validates type and size, and adds the array to the program's variable table.
+        /// </summary>
+        /// <exception cref="CommandException">Thrown if the array type or size is invalid.</exception>
         public override void Compile()
         {
             base.Compile();
@@ -73,6 +138,11 @@ namespace BradleyLeach_BooseApp
             base.Program.AddVariable(this);
         }
 
+        /// <summary>
+        /// Checks that the correct number of parameters are provided for the array declaration.
+        /// </summary>
+        /// <param name="parameterList">The list of parameters to check.</param>
+        /// <exception cref="CommandException">Thrown if the number of parameters is not 3 or 4.</exception>
         public override void CheckParameters(string[] parameterList)
         {
             ArrayRestrictions();
@@ -84,6 +154,10 @@ namespace BradleyLeach_BooseApp
             }
         }
 
+        /// <summary>
+        /// Executes the array declaration, allocating storage for the array based on its type and dimensions.
+        /// </summary>
+        /// <exception cref="CommandException">Thrown if the array type is unknown.</exception>
         public override void Execute()
         {
             base.Execute();
@@ -102,6 +176,11 @@ namespace BradleyLeach_BooseApp
             throw new CommandException("Unknown array type");
         }
 
+        /// <summary>
+        /// Processes and validates array parameters for compile-time operations (peek or poke).
+        /// </summary>
+        /// <param name="peekOrPoke">True for poke, false for peek.</param>
+        /// <exception cref="CommandException">Thrown if the assignment or variable is invalid.</exception>
         protected virtual void ProcessArrayParametersCompile(bool peekOrPoke)
         {
             ArrayRestrictions();
@@ -144,6 +223,11 @@ namespace BradleyLeach_BooseApp
             }
         }
 
+        /// <summary>
+        /// Processes and validates array parameters for run-time operations (peek or poke), evaluating expressions as needed.
+        /// </summary>
+        /// <param name="peekOrPoke">True for poke, false for peek.</param>
+        /// <exception cref="CommandException">Thrown if indices or values are invalid, or if the array type is unknown.</exception>
         protected virtual void ProcessArrayParametersExecute(bool peekOrPoke)
         {
             bool flag = true;
@@ -227,31 +311,65 @@ namespace BradleyLeach_BooseApp
             throw new CommandException("Unknown array type");
         }
 
+        /// <summary>
+        /// Sets the value of an integer array element at the specified row and column.
+        /// </summary>
+        /// <param name="val">The value to set.</param>
+        /// <param name="row">The row index.</param>
+        /// <param name="col">The column index.</param>
+        /// <exception cref="CommandException">Thrown if the indices are out of bounds.</exception>
         public virtual void SetIntArray(int val, int row, int col)
         {
-            뻨(row, col);
+            boundCheck(row, col);
             intArray[row, col] = val;
         }
 
+        /// <summary>
+        /// Sets the value of a real (double) array element at the specified row and column.
+        /// </summary>
+        /// <param name="val">The value to set.</param>
+        /// <param name="row">The row index.</param>
+        /// <param name="col">The column index.</param>
+        /// <exception cref="CommandException">Thrown if the indices are out of bounds.</exception>
         public virtual void SetRealArray(double val, int row, int col)
         {
-            뻨(row, col);
+            boundCheck(row, col);
             realArray[row, col] = val;
         }
 
+        /// <summary>
+        /// Gets the value of an integer array element at the specified row and column.
+        /// </summary>
+        /// <param name="row">The row index.</param>
+        /// <param name="col">The column index.</param>
+        /// <returns>The integer value at the specified position.</returns>
+        /// <exception cref="CommandException">Thrown if the indices are out of bounds.</exception>
         public virtual int GetIntArray(int row, int col)
         {
-            뻨(row, col);
+            boundCheck(row, col);
             return intArray[row, col];
         }
 
+        /// <summary>
+        /// Gets the value of a real (double) array element at the specified row and column.
+        /// </summary>
+        /// <param name="row">The row index.</param>
+        /// <param name="col">The column index.</param>
+        /// <returns>The real value at the specified position.</returns>
+        /// <exception cref="CommandException">Thrown if the indices are out of bounds.</exception>
         public virtual double GetRealArray(int row, int col)
         {
-            뻨(row, col);
+            boundCheck(row, col);
             return realArray[row, col];
         }
 
-        private void 뻨(int P_0, int P_1)
+        /// <summary>
+        /// Checks if the specified row and column indices are within the bounds of the array.
+        /// </summary>
+        /// <param name="P_0">The row index.</param>
+        /// <param name="P_1">The column index.</param>
+        /// <exception cref="CommandException">Thrown if the indices are out of bounds.</exception>
+        private void boundCheck(int P_0, int P_1)
         {
             if (P_0 >= rows || P_1 >= columns)
             {

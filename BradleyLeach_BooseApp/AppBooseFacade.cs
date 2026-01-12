@@ -17,6 +17,9 @@ namespace BradleyLeach_BooseApp
         /// </summary>
         private static AppBooseFacade _instance;
 
+        /// <summary>
+        /// Singleton lock object
+        /// </summary>
         private static readonly object _lock = new object();
 
         /// <summary>

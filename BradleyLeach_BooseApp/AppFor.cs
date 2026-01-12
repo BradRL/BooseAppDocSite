@@ -8,43 +8,62 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
+    /// <summary>
+    /// Command class representing a 'for' loop block in the program.
+    /// Evaluates start, end, and step expressions, manages the loop variable, and controls program flow for iteration.
+    /// </summary>
     public class AppFor : AppConditionalCommand, ICommand
     {
         private int from;
-
         private int to;
-
         private int step;
-
         private string startExpr;
         private string endExpr;
         private string stepExpr;
         private string loopVarName;
-
         private Evaluation loopControlV;
 
+        /// <summary>
+        /// Gets the evaluation object representing the loop control variable.
+        /// </summary>
         public Evaluation LoopControlV => loopControlV;
 
+        /// <summary>
+        /// Gets or sets the starting value of the loop.
+        /// </summary>
         public int From
         {
             get { return from; }
             set { from = value; }
         }
 
+        /// <summary>
+        /// Gets or sets the ending value of the loop.
+        /// </summary>
         public int To
         {
             get { return to; }
             set { to = value; }
         }
 
+        /// <summary>
+        /// Gets or sets the step value for the loop.
+        /// </summary>
         public int Step
         {
             get { return step; }
             set { step = value; }
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AppFor"/> class for factory use.
+        /// </summary>
         public AppFor() { }
 
+        /// <summary>
+        /// Compiles the 'for' loop command, parsing and preparing the loop variable, start, end, and step expressions.
+        /// </summary>
+        /// <exception cref="StoredProgramException">Thrown if the loop variable or expressions are invalid.</exception>
         public override void Compile()
         {
             base.Compile();
@@ -72,7 +91,7 @@ namespace BradleyLeach_BooseApp
                 stepExpr = "1";
             }
 
-            Debug.WriteLine(string.Join(",",loopExpr));
+            Debug.WriteLine(string.Join(",", loopExpr));
             int varIndx = base.Program.FindVariable(loopVarName);
             Evaluation loopVar;
 
@@ -90,9 +109,13 @@ namespace BradleyLeach_BooseApp
 
             loopControlV.Expression = startExpr;
             Debug.WriteLine($"COMPILE FOR: {startExpr}, {endExpr}, {stepExpr}");
-
         }
 
+        /// <summary>
+        /// Executes the 'for' loop command, evaluating the loop condition and updating the loop variable and program counter accordingly.
+        /// </summary>
+        /// <exception cref="StoredProgramException">Thrown if the start, end, or step values are invalid.</exception>
+        /// <exception cref="CommandException">Thrown if the 'for' command does not have a corresponding 'end' command.</exception>
         public override void Execute()
         {
             // Evaluate start, end, and step expressions (they can be variables or calculations)
@@ -141,7 +164,6 @@ namespace BradleyLeach_BooseApp
             // Loop is active — current loop variable value is valid
             // Increment for next iteration after the loop body executes
             loopControlV.Value += step;
-
         }
     }
 }

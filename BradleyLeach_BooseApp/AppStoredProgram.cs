@@ -124,13 +124,25 @@ namespace BradleyLeach_BooseApp
             return evaluation.Value.ToString();
         }
 
+        /// <summary>
+        /// Overwritten stack to manage custom conditional commands in the stored program.
+        /// </summary>
         private Stack<AppConditionalCommand> stack = new Stack<AppConditionalCommand>();
 
+        /// <summary>
+        /// Overwritten push method to add custom conditional commands to the stack.
+        /// </summary>
+        /// <param name="Com"></param>
         public void Push(AppConditionalCommand Com)
         {
             stack.Push(Com);
         }
 
+        /// <summary>
+        /// Overwritten pop method to remove and return custom conditional commands from the stack.
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="StoredProgramException"></exception>
         public new AppConditionalCommand Pop()
         {
             try
@@ -143,6 +155,9 @@ namespace BradleyLeach_BooseApp
             }
         }
 
+        /// <summary>
+        /// Resets the program to its initial state by clearing the execution stack.
+        /// </summary>
         public override void ResetProgram()
         {
             base.ResetProgram();

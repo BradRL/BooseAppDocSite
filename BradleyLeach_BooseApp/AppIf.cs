@@ -8,13 +8,24 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
+    /// <summary>
+    /// Command class representing an 'if' conditional block in the program.
+    /// Evaluates a boolean condition and controls program flow based on the result.
+    /// </summary>
     public class AppIf : AppCompoundCommand, ICommand
     {
         /// <summary>
-        /// Blank constructor for factory use. REMOVES RESTRICTION
+        /// Initializes a new instance of the <see cref="AppIf"/> class for factory use.
         /// </summary>
         public AppIf() : base() { }
 
+        /// <summary>
+        /// Executes the 'if' command by evaluating the condition and updating the program counter
+        /// to skip the block if the condition is false.
+        /// </summary>
+        /// <exception cref="CommandException">
+        /// Thrown if the 'if' command does not have a corresponding 'end' command.
+        /// </exception>
         public override void Execute()
         {           
             base.Execute();

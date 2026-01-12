@@ -10,18 +10,28 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
+    /// <summary>
+    /// Command class representing the end of a control flow block (if, while, for) in the program.
+    /// Handles linking to the corresponding start command and manages control flow for loops.
+    /// </summary>
     public class AppEnd : AppCompoundCommand, ICommand
     {
         /// <summary>
-        /// Blank constructor for factory use.
+        /// Initializes a new instance of the <see cref="AppEnd"/> class for factory use.
         /// </summary>
         public AppEnd() : base() { }
 
+        /// <summary>
+        /// Compiles the end command, linking it to the corresponding control flow start command
+        /// and setting line numbers for block navigation.
+        /// </summary>
+        /// <exception cref="CommandException">
+        /// Thrown if the end command does not match the expected control flow block type.
+        /// </exception>
         public override void Compile()
         {
             AppStoredProgram adapter = (AppStoredProgram)base.Program;
 
-            //base.CorrespondingCommand = base.Program.Pop();
             var condition = adapter.Pop();
 
             if (base.CorrespondingCommand is AppIf && !base.ParameterList.Contains("if"))
@@ -45,11 +55,18 @@ namespace BradleyLeach_BooseApp
             condition.EndLineNumber = base.LineNumber;
         }
 
+        /// <summary>
+        /// Executes the end command, managing control flow for while and for loops.
+        /// For while loops, jumps back to the start if the condition is true.
+        /// For for loops, updates the loop variable and determines if the loop should continue.
+        /// </summary>
+        /// <exception cref="CommandException">
+        /// Thrown if the loop variable does not exist for a for loop.
+        /// </exception>
         public override void Execute() 
         {
             if (base.CorrespondingCommand is AppWhile) 
             {
-                Debug.WriteLine($"end while jumping to start {base.CorrespondingCommand.LineNumber}");
                 base.Program.PC = base.CorrespondingCommand.LineNumber - 1;
             }
             else if (base.CorrespondingCommand is AppFor) 
@@ -64,16 +81,13 @@ namespace BradleyLeach_BooseApp
                     throw new CommandException($"For loop variable '{loopControlV.VarName}' does not exist");
                 }
 
-                //loopControlV.Value = num;
-
                 base.Program.UpdateVariable(loopControlV.VarName, num);
                 @for.From = num;
 
                 if ((@for.From < @for.To && @for.Step <= 0) || 
                     (@for.From > @for.To && @for.Step >= 0))
                 {
-
-                    //throw new CommandException($"Invalid loop step '{@for.Step}' for loop from '{@for.From}' to '{@for.To}'");
+                    // Invalid loop step, but not throwing by default
                 }
 
                 if ((num < @for.To && @for.Step > 0) || (num > @for.To && @for.Step < 0))
@@ -82,7 +96,6 @@ namespace BradleyLeach_BooseApp
                 }
             }
             //else if (base.CorrespondingCommand is AppMethod) { }
-
         }
     }
 }

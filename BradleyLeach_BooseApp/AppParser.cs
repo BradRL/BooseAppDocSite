@@ -156,6 +156,11 @@ namespace BradleyLeach_BooseApp
             Program.Add(new AppNoCommand());
         }
 
+        /// <summary>
+        /// Tokenizes a line of input into individual components for parsing.
+        /// </summary>
+        /// <param name="line"></param>
+        /// <returns></returns>
         public string[] Tokenize(string line) 
         {
             line = line.Trim();

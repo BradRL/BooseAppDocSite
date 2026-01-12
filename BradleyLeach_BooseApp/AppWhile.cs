@@ -8,18 +8,32 @@ using System.Threading.Tasks;
 
 namespace BradleyLeach_BooseApp
 {
+    /// <summary>
+    /// Command class representing a 'while' loop block in the program.
+    /// Evaluates a boolean condition and controls program flow to repeat the block while the condition is true.
+    /// </summary>
     public class AppWhile : AppCompoundCommand, ICommand
     {
         /// <summary>
-        /// Blank constructor for factory use.
+        /// Initializes a new instance of the <see cref="AppWhile"/> class for factory use.
         /// </summary>
         public AppWhile() : base() { }
 
+        /// <summary>
+        /// Compiles the current expression tree into executable code.
+        /// </summary>
         public override void Compile()
         {
             base.Compile();
         }
 
+        /// <summary>
+        /// Executes the 'while' command by evaluating the loop condition and updating the program counter
+        /// to exit the loop if the condition is false.
+        /// </summary>
+        /// <exception cref="CommandException">
+        /// Thrown if the 'while' command does not have a corresponding 'end' command (i.e., <c>EndLineNumber</c> is less than zero).
+        /// </exception>
         public override void Execute()
         {
             base.Execute();

@@ -240,6 +240,10 @@ namespace BradleyLeach_BooseApp
             Graphics.DrawString(text, new Font("Arial", 16), Brush, new PointF(Xpos, Ypos));
         }
 
+        /// <summary>
+        /// Sets the fill state for subsequent shape drawing operations.
+        /// </summary>
+        /// <param name="fillState">True of False value to set the fill</param>
         public void SetFill(bool fillState) 
         { 
             FillShapes = fillState;
