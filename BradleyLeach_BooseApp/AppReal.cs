@@ -45,6 +45,21 @@ namespace BradleyLeach_BooseApp
             if (!double.TryParse(evaluatedExpression, out double value)) 
             {
                 throw new StoredProgramException($"Invalid value `{evaluatedExpression}`, cannot parse to `Float`");
+            } else
+            {
+                if (int.TryParse(evaluatedExpression, out int intValue)) 
+                {
+                    base.Program.DeleteVariable(varName);
+
+                    AppInt newVar = new AppInt();
+
+                    string args = $"{varName} = {intValue}";
+                    newVar.Set(Program, args);
+                    newVar.Compile();
+                    newVar.Execute();
+
+                    return;
+                }
             }
 
             base.Program.UpdateVariable(varName, value);
