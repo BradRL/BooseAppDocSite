@@ -59,8 +59,6 @@ namespace BradleyLeach_BooseApp
                 catch { param1resolved = param1unprocessed; }
             }
 
-            Debug.WriteLine($"AppCircle: Resolved parameter 1 to '{param1resolved}'");
-
             bool param1Valid = float.TryParse(param1resolved, out float param1);
 
             List<string> invalidParams = new();

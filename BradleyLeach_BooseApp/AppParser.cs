@@ -58,13 +58,17 @@ namespace BradleyLeach_BooseApp
             string commandName = tokens[0];
             string commandArgs = string.Empty;
 
+            if (commandName[0] == '*')
+            {
+                return new AppNoCommand();
+            }
+
             if (tokens.Length == 1) 
             {
                 ICommand NoParamCommand = Factory.MakeCommand(commandName);
 
                 NoParamCommand.Set(Program, commandArgs);
                 NoParamCommand.Compile();
-                Debug.WriteLine($"Created {commandName}");
                 return NoParamCommand;
             } 
             else if (tokens.Length == 2)
@@ -108,6 +112,7 @@ namespace BradleyLeach_BooseApp
                     throw new ParserException($"Unsupported variable type `{variable.GetType}`");
                 }
             }
+
             ICommand command = Factory.MakeCommand(commandName);
 
             command.Set(Program, commandArgs);
